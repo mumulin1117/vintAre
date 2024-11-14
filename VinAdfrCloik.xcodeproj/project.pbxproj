@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		047512B42CE48BDA002F3B71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512AE2CE48BDA002F3B71 /* AppDelegate.swift */; };
+		047512B52CE48BDA002F3B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047512AF2CE48BDA002F3B71 /* Assets.xcassets */; };
+		047512B72CE48BDA002F3B71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047512B22CE48BDA002F3B71 /* LaunchScreen.storyboard */; };
+		047512C32CE495E4002F3B71 /* VAFLogChoiceTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512C12CE495E4002F3B71 /* VAFLogChoiceTernaler.swift */; };
+		047512C42CE495E4002F3B71 /* VAFLogChoiceTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047512C22CE495E4002F3B71 /* VAFLogChoiceTernaler.xib */; };
+		047512C72CE49D2D002F3B71 /* VAFLogEomaillogTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047512C62CE49D2D002F3B71 /* VAFLogEomaillogTernaler.xib */; };
+		047512C82CE49D2D002F3B71 /* VAFLogEomaillogTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512C52CE49D2D002F3B71 /* VAFLogEomaillogTernaler.swift */; };
+		047512CF2CE4A4A9002F3B71 /* VAFMainContainerTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047512CE2CE4A4A9002F3B71 /* VAFMainContainerTernaler.xib */; };
+		047512D02CE4A4A9002F3B71 /* VAFMainContainerTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512CD2CE4A4A9002F3B71 /* VAFMainContainerTernaler.swift */; };
+		047512D42CE4AB4B002F3B71 /* VAFokayusreTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512D32CE4AB4B002F3B71 /* VAFokayusreTernaler.swift */; };
+		047512D72CE4AB6E002F3B71 /* VAFokaPostTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512D52CE4AB6E002F3B71 /* VAFokaPostTernaler.swift */; };
+		047512D82CE4AB6E002F3B71 /* VAFokaPostTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047512D62CE4AB6E002F3B71 /* VAFokaPostTernaler.xib */; };
+		0489732A2CE594EB00020DBD /* VAFokayHomeTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */; };
+		0489732B2CE594EB00020DBD /* VAFokayHomeTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		047512962CE48B9C002F3B71 /* VinAdfrCloik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinAdfrCloik.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		047512AE2CE48BDA002F3B71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		047512AF2CE48BDA002F3B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		047512B02CE48BDA002F3B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047512B12CE48BDA002F3B71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		047512C12CE495E4002F3B71 /* VAFLogChoiceTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFLogChoiceTernaler.swift; sourceTree = "<group>"; };
+		047512C22CE495E4002F3B71 /* VAFLogChoiceTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFLogChoiceTernaler.xib; sourceTree = "<group>"; };
+		047512C52CE49D2D002F3B71 /* VAFLogEomaillogTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFLogEomaillogTernaler.swift; sourceTree = "<group>"; };
+		047512C62CE49D2D002F3B71 /* VAFLogEomaillogTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFLogEomaillogTernaler.xib; sourceTree = "<group>"; };
+		047512CD2CE4A4A9002F3B71 /* VAFMainContainerTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFMainContainerTernaler.swift; sourceTree = "<group>"; };
+		047512CE2CE4A4A9002F3B71 /* VAFMainContainerTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFMainContainerTernaler.xib; sourceTree = "<group>"; };
+		047512D32CE4AB4B002F3B71 /* VAFokayusreTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFokayusreTernaler.swift; sourceTree = "<group>"; };
+		047512D52CE4AB6E002F3B71 /* VAFokaPostTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFokaPostTernaler.swift; sourceTree = "<group>"; };
+		047512D62CE4AB6E002F3B71 /* VAFokaPostTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFokaPostTernaler.xib; sourceTree = "<group>"; };
+		048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFokayHomeTernaler.swift; sourceTree = "<group>"; };
+		048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFokayHomeTernaler.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		047512932CE48B9C002F3B71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0475128D2CE48B9C002F3B71 = {
+			isa = PBXGroup;
+			children = (
+				047512B32CE48BDA002F3B71 /* VinAdfrCloik */,
+				047512972CE48B9C002F3B71 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		047512972CE48B9C002F3B71 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				047512962CE48B9C002F3B71 /* VinAdfrCloik.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		047512B32CE48BDA002F3B71 /* VinAdfrCloik */ = {
+			isa = PBXGroup;
+			children = (
+				047512BE2CE48E0D002F3B71 /* VAG_Mainr */,
+				047512BB2CE48DDE002F3B71 /* VAG_ohome */,
+				047512BA2CE48DD4002F3B71 /* VAG_Ous */,
+				047512B92CE48DC5002F3B71 /* VAG_Post */,
+				047512B82CE48D9E002F3B71 /* VAG_Loopgo */,
+				047512AE2CE48BDA002F3B71 /* AppDelegate.swift */,
+				047512AF2CE48BDA002F3B71 /* Assets.xcassets */,
+				047512B02CE48BDA002F3B71 /* Info.plist */,
+				047512B22CE48BDA002F3B71 /* LaunchScreen.storyboard */,
+			);
+			path = VinAdfrCloik;
+			sourceTree = "<group>";
+		};
+		047512B82CE48D9E002F3B71 /* VAG_Loopgo */ = {
+			isa = PBXGroup;
+			children = (
+				047512C12CE495E4002F3B71 /* VAFLogChoiceTernaler.swift */,
+				047512C22CE495E4002F3B71 /* VAFLogChoiceTernaler.xib */,
+				047512C52CE49D2D002F3B71 /* VAFLogEomaillogTernaler.swift */,
+				047512C62CE49D2D002F3B71 /* VAFLogEomaillogTernaler.xib */,
+			);
+			path = VAG_Loopgo;
+			sourceTree = "<group>";
+		};
+		047512B92CE48DC5002F3B71 /* VAG_Post */ = {
+			isa = PBXGroup;
+			children = (
+				047512D52CE4AB6E002F3B71 /* VAFokaPostTernaler.swift */,
+				047512D62CE4AB6E002F3B71 /* VAFokaPostTernaler.xib */,
+			);
+			path = VAG_Post;
+			sourceTree = "<group>";
+		};
+		047512BA2CE48DD4002F3B71 /* VAG_Ous */ = {
+			isa = PBXGroup;
+			children = (
+				047512D32CE4AB4B002F3B71 /* VAFokayusreTernaler.swift */,
+			);
+			path = VAG_Ous;
+			sourceTree = "<group>";
+		};
+		047512BB2CE48DDE002F3B71 /* VAG_ohome */ = {
+			isa = PBXGroup;
+			children = (
+				048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */,
+				048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */,
+			);
+			path = VAG_ohome;
+			sourceTree = "<group>";
+		};
+		047512BE2CE48E0D002F3B71 /* VAG_Mainr */ = {
+			isa = PBXGroup;
+			children = (
+				047512CD2CE4A4A9002F3B71 /* VAFMainContainerTernaler.swift */,
+				047512CE2CE4A4A9002F3B71 /* VAFMainContainerTernaler.xib */,
+			);
+			path = VAG_Mainr;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		047512952CE48B9C002F3B71 /* VinAdfrCloik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 047512A92CE48B9E002F3B71 /* Build configuration list for PBXNativeTarget "VinAdfrCloik" */;
+			buildPhases = (
+				047512922CE48B9C002F3B71 /* Sources */,
+				047512932CE48B9C002F3B71 /* Frameworks */,
+				047512942CE48B9C002F3B71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VinAdfrCloik;
+			packageProductDependencies = (
+			);
+			productName = VinAdfrCloik;
+			productReference = 047512962CE48B9C002F3B71 /* VinAdfrCloik.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0475128E2CE48B9C002F3B71 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = VAF;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					047512952CE48B9C002F3B71 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 047512912CE48B9C002F3B71 /* Build configuration list for PBXProject "VinAdfrCloik" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0475128D2CE48B9C002F3B71;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 047512972CE48B9C002F3B71 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				047512952CE48B9C002F3B71 /* VinAdfrCloik */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		047512942CE48B9C002F3B71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047512D82CE4AB6E002F3B71 /* VAFokaPostTernaler.xib in Resources */,
+				0489732A2CE594EB00020DBD /* VAFokayHomeTernaler.xib in Resources */,
+				047512C42CE495E4002F3B71 /* VAFLogChoiceTernaler.xib in Resources */,
+				047512CF2CE4A4A9002F3B71 /* VAFMainContainerTernaler.xib in Resources */,
+				047512C72CE49D2D002F3B71 /* VAFLogEomaillogTernaler.xib in Resources */,
+				047512B52CE48BDA002F3B71 /* Assets.xcassets in Resources */,
+				047512B72CE48BDA002F3B71 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		047512922CE48B9C002F3B71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047512D72CE4AB6E002F3B71 /* VAFokaPostTernaler.swift in Sources */,
+				047512C32CE495E4002F3B71 /* VAFLogChoiceTernaler.swift in Sources */,
+				047512C82CE49D2D002F3B71 /* VAFLogEomaillogTernaler.swift in Sources */,
+				047512B42CE48BDA002F3B71 /* AppDelegate.swift in Sources */,
+				047512D02CE4A4A9002F3B71 /* VAFMainContainerTernaler.swift in Sources */,
+				0489732B2CE594EB00020DBD /* VAFokayHomeTernaler.swift in Sources */,
+				047512D42CE4AB4B002F3B71 /* VAFokayusreTernaler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		047512B22CE48BDA002F3B71 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				047512B12CE48BDA002F3B71 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		047512AA2CE48B9E002F3B71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				EXCLUDED_ARCHS = arm64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VinAdfrCloik/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VintAre;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VinAdfr.cloik.VinAdfrCloik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		047512AB2CE48B9E002F3B71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				EXCLUDED_ARCHS = arm64;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VinAdfrCloik/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VintAre;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VinAdfr.cloik.VinAdfrCloik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		047512AC2CE48B9E002F3B71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		047512AD2CE48B9E002F3B71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		047512912CE48B9C002F3B71 /* Build configuration list for PBXProject "VinAdfrCloik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047512AC2CE48B9E002F3B71 /* Debug */,
+				047512AD2CE48B9E002F3B71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		047512A92CE48B9E002F3B71 /* Build configuration list for PBXNativeTarget "VinAdfrCloik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047512AA2CE48B9E002F3B71 /* Debug */,
+				047512AB2CE48B9E002F3B71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0475128E2CE48B9C002F3B71 /* Project object */;
+}
