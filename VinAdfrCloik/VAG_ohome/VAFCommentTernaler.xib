@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VAFCommentTernaler" customModule="VinAdfrCloik" customModuleProvider="target">
+            <connections>
+                <outlet property="bgCommentVAF" destination="jVE-3M-5EK" id="Qth-bc-b8t"/>
+                <outlet property="inouterCAF" destination="vAH-Qm-Bqg" id="DpB-0J-eQQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-3M-5EK">
+                    <rect key="frame" x="0.0" y="602" width="393" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No comments yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nT-VX-C57">
+                            <rect key="frame" x="117.33333333333333" y="36" width="158.33333333333337" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="eKt-nm-2ae"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                            <color key="textColor" red="0.96078431369999995" green="0.82352941180000006" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say somethings..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAH-Qm-Bqg">
+                            <rect key="frame" x="12" y="156" width="303" height="52"/>
+                            <color key="backgroundColor" red="0.35686274509803922" green="0.28627450980392155" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="52" id="77E-wl-St7"/>
+                            </constraints>
+                            <color key="textColor" red="0.63921568627450975" green="0.5490196078431373" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMr-LV-QRw">
+                            <rect key="frame" x="329" y="158" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="vJD-Qq-4Vk"/>
+                                <constraint firstAttribute="height" constant="48" id="xaH-sD-rOU"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="send_publish"/>
+                            <connections>
+                                <action selector="sendmcommentVAF:" destination="-1" eventType="touchUpInside" id="yDc-0P-FYp"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hurry up and add the first comment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SA2-NI-U2v">
+                            <rect key="frame" x="71" y="89" width="251" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="TEb-JA-hR5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <color key="textColor" red="0.96078431369999995" green="0.82352941180000006" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6H-kj-jlC">
+                            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="9jo-rK-mWN"/>
+                                <constraint firstAttribute="width" constant="48" id="sKd-iw-hyP"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="vafg_close"/>
+                            <connections>
+                                <action selector="sendmcommentVAF:" destination="-1" eventType="touchUpInside" id="bky-1X-Qj8"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.52156862745098043" green="0.45490196078431372" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="6nT-VX-C57" firstAttribute="centerX" secondItem="jVE-3M-5EK" secondAttribute="centerX" id="EDG-Ng-418"/>
+                        <constraint firstAttribute="trailing" secondItem="KMr-LV-QRw" secondAttribute="trailing" constant="16" id="Jjs-wl-X1g"/>
+                        <constraint firstItem="vAH-Qm-Bqg" firstAttribute="leading" secondItem="jVE-3M-5EK" secondAttribute="leading" constant="12" id="NL7-xc-ATY"/>
+                        <constraint firstItem="SA2-NI-U2v" firstAttribute="centerX" secondItem="jVE-3M-5EK" secondAttribute="centerX" id="O2V-hi-NrO"/>
+                        <constraint firstAttribute="height" constant="250" id="PmU-7c-DBT"/>
+                        <constraint firstAttribute="bottom" secondItem="vAH-Qm-Bqg" secondAttribute="bottom" constant="42" id="TQI-Si-PWF"/>
+                        <constraint firstItem="KMr-LV-QRw" firstAttribute="centerY" secondItem="vAH-Qm-Bqg" secondAttribute="centerY" id="YSr-2J-aUT"/>
+                        <constraint firstItem="g6H-kj-jlC" firstAttribute="leading" secondItem="jVE-3M-5EK" secondAttribute="leading" id="bG6-zJ-9Om"/>
+                        <constraint firstItem="KMr-LV-QRw" firstAttribute="leading" secondItem="vAH-Qm-Bqg" secondAttribute="trailing" constant="14" id="e1A-si-Sbo"/>
+                        <constraint firstItem="6nT-VX-C57" firstAttribute="top" secondItem="jVE-3M-5EK" secondAttribute="top" constant="36" id="h7s-MI-2RL"/>
+                        <constraint firstItem="g6H-kj-jlC" firstAttribute="top" secondItem="jVE-3M-5EK" secondAttribute="top" id="xC0-Db-bcP"/>
+                        <constraint firstItem="SA2-NI-U2v" firstAttribute="top" secondItem="6nT-VX-C57" secondAttribute="bottom" constant="29" id="yRE-dX-Tjs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="jVE-3M-5EK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DAh-39-jDG"/>
+                <constraint firstAttribute="bottom" secondItem="jVE-3M-5EK" secondAttribute="bottom" id="MXY-TW-ubM"/>
+                <constraint firstItem="jVE-3M-5EK" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="QhZ-De-Bb9"/>
+            </constraints>
+            <point key="canvasLocation" x="29.770992366412212" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="send_publish" width="48" height="48"/>
+        <image name="vafg_close" width="24" height="24"/>
+    </resources>
+</document>

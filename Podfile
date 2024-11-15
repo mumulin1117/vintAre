@@ -13,7 +13,7 @@ pod 'Alamofire'
 pod 'IQKeyboardManager'
 
 pod 'SnapKit'
-pod 'SVProgerssHUD'
+pod 'SVProgressHUD'
 pod 'SwiftyStoreKit'
 
 end

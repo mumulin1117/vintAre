@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VAFTELUATernaler" customModule="VinAdfrCloik" customModuleProvider="target">
+            <connections>
+                <outlet property="EluaAgreeVAF" destination="giR-nQ-usV" id="4lD-aG-z7I"/>
+                <outlet property="eluaVAFBg" destination="xE2-FW-Cdf" id="FxJ-Ar-Rwh"/>
+                <outlet property="mindContentVAF" destination="Nmg-Dh-emb" id="wQq-fR-GAo"/>
+                <outlet property="mintTitleVAF" destination="gLJ-2E-END" id="7pm-bc-iTd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xE2-FW-Cdf">
+                    <rect key="frame" x="20" y="136" width="353" height="580"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VintAre End-User License Agreement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-2E-END">
+                            <rect key="frame" x="28.333333333333343" y="36" width="296.66666666666663" height="21"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <color key="textColor" red="0.85098039219999999" green="0.59999999999999998" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Nmg-Dh-emb">
+                            <rect key="frame" x="14" y="69" width="325" height="401"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <mutableString key="text">1. Grant of License
+﻿
+By installing and using the VintAre application, you agree to be bound by this End-User License Agreement (EULA). VintAre grants you a personal, non-exclusive, non-transferable license to use the application for your personal and non-commercial purposes.
+﻿
+2. Restrictions on Use
+﻿
+You shall not modify, reverse engineer, decompile, or disassemble the VintAre application. You are prohibited from reproducing, distributing, selling, or exploiting any part of the application without prior written consent from VintAre.
+﻿
+3. Privacy Policy
+﻿
+VintAre respects your privacy and is committed to protecting your personal information. By using the application, you consent to the collection, storage, and processing of your data in accordance with our Privacy Policy.
+﻿
+4. User Conduct
+﻿
+When using VintAre, you agree to abide by all applicable laws and regulations. You are responsible for the content you share on the platform and must not engage in any unlawful, offensive, or harmful activities.
+﻿
+5. Termination
+﻿
+VintAre reserves the right to terminate your access to the application at any time if you violate the terms of this EULA. Upon termination, you must cease using the application and delete all copies from your device.
+﻿
+6. Disclaimer of Warranty
+﻿
+VintAre provides the application on an "as is" basis without any warranties, express or implied. We do not guarantee uninterrupted or error-free operation of the application.
+﻿
+﻿</mutableString>
+                            <color key="textColor" red="1" green="0.96078431372549022" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giR-nQ-usV">
+                            <rect key="frame" x="35" y="501" width="283" height="44"/>
+                            <color key="backgroundColor" red="0.85098039215686272" green="0.59999999999999998" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="NE5-gY-Tbh"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="I Agree">
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="tobakgVAG:" destination="-1" eventType="touchUpInside" id="4xQ-OK-10W"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.52156862745098043" green="0.45490196078431372" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="giR-nQ-usV" firstAttribute="leading" secondItem="xE2-FW-Cdf" secondAttribute="leading" constant="35" id="7B8-bu-TwQ"/>
+                        <constraint firstItem="gLJ-2E-END" firstAttribute="top" secondItem="xE2-FW-Cdf" secondAttribute="top" constant="36" id="Djs-nP-HPK"/>
+                        <constraint firstAttribute="trailing" secondItem="giR-nQ-usV" secondAttribute="trailing" constant="35" id="DtU-Vw-f6b"/>
+                        <constraint firstItem="Nmg-Dh-emb" firstAttribute="leading" secondItem="xE2-FW-Cdf" secondAttribute="leading" constant="14" id="LHl-Yx-qdB"/>
+                        <constraint firstAttribute="trailing" secondItem="Nmg-Dh-emb" secondAttribute="trailing" constant="14" id="Urz-1N-csS"/>
+                        <constraint firstItem="giR-nQ-usV" firstAttribute="centerX" secondItem="xE2-FW-Cdf" secondAttribute="centerX" id="XdS-Sf-E4T"/>
+                        <constraint firstAttribute="bottom" secondItem="giR-nQ-usV" secondAttribute="bottom" constant="35" id="clv-Un-KIt"/>
+                        <constraint firstItem="gLJ-2E-END" firstAttribute="centerX" secondItem="xE2-FW-Cdf" secondAttribute="centerX" id="d3g-HJ-EhV"/>
+                        <constraint firstAttribute="bottom" secondItem="Nmg-Dh-emb" secondAttribute="bottom" constant="110" id="kuG-AM-QeR"/>
+                        <constraint firstItem="Nmg-Dh-emb" firstAttribute="top" secondItem="gLJ-2E-END" secondAttribute="bottom" constant="12" id="rlG-ph-KyB"/>
+                        <constraint firstAttribute="height" constant="580" id="uew-DR-WgD"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQR-gm-gAi">
+                    <rect key="frame" x="28" y="771" width="103" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="7JQ-E4-Zy9"/>
+                        <constraint firstAttribute="width" constant="103" id="OyC-J4-dK1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Privacy Policy">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="tobakgVAG:" destination="-1" eventType="touchUpInside" id="G9R-Gd-pEf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLL-cy-4Be">
+                    <rect key="frame" x="262" y="765.66666666666663" width="103" height="46"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Terms of use">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="tobakgVAG:" destination="-1" eventType="touchUpInside" id="18Z-bI-2AX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="how-A9-9AO">
+                    <rect key="frame" x="20" y="59" width="24" height="24"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="2OI-OE-JED"/>
+                        <constraint firstAttribute="width" constant="24" id="BGa-iT-ESL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="vafback">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="tobakgVAG:" destination="-1" eventType="touchUpInside" id="qwW-jn-IXU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70118516156462585" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cLL-cy-4Be" secondAttribute="trailing" constant="28" id="B5l-z9-zJX"/>
+                <constraint firstItem="cLL-cy-4Be" firstAttribute="centerY" secondItem="PQR-gm-gAi" secondAttribute="centerY" id="CFl-fK-WxO"/>
+                <constraint firstItem="xE2-FW-Cdf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="CIr-Oc-xB6"/>
+                <constraint firstItem="how-A9-9AO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="EZP-ev-K5l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="PQR-gm-gAi" secondAttribute="bottom" constant="12" id="KvJ-yj-HtZ"/>
+                <constraint firstItem="PQR-gm-gAi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="28" id="RGh-jJ-1mW"/>
+                <constraint firstItem="xE2-FW-Cdf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Xia-HO-4uW"/>
+                <constraint firstItem="cLL-cy-4Be" firstAttribute="height" secondItem="PQR-gm-gAi" secondAttribute="height" multiplier="1.31429" id="dTR-R9-isz"/>
+                <constraint firstItem="how-A9-9AO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="sBO-xT-hme"/>
+                <constraint firstItem="cLL-cy-4Be" firstAttribute="width" secondItem="PQR-gm-gAi" secondAttribute="width" id="ueS-Xa-wct"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xE2-FW-Cdf" secondAttribute="trailing" constant="20" id="vIf-uT-paC"/>
+            </constraints>
+            <point key="canvasLocation" x="52.671755725190835" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="vafback" width="24" height="24"/>
+    </resources>
+</document>

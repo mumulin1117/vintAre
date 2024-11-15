@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class VAFLogEomaillogTernaler: UIViewController {
     @IBOutlet weak var maskBototmVAFbg: UIView!
@@ -19,6 +20,7 @@ class VAFLogEomaillogTernaler: UIViewController {
     @IBOutlet weak var pswVAFINput: UITextField!
     
     
+    @IBOutlet weak var backVAFINput: UIButton!
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -45,19 +47,71 @@ class VAFLogEomaillogTernaler: UIViewController {
         cangerloginvAF.layer.cornerRadius = 24
         cangerloginvAF.layer.masksToBounds = true
         
-        
-        
+        cangerloginvAF.addTarget(self, action:#selector(cangerloginvAF(Uijjg:)), for: .touchUpInside)
+        backVAFINput.addTarget(self, action:#selector(cangerloginvAF(Uijjg:)), for: .touchUpInside)
     }
 
+    @objc  func cangerloginvAF(Uijjg:UIButton)  {
+        if Uijjg ==  backVAFINput{
+            self.navigationController?.popViewController(animated: true)
+        }else{
+          
+            guard let youxiang = emailVAFINput.text,
+            let mimaVAF = pswVAFINput.text,
+            youxiang.count != 0,
+            mimaVAF.count != 0 else {
+                SVProgressHUD.showInfo(withStatus: "Email address or password can not be empty")
+               
+                return
+            }
+            
+            SVProgressHUD.show()
+            if youxiang == "Laauu99@gmail.com" {
+               
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
+                    
+                    SVProgressHUD.showSuccess(withStatus: "Welcome log in!")
+                    VAFTrendyLoadding.reasures.setupGivenVAFUser()
+                    
+                    VAFTrendyLoadding.reasures.ifVAFLogEnter = true
+                   
+                    let rootNAvifvc = UINavigationController(rootViewController: VAFMainContainerTernaler())
+                    rootNAvifvc.navigationBar.isHidden = true
+                    ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rootNAvifvc
+                    return
+                }))
+                
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            }else{
+                let emailCVerifyDesc = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+                       
+            
+                let emaiFormateVAF = NSPredicate(format:"SELF MATCHES %@", emailCVerifyDesc).evaluate(with: youxiang)
+                if emaiFormateVAF == false {
+                    SVProgressHUD.showInfo(withStatus: "The email format you entered is incorrect")
+                   
+                }else{
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
+                       
+                        VAFTrendyLoadding.reasures.ifVAFLogEnter = true
+                        VAFTrendyLoadding.reasures.logingVAFIufo["vafmEail"] = "8906785@gmail.com"
+                        VAFTrendyLoadding.reasures.logingVAFIufo["vafIJID"] = "\(Int.random(in: 900000...1000000))"
+                        VAFTrendyLoadding.reasures.logingVAFIufo["csbpersonHead"] = "holder_mrtx"
+                        VAFTrendyLoadding.reasures.cacheVAFHead = UIImage(named: "holder_mrtx")
+                        VAFTrendyLoadding.reasures.logingVAFIufo["csbpersonName"] = "Guest"
+                        
+                        let rootNAvifvc = UINavigationController(rootViewController: VAFMainContainerTernaler())
+                        rootNAvifvc.navigationBar.isHidden = true
+                        ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rootNAvifvc
+                      
+                    }))
+                    
+                }
+                
+            }
+            
+            
+        }
+        
     }
-    */
-
 }

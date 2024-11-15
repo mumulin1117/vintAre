@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040C93E32CE5C35D00214863 /* VAFUserFdaata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040C93E22CE5C35D00214863 /* VAFUserFdaata.plist */; };
+		040C93E52CE5CF5900214863 /* VAFTrendyLoadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C93E42CE5CF5900214863 /* VAFTrendyLoadding.swift */; };
+		040C93E82CE5D9A700214863 /* VAFTELUATernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040C93E72CE5D9A700214863 /* VAFTELUATernaler.xib */; };
+		040C93E92CE5D9A700214863 /* VAFTELUATernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C93E62CE5D9A700214863 /* VAFTELUATernaler.swift */; };
+		040C93EB2CE5F1F000214863 /* VAFTHOmeShingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C93EA2CE5F1F000214863 /* VAFTHOmeShingCell.swift */; };
+		0416CC4E2CE74C5000CBDD1A /* VAFVideogTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416CC4D2CE74C5000CBDD1A /* VAFVideogTernaler.xib */; };
+		0416CC4F2CE74C5000CBDD1A /* VAFVideogTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416CC4C2CE74C5000CBDD1A /* VAFVideogTernaler.swift */; };
 		047512B42CE48BDA002F3B71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512AE2CE48BDA002F3B71 /* AppDelegate.swift */; };
 		047512B52CE48BDA002F3B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 047512AF2CE48BDA002F3B71 /* Assets.xcassets */; };
 		047512B72CE48BDA002F3B71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047512B22CE48BDA002F3B71 /* LaunchScreen.storyboard */; };
@@ -21,9 +28,31 @@
 		047512D82CE4AB6E002F3B71 /* VAFokaPostTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047512D62CE4AB6E002F3B71 /* VAFokaPostTernaler.xib */; };
 		0489732A2CE594EB00020DBD /* VAFokayHomeTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */; };
 		0489732B2CE594EB00020DBD /* VAFokayHomeTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */; };
+		0494BD342CE6F23900C1F77E /* VAFCommentTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494BD322CE6F23900C1F77E /* VAFCommentTernaler.swift */; };
+		0494BD352CE6F23900C1F77E /* VAFCommentTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0494BD332CE6F23900C1F77E /* VAFCommentTernaler.xib */; };
+		0494BD392CE6F6DA00C1F77E /* VAFContenReportTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0494BD382CE6F6DA00C1F77E /* VAFContenReportTernaler.xib */; };
+		0494BD3A2CE6F6DA00C1F77E /* VAFContenReportTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494BD372CE6F6DA00C1F77E /* VAFContenReportTernaler.swift */; };
+		0494BD3D2CE722BF00C1F77E /* VAFDetaiChagtTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494BD3B2CE722BF00C1F77E /* VAFDetaiChagtTernaler.swift */; };
+		0494BD3E2CE722BF00C1F77E /* VAFDetaiChagtTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0494BD3C2CE722BF00C1F77E /* VAFDetaiChagtTernaler.xib */; };
+		0495C8D12CE6DD75005EDC67 /* VAFDetailDyymstTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495C8CF2CE6DD75005EDC67 /* VAFDetailDyymstTernaler.swift */; };
+		0495C8D22CE6DD75005EDC67 /* VAFDetailDyymstTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495C8D02CE6DD75005EDC67 /* VAFDetailDyymstTernaler.xib */; };
+		04CACE482CE731EF009F920F /* VAFAIPAyTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CACE462CE731EF009F920F /* VAFAIPAyTernaler.swift */; };
+		04CACE492CE731EF009F920F /* VAFAIPAyTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CACE472CE731EF009F920F /* VAFAIPAyTernaler.xib */; };
+		04CACE4C2CE73872009F920F /* VAFShowingPAyTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CACE4A2CE73872009F920F /* VAFShowingPAyTernaler.swift */; };
+		04CACE4D2CE73872009F920F /* VAFShowingPAyTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CACE4B2CE73872009F920F /* VAFShowingPAyTernaler.xib */; };
+		04CACE502CE73A0B009F920F /* VAFAIDetailTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CACE4E2CE73A0B009F920F /* VAFAIDetailTernaler.swift */; };
+		04CACE512CE73A0B009F920F /* VAFAIDetailTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CACE4F2CE73A0B009F920F /* VAFAIDetailTernaler.xib */; };
+		8963DE309103A8FDA2BEC468 /* Pods_VinAdfrCloik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D772B7DDE0CDA4216018D6E /* Pods_VinAdfrCloik.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040C93E22CE5C35D00214863 /* VAFUserFdaata.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = VAFUserFdaata.plist; sourceTree = "<group>"; };
+		040C93E42CE5CF5900214863 /* VAFTrendyLoadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFTrendyLoadding.swift; sourceTree = "<group>"; };
+		040C93E62CE5D9A700214863 /* VAFTELUATernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFTELUATernaler.swift; sourceTree = "<group>"; };
+		040C93E72CE5D9A700214863 /* VAFTELUATernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFTELUATernaler.xib; sourceTree = "<group>"; };
+		040C93EA2CE5F1F000214863 /* VAFTHOmeShingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFTHOmeShingCell.swift; sourceTree = "<group>"; };
+		0416CC4C2CE74C5000CBDD1A /* VAFVideogTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFVideogTernaler.swift; sourceTree = "<group>"; };
+		0416CC4D2CE74C5000CBDD1A /* VAFVideogTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFVideogTernaler.xib; sourceTree = "<group>"; };
 		047512962CE48B9C002F3B71 /* VinAdfrCloik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VinAdfrCloik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047512AE2CE48BDA002F3B71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047512AF2CE48BDA002F3B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,6 +69,23 @@
 		047512D62CE4AB6E002F3B71 /* VAFokaPostTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFokaPostTernaler.xib; sourceTree = "<group>"; };
 		048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFokayHomeTernaler.swift; sourceTree = "<group>"; };
 		048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFokayHomeTernaler.xib; sourceTree = "<group>"; };
+		0494BD322CE6F23900C1F77E /* VAFCommentTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFCommentTernaler.swift; sourceTree = "<group>"; };
+		0494BD332CE6F23900C1F77E /* VAFCommentTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFCommentTernaler.xib; sourceTree = "<group>"; };
+		0494BD372CE6F6DA00C1F77E /* VAFContenReportTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFContenReportTernaler.swift; sourceTree = "<group>"; };
+		0494BD382CE6F6DA00C1F77E /* VAFContenReportTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFContenReportTernaler.xib; sourceTree = "<group>"; };
+		0494BD3B2CE722BF00C1F77E /* VAFDetaiChagtTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFDetaiChagtTernaler.swift; sourceTree = "<group>"; };
+		0494BD3C2CE722BF00C1F77E /* VAFDetaiChagtTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFDetaiChagtTernaler.xib; sourceTree = "<group>"; };
+		0495C8CF2CE6DD75005EDC67 /* VAFDetailDyymstTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFDetailDyymstTernaler.swift; sourceTree = "<group>"; };
+		0495C8D02CE6DD75005EDC67 /* VAFDetailDyymstTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFDetailDyymstTernaler.xib; sourceTree = "<group>"; };
+		04CACE462CE731EF009F920F /* VAFAIPAyTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFAIPAyTernaler.swift; sourceTree = "<group>"; };
+		04CACE472CE731EF009F920F /* VAFAIPAyTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFAIPAyTernaler.xib; sourceTree = "<group>"; };
+		04CACE4A2CE73872009F920F /* VAFShowingPAyTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFShowingPAyTernaler.swift; sourceTree = "<group>"; };
+		04CACE4B2CE73872009F920F /* VAFShowingPAyTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFShowingPAyTernaler.xib; sourceTree = "<group>"; };
+		04CACE4E2CE73A0B009F920F /* VAFAIDetailTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFAIDetailTernaler.swift; sourceTree = "<group>"; };
+		04CACE4F2CE73A0B009F920F /* VAFAIDetailTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFAIDetailTernaler.xib; sourceTree = "<group>"; };
+		1D772B7DDE0CDA4216018D6E /* Pods_VinAdfrCloik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinAdfrCloik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CF14668292329F60486E2E1 /* Pods-VinAdfrCloik.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinAdfrCloik.debug.xcconfig"; path = "Target Support Files/Pods-VinAdfrCloik/Pods-VinAdfrCloik.debug.xcconfig"; sourceTree = "<group>"; };
+		FBDA0468743DEBBDF38CB63D /* Pods-VinAdfrCloik.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinAdfrCloik.release.xcconfig"; path = "Target Support Files/Pods-VinAdfrCloik/Pods-VinAdfrCloik.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8963DE309103A8FDA2BEC468 /* Pods_VinAdfrCloik.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +105,8 @@
 			children = (
 				047512B32CE48BDA002F3B71 /* VinAdfrCloik */,
 				047512972CE48B9C002F3B71 /* Products */,
+				2D5D03BCEE8E0D21E8D0FD8C /* Pods */,
+				B4E6462F4A8851D024DD1642 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +121,7 @@
 		047512B32CE48BDA002F3B71 /* VinAdfrCloik */ = {
 			isa = PBXGroup;
 			children = (
+				0494BD362CE6F6C100C1F77E /* VAG_OtherAlert */,
 				047512BE2CE48E0D002F3B71 /* VAG_Mainr */,
 				047512BB2CE48DDE002F3B71 /* VAG_ohome */,
 				047512BA2CE48DD4002F3B71 /* VAG_Ous */,
@@ -92,6 +142,8 @@
 				047512C22CE495E4002F3B71 /* VAFLogChoiceTernaler.xib */,
 				047512C52CE49D2D002F3B71 /* VAFLogEomaillogTernaler.swift */,
 				047512C62CE49D2D002F3B71 /* VAFLogEomaillogTernaler.xib */,
+				040C93E62CE5D9A700214863 /* VAFTELUATernaler.swift */,
+				040C93E72CE5D9A700214863 /* VAFTELUATernaler.xib */,
 			);
 			path = VAG_Loopgo;
 			sourceTree = "<group>";
@@ -118,6 +170,15 @@
 			children = (
 				048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */,
 				048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */,
+				040C93EA2CE5F1F000214863 /* VAFTHOmeShingCell.swift */,
+				0495C8CF2CE6DD75005EDC67 /* VAFDetailDyymstTernaler.swift */,
+				0495C8D02CE6DD75005EDC67 /* VAFDetailDyymstTernaler.xib */,
+				0494BD322CE6F23900C1F77E /* VAFCommentTernaler.swift */,
+				0494BD332CE6F23900C1F77E /* VAFCommentTernaler.xib */,
+				04CACE4E2CE73A0B009F920F /* VAFAIDetailTernaler.swift */,
+				04CACE4F2CE73A0B009F920F /* VAFAIDetailTernaler.xib */,
+				0416CC4C2CE74C5000CBDD1A /* VAFVideogTernaler.swift */,
+				0416CC4D2CE74C5000CBDD1A /* VAFVideogTernaler.xib */,
 			);
 			path = VAG_ohome;
 			sourceTree = "<group>";
@@ -127,8 +188,42 @@
 			children = (
 				047512CD2CE4A4A9002F3B71 /* VAFMainContainerTernaler.swift */,
 				047512CE2CE4A4A9002F3B71 /* VAFMainContainerTernaler.xib */,
+				040C93E22CE5C35D00214863 /* VAFUserFdaata.plist */,
+				040C93E42CE5CF5900214863 /* VAFTrendyLoadding.swift */,
 			);
 			path = VAG_Mainr;
+			sourceTree = "<group>";
+		};
+		0494BD362CE6F6C100C1F77E /* VAG_OtherAlert */ = {
+			isa = PBXGroup;
+			children = (
+				0494BD372CE6F6DA00C1F77E /* VAFContenReportTernaler.swift */,
+				0494BD382CE6F6DA00C1F77E /* VAFContenReportTernaler.xib */,
+				0494BD3B2CE722BF00C1F77E /* VAFDetaiChagtTernaler.swift */,
+				0494BD3C2CE722BF00C1F77E /* VAFDetaiChagtTernaler.xib */,
+				04CACE462CE731EF009F920F /* VAFAIPAyTernaler.swift */,
+				04CACE472CE731EF009F920F /* VAFAIPAyTernaler.xib */,
+				04CACE4A2CE73872009F920F /* VAFShowingPAyTernaler.swift */,
+				04CACE4B2CE73872009F920F /* VAFShowingPAyTernaler.xib */,
+			);
+			path = VAG_OtherAlert;
+			sourceTree = "<group>";
+		};
+		2D5D03BCEE8E0D21E8D0FD8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6CF14668292329F60486E2E1 /* Pods-VinAdfrCloik.debug.xcconfig */,
+				FBDA0468743DEBBDF38CB63D /* Pods-VinAdfrCloik.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4E6462F4A8851D024DD1642 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D772B7DDE0CDA4216018D6E /* Pods_VinAdfrCloik.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,17 +233,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 047512A92CE48B9E002F3B71 /* Build configuration list for PBXNativeTarget "VinAdfrCloik" */;
 			buildPhases = (
+				21F7316C8103CCDD39D4498C /* [CP] Check Pods Manifest.lock */,
 				047512922CE48B9C002F3B71 /* Sources */,
 				047512932CE48B9C002F3B71 /* Frameworks */,
 				047512942CE48B9C002F3B71 /* Resources */,
+				1840CCCCD3A2DD80429EE97D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = VinAdfrCloik;
-			packageProductDependencies = (
-			);
 			productName = VinAdfrCloik;
 			productReference = 047512962CE48B9C002F3B71 /* VinAdfrCloik.app */;
 			productType = "com.apple.product-type.application";
@@ -170,6 +265,7 @@
 				};
 			};
 			buildConfigurationList = 047512912CE48B9C002F3B71 /* Build configuration list for PBXProject "VinAdfrCloik" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -178,7 +274,6 @@
 			);
 			mainGroup = 0475128D2CE48B9C002F3B71;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 047512972CE48B9C002F3B71 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,15 +290,67 @@
 			files = (
 				047512D82CE4AB6E002F3B71 /* VAFokaPostTernaler.xib in Resources */,
 				0489732A2CE594EB00020DBD /* VAFokayHomeTernaler.xib in Resources */,
+				040C93E32CE5C35D00214863 /* VAFUserFdaata.plist in Resources */,
+				0495C8D22CE6DD75005EDC67 /* VAFDetailDyymstTernaler.xib in Resources */,
+				040C93E82CE5D9A700214863 /* VAFTELUATernaler.xib in Resources */,
+				04CACE492CE731EF009F920F /* VAFAIPAyTernaler.xib in Resources */,
 				047512C42CE495E4002F3B71 /* VAFLogChoiceTernaler.xib in Resources */,
 				047512CF2CE4A4A9002F3B71 /* VAFMainContainerTernaler.xib in Resources */,
+				0494BD3E2CE722BF00C1F77E /* VAFDetaiChagtTernaler.xib in Resources */,
 				047512C72CE49D2D002F3B71 /* VAFLogEomaillogTernaler.xib in Resources */,
+				0416CC4E2CE74C5000CBDD1A /* VAFVideogTernaler.xib in Resources */,
 				047512B52CE48BDA002F3B71 /* Assets.xcassets in Resources */,
+				0494BD392CE6F6DA00C1F77E /* VAFContenReportTernaler.xib in Resources */,
+				04CACE4D2CE73872009F920F /* VAFShowingPAyTernaler.xib in Resources */,
+				0494BD352CE6F23900C1F77E /* VAFCommentTernaler.xib in Resources */,
 				047512B72CE48BDA002F3B71 /* LaunchScreen.storyboard in Resources */,
+				04CACE512CE73A0B009F920F /* VAFAIDetailTernaler.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1840CCCCD3A2DD80429EE97D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VinAdfrCloik/Pods-VinAdfrCloik-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VinAdfrCloik/Pods-VinAdfrCloik-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VinAdfrCloik/Pods-VinAdfrCloik-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21F7316C8103CCDD39D4498C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VinAdfrCloik-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		047512922CE48B9C002F3B71 /* Sources */ = {
@@ -212,11 +359,22 @@
 			files = (
 				047512D72CE4AB6E002F3B71 /* VAFokaPostTernaler.swift in Sources */,
 				047512C32CE495E4002F3B71 /* VAFLogChoiceTernaler.swift in Sources */,
+				04CACE482CE731EF009F920F /* VAFAIPAyTernaler.swift in Sources */,
+				0494BD3D2CE722BF00C1F77E /* VAFDetaiChagtTernaler.swift in Sources */,
+				040C93E92CE5D9A700214863 /* VAFTELUATernaler.swift in Sources */,
+				040C93EB2CE5F1F000214863 /* VAFTHOmeShingCell.swift in Sources */,
 				047512C82CE49D2D002F3B71 /* VAFLogEomaillogTernaler.swift in Sources */,
 				047512B42CE48BDA002F3B71 /* AppDelegate.swift in Sources */,
+				0494BD3A2CE6F6DA00C1F77E /* VAFContenReportTernaler.swift in Sources */,
+				04CACE4C2CE73872009F920F /* VAFShowingPAyTernaler.swift in Sources */,
 				047512D02CE4A4A9002F3B71 /* VAFMainContainerTernaler.swift in Sources */,
+				0495C8D12CE6DD75005EDC67 /* VAFDetailDyymstTernaler.swift in Sources */,
+				0416CC4F2CE74C5000CBDD1A /* VAFVideogTernaler.swift in Sources */,
+				0494BD342CE6F23900C1F77E /* VAFCommentTernaler.swift in Sources */,
 				0489732B2CE594EB00020DBD /* VAFokayHomeTernaler.swift in Sources */,
 				047512D42CE4AB4B002F3B71 /* VAFokayusreTernaler.swift in Sources */,
+				040C93E52CE5CF5900214863 /* VAFTrendyLoadding.swift in Sources */,
+				04CACE502CE73A0B009F920F /* VAFAIDetailTernaler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +394,7 @@
 /* Begin XCBuildConfiguration section */
 		047512AA2CE48B9E002F3B71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CF14668292329F60486E2E1 /* Pods-VinAdfrCloik.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -243,6 +402,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VinAdfrCloik/Info.plist;
@@ -277,6 +437,7 @@
 		};
 		047512AB2CE48B9E002F3B71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBDA0468743DEBBDF38CB63D /* Pods-VinAdfrCloik.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -284,6 +445,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VinAdfrCloik/Info.plist;

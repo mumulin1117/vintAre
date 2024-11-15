@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (5.10.0)
+  - IQKeyboardManager (6.5.19)
+  - SCLAlertView (0.8)
+  - SnapKit (5.7.1)
+  - SVProgressHUD (2.3.1):
+    - SVProgressHUD/Core (= 2.3.1)
+  - SVProgressHUD/Core (2.3.1)
+  - SwiftyStoreKit (0.16.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - IQKeyboardManager
+  - SCLAlertView
+  - SnapKit
+  - SVProgressHUD
+  - SwiftyStoreKit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - IQKeyboardManager
+    - SCLAlertView
+    - SnapKit
+    - SVProgressHUD
+    - SwiftyStoreKit
+
+SPEC CHECKSUMS:
+  Alamofire: cd0b98508df05796dd2ff278f3bb055a631b5390
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+
+PODFILE CHECKSUM: 9a3a1663996cb315815a080b178aab01cbcfe6c3
+
+COCOAPODS: 1.15.2

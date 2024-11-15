@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VAFLogEomaillogTernaler" customModule="VinAdfrCloik" customModuleProvider="target">
             <connections>
+                <outlet property="backVAFINput" destination="8N6-ku-XUw" id="le7-zW-NBq"/>
                 <outlet property="cangerloginvAF" destination="q1t-3c-Ok9" id="7m3-XH-i6O"/>
                 <outlet property="emailVAFINput" destination="2nk-8O-las" id="nKh-dx-YlS"/>
                 <outlet property="maskBototmVAFbg" destination="5SJ-XS-xSJ" id="ef2-Gf-Gzv"/>
@@ -64,6 +65,19 @@
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Login"/>
                 </button>
+                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8N6-ku-XUw">
+                    <rect key="frame" x="16" y="59" width="24" height="24"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="DRf-4g-Glp"/>
+                        <constraint firstAttribute="width" constant="24" id="iUX-VD-hVP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="vafback">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.52156862745098043" green="0.45490196078431372" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,7 +94,9 @@
                 <constraint firstItem="5SJ-XS-xSJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="boj-GS-Srb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2nk-8O-las" secondAttribute="trailing" constant="30" id="kmm-b8-CJ3"/>
                 <constraint firstItem="hdS-CM-Pek" firstAttribute="trailing" secondItem="2nk-8O-las" secondAttribute="trailing" id="m0b-L1-2qj"/>
+                <constraint firstItem="8N6-ku-XUw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="m99-f2-TM0"/>
                 <constraint firstItem="q1t-3c-Ok9" firstAttribute="leading" secondItem="hdS-CM-Pek" secondAttribute="leading" id="qPN-cr-vj7"/>
+                <constraint firstItem="8N6-ku-XUw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uMt-YH-hPA"/>
                 <constraint firstItem="hdS-CM-Pek" firstAttribute="top" secondItem="2nk-8O-las" secondAttribute="bottom" constant="32" id="xWy-Mx-YN9"/>
                 <constraint firstAttribute="bottom" secondItem="5SJ-XS-xSJ" secondAttribute="bottom" id="yrb-hz-HJf"/>
             </constraints>
@@ -89,5 +105,6 @@
     </objects>
     <resources>
         <image name="loger_pur" width="375" height="812"/>
+        <image name="vafback" width="24" height="24"/>
     </resources>
 </document>

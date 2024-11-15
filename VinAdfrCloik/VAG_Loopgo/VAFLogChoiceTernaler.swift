@@ -6,31 +6,62 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class VAFLogChoiceTernaler: UIViewController {
 
     @IBOutlet weak var okayKnowCAF: UIButton!
     
-    @IBOutlet weak var emaillogCAF: UIButton!
+    @IBOutlet weak var quiickQuestllogCAF: UIButton!
     
-    @IBOutlet weak var toplohinVAF: UIButton!
+    @IBOutlet weak var emaillohinVAF: UIButton!//email
     
     @IBAction func vaf_seeElseua(_ sender: UIButton) {
         if sender == eluaVAFbutg {
-            
+            self.navigationController?.pushViewController(VAFTELUATernaler.init(), animated: true)
         }
         
         if sender == okayKnowCAF {
-            
+            okayKnowCAF.isSelected = !okayKnowCAF.isSelected
+            VAFTrendyLoadding.reasures.hasAgreenELUAVAf = okayKnowCAF.isSelected
         }
         
         
-        if sender == toplohinVAF {
+        if sender == quiickQuestllogCAF {
+            if VAFTrendyLoadding.reasures.hasAgreenELUAVAf == false {
+                SVProgressHUD.showInfo(withStatus: "Please read and agree to the terms of use and conditions at first!")
+
+                return
+            }
+            SVProgressHUD.show()
             
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
+
+                SVProgressHUD.showSuccess(withStatus: "Welcome log in!")
+        
+                VAFTrendyLoadding.reasures.ifVAFLogEnter = true
+                
+                VAFTrendyLoadding.reasures.logingVAFIufo["vafmEail"] = "8906785@gmail.com"
+                VAFTrendyLoadding.reasures.logingVAFIufo["vafIJID"] = "\(Int.random(in: 900000...1000000))"
+                VAFTrendyLoadding.reasures.logingVAFIufo["csbpersonHead"] = "holder_mrtx"
+                VAFTrendyLoadding.reasures.cacheVAFHead = UIImage(named: "holder_mrtx")
+                VAFTrendyLoadding.reasures.logingVAFIufo["csbpersonName"] = "Guest"
+                
+                let rootNAvifvc = UINavigationController(rootViewController: VAFMainContainerTernaler())
+                rootNAvifvc.navigationBar.isHidden = true
+                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rootNAvifvc
+               
+            }))
         }
         
         
-        if sender == emaillogCAF {
+        if sender == emaillohinVAF  {
+            
+            if VAFTrendyLoadding.reasures.hasAgreenELUAVAf == false {
+                SVProgressHUD.showInfo(withStatus: "Please read and agree to the terms of use and conditions at first!")
+
+                return
+            }
+            
             self.navigationController?.pushViewController(VAFLogEomaillogTernaler.init(), animated: true)
         }
         
@@ -45,13 +76,13 @@ class VAFLogChoiceTernaler: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        toplohinVAF.layer.cornerRadius = 26
-        toplohinVAF.layer.masksToBounds = true
+        emaillohinVAF.layer.cornerRadius = 26
+        emaillohinVAF.layer.masksToBounds = true
         
-        emaillogCAF.layer.cornerRadius = 26
-        emaillogCAF.layer.masksToBounds = true
-        emaillogCAF.layer.borderColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1).cgColor
-        emaillogCAF.layer.borderWidth = 1.6
+        quiickQuestllogCAF.layer.cornerRadius = 26
+        quiickQuestllogCAF.layer.masksToBounds = true
+        quiickQuestllogCAF.layer.borderColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1).cgColor
+        quiickQuestllogCAF.layer.borderWidth = 1.6
         
         
         

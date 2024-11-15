@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VAFContenReportTernaler" customModule="VinAdfrCloik" customModuleProvider="target">
+            <connections>
+                <outlet property="bafjgoVAF" destination="oMw-5n-uen" id="vps-26-7b4"/>
+                <outlet property="canceDetailYIVAF" destination="fvP-ft-CJw" id="2V7-Ez-v4u"/>
+                <outlet property="resonDetailYIVAF" destination="bhF-RK-q9U" id="amv-eZ-Yxw"/>
+                <outlet property="resonErVAF" destination="erU-KL-xpG" id="nAA-3N-R81"/>
+                <outlet property="resonSAnVAF" destination="i6d-9G-N1b" id="ICL-O6-kev"/>
+                <outlet property="resonSiVAF" destination="dg6-J7-55B" id="Zvr-D4-JbG"/>
+                <outlet property="resonYIVAF" destination="tTt-p8-Wy3" id="eE3-0Z-zoy"/>
+                <outlet property="sureilYIVAF" destination="XfA-xe-OyW" id="AnP-Mv-Vkn"/>
+                <outlet property="view" destination="Lxd-kU-T1M" id="Oc5-lP-gFk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Lxd-kU-T1M">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oMw-5n-uen">
+                    <rect key="frame" x="12" y="229" width="393" height="623"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select the reason for reporting " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfh-mG-Zqn">
+                            <rect key="frame" x="48.333333333333343" y="36" width="296.66666666666663" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="URE-zq-ga4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                            <color key="textColor" red="0.96078431369999995" green="0.82352941180000006" blue="0.62352941179999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTt-p8-Wy3">
+                            <rect key="frame" x="20" y="84" width="162" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="dAY-dH-Frw"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Harassment" backgroundImage="report_bg_">
+                                <color key="titleColor" red="0.37254901960784315" green="0.25882352941176467" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" backgroundImage="report_bg_select">
+                                <color key="titleColor" red="0.85098039215686272" green="0.59999999999999998" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="resongChongse:" destination="-1" eventType="touchUpInside" id="wdo-Yz-fsT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erU-KL-xpG">
+                            <rect key="frame" x="194" y="86" width="179" height="116"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="       Inappropriate language     " backgroundImage="report_bg_">
+                                <color key="titleColor" red="0.37254901959999998" green="0.25882352939999997" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" backgroundImage="report_bg_select">
+                                <color key="titleColor" red="0.85098039219999999" green="0.59999999999999998" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="resongChongse:" destination="-1" eventType="touchUpInside" id="nIT-aR-L5g"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6d-9G-N1b">
+                            <rect key="frame" x="20" y="216" width="161" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="120" id="JiT-qC-i7k"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Harassment" backgroundImage="report_bg_">
+                                <color key="titleColor" red="0.37254901959999998" green="0.25882352939999997" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" backgroundImage="report_bg_select">
+                                <color key="titleColor" red="0.85098039219999999" green="0.59999999999999998" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="resongChongse:" destination="-1" eventType="touchUpInside" id="C35-rG-L7g"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-J7-55B">
+                            <rect key="frame" x="193" y="218" width="178" height="116"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Harassment" backgroundImage="report_bg_">
+                                <color key="titleColor" red="0.37254901959999998" green="0.25882352939999997" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" backgroundImage="report_bg_select">
+                                <color key="titleColor" red="0.85098039219999999" green="0.59999999999999998" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="resongChongse:" destination="-1" eventType="touchUpInside" id="yab-We-r6i"/>
+                            </connections>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The detail reason is ..." translatesAutoresizingMaskIntoConstraints="NO" id="bhF-RK-q9U">
+                            <rect key="frame" x="20" y="356" width="351" height="95"/>
+                            <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="95" id="mqn-8R-aHf"/>
+                            </constraints>
+                            <color key="textColor" red="0.37254901960784315" green="0.25882352941176467" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfA-xe-OyW">
+                            <rect key="frame" x="202.66666666666663" y="486" width="147" height="44"/>
+                            <color key="backgroundColor" red="0.85098039219999999" green="0.59999999999999998" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="00l-x1-gdu"/>
+                                <constraint firstAttribute="width" constant="147" id="aqN-of-rnw"/>
+                                <constraint firstAttribute="height" constant="44" id="tfi-1H-MYx"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Submit Report">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="resongChongse:" destination="-1" eventType="touchUpInside" id="Ehj-va-FIu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvP-ft-CJw">
+                            <rect key="frame" x="43.666666666666657" y="486" width="147" height="44"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="QLi-03-dlN"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="WXd-ek-wNX"/>
+                                <constraint firstAttribute="width" constant="147" id="skv-Fl-YH0"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                <color key="baseForegroundColor" red="0.85098039215686272" green="0.59999999999999998" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="resongChongse:" destination="-1" eventType="touchUpInside" id="sja-L3-ky3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.52156862749999999" green="0.4549019608" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="erU-KL-xpG" firstAttribute="height" secondItem="tTt-p8-Wy3" secondAttribute="height" multiplier="0.966667" id="1Ts-BI-Kc5"/>
+                        <constraint firstItem="XfA-xe-OyW" firstAttribute="top" secondItem="bhF-RK-q9U" secondAttribute="bottom" constant="35" id="2IF-cz-1Zw"/>
+                        <constraint firstItem="tTt-p8-Wy3" firstAttribute="top" secondItem="Zfh-mG-Zqn" secondAttribute="bottom" constant="24" id="3BX-jU-EO5"/>
+                        <constraint firstItem="dg6-J7-55B" firstAttribute="width" secondItem="i6d-9G-N1b" secondAttribute="width" multiplier="1.10494" id="3qP-RS-yNC"/>
+                        <constraint firstItem="fvP-ft-CJw" firstAttribute="centerY" secondItem="XfA-xe-OyW" secondAttribute="centerY" id="Ab3-jM-T4u"/>
+                        <constraint firstItem="dg6-J7-55B" firstAttribute="centerY" secondItem="i6d-9G-N1b" secondAttribute="centerY" id="BiL-xV-9XT"/>
+                        <constraint firstItem="XfA-xe-OyW" firstAttribute="leading" secondItem="oMw-5n-uen" secondAttribute="centerX" constant="6" id="Di9-wT-XkH"/>
+                        <constraint firstItem="Zfh-mG-Zqn" firstAttribute="centerX" secondItem="oMw-5n-uen" secondAttribute="centerX" id="Kkl-eN-Yyt"/>
+                        <constraint firstItem="Zfh-mG-Zqn" firstAttribute="top" secondItem="oMw-5n-uen" secondAttribute="top" constant="36" id="Nhj-90-rQm"/>
+                        <constraint firstItem="XfA-xe-OyW" firstAttribute="leading" secondItem="fvP-ft-CJw" secondAttribute="trailing" constant="12" id="QZt-st-GHY"/>
+                        <constraint firstItem="bhF-RK-q9U" firstAttribute="trailing" secondItem="dg6-J7-55B" secondAttribute="trailing" id="UK8-px-U9z"/>
+                        <constraint firstItem="dg6-J7-55B" firstAttribute="height" secondItem="i6d-9G-N1b" secondAttribute="height" multiplier="0.966667" id="X8F-Tm-pLI"/>
+                        <constraint firstItem="tTt-p8-Wy3" firstAttribute="leading" secondItem="oMw-5n-uen" secondAttribute="leading" constant="20" id="Yzy-KM-Ylq"/>
+                        <constraint firstItem="i6d-9G-N1b" firstAttribute="top" secondItem="tTt-p8-Wy3" secondAttribute="bottom" constant="12" id="gU5-0H-Kcy"/>
+                        <constraint firstItem="erU-KL-xpG" firstAttribute="centerY" secondItem="tTt-p8-Wy3" secondAttribute="centerY" id="kU0-ud-62U"/>
+                        <constraint firstItem="bhF-RK-q9U" firstAttribute="leading" secondItem="i6d-9G-N1b" secondAttribute="leading" id="mlq-kZ-HzG"/>
+                        <constraint firstItem="bhF-RK-q9U" firstAttribute="top" secondItem="i6d-9G-N1b" secondAttribute="bottom" constant="20" id="nDe-dV-LYU"/>
+                        <constraint firstItem="i6d-9G-N1b" firstAttribute="leading" secondItem="tTt-p8-Wy3" secondAttribute="leading" id="nfm-hY-UEe"/>
+                        <constraint firstItem="erU-KL-xpG" firstAttribute="leading" secondItem="tTt-p8-Wy3" secondAttribute="trailing" constant="12" id="qcP-29-bvx"/>
+                        <constraint firstItem="erU-KL-xpG" firstAttribute="width" secondItem="tTt-p8-Wy3" secondAttribute="width" multiplier="1.10494" id="qsk-qs-hfK"/>
+                        <constraint firstAttribute="trailing" secondItem="erU-KL-xpG" secondAttribute="trailing" constant="20" id="tnD-dD-sPc"/>
+                        <constraint firstItem="dg6-J7-55B" firstAttribute="leading" secondItem="i6d-9G-N1b" secondAttribute="trailing" constant="12" id="wJQ-Wb-5oT"/>
+                        <constraint firstAttribute="height" constant="623" id="zIU-Wc-MoV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Tb3-0q-gqd"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="oMw-5n-uen" secondAttribute="bottom" id="KiO-aA-t88"/>
+                <constraint firstItem="oMw-5n-uen" firstAttribute="trailing" secondItem="Tb3-0q-gqd" secondAttribute="trailing" constant="12" id="WZU-IC-RAA"/>
+                <constraint firstItem="oMw-5n-uen" firstAttribute="leading" secondItem="Tb3-0q-gqd" secondAttribute="leading" constant="12" id="u2q-kJ-rb5"/>
+            </constraints>
+            <point key="canvasLocation" x="29.770992366412212" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="report_bg_" width="161" height="120"/>
+        <image name="report_bg_select" width="161" height="120"/>
+    </resources>
+</document>

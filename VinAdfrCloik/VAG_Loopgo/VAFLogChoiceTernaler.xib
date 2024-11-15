@@ -12,10 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VAFLogChoiceTernaler" customModule="VinAdfrCloik" customModuleProvider="target">
             <connections>
                 <outlet property="eluaVAFbutg" destination="oSQ-aP-25Z" id="djv-AC-Ism"/>
-                <outlet property="emaillogCAF" destination="RZE-nx-rHC" id="CGC-NM-1sk"/>
+                <outlet property="emaillohinVAF" destination="eye-AS-kcE" id="S6c-qQ-i8u"/>
                 <outlet property="maskBototmVAFbg" destination="cbP-sA-SJl" id="7sY-KF-zhk"/>
                 <outlet property="okayKnowCAF" destination="cx6-tz-4Wc" id="kcu-vR-vuy"/>
-                <outlet property="toplohinVAF" destination="eye-AS-kcE" id="S6c-qQ-i8u"/>
+                <outlet property="quiickQuestllogCAF" destination="RZE-nx-rHC" id="CGC-NM-1sk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
