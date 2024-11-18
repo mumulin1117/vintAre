@@ -7,15 +7,15 @@
 
 import UIKit
 import SVProgressHUD
-
+enum ZhaoguType {
+    case cloth
+    case bottom
+    case shose
+    case bags
+    case access
+}
 class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-    enum ZhaoguType {
-        case cloth
-        case bottom
-        case shose
-        case bags
-        case access
-    }
+    
     enum SecondType {
         case newest
         case Trendind

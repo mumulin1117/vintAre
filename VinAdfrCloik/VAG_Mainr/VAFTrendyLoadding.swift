@@ -56,7 +56,7 @@ class VAFTrendyLoadding: NSObject {
         logingVAFIufo["vafBornDayh"] = "1997-08-22"
         logingVAFIufo["vafsay"] = "Nothing to say!"
        
-        logingVAFIufo["PayidCoin"] = "100"
+        logingVAFIufo["PayidCoin"] = "20"
        
         cacheVAFHead = UIImage(named:"holder_mrtx")
         
