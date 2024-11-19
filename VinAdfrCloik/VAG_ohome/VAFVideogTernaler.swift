@@ -2,7 +2,7 @@
 //  VAFVideogTernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/15.
+//  Created by VinAdfrCloik on 2024/11/15.
 //
 
 import UIKit
@@ -28,7 +28,7 @@ class VAFVideogTernaler: UIViewController {
             mediaType: .video,
             position: .unspecified).devices
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5.5, execute: DispatchWorkItem(block: {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3, execute: DispatchWorkItem(block: {
             self.sesrgREZUion.stopRunning()
             self.dismiss(animated: true)
             SVProgressHUD.showInfo(withStatus: "Sorry, the user you dialed is not online")
@@ -38,7 +38,8 @@ class VAFVideogTernaler: UIViewController {
         AVCaptureDevice.requestAccess(for: .video) { granted in
             
         }
-        
+        minVAFimgv.layer.cornerRadius = 12
+        minVAFimgv.layer.masksToBounds = true
         
         AVAudioSession.sharedInstance().requestRecordPermission { (allowed) in
             
@@ -78,19 +79,27 @@ class VAFVideogTernaler: UIViewController {
         if sender.tag == 90 {
             
             
-            let alert = SCLAlertView()
-            
-            
-            alert.addButton("Block") {
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false,
+                circleBackgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1),
+                contentViewColor:UIColor(red: 133/255, green: 116/255, blue: 88/255, alpha: 1),
+                
+                titleColor:UIColor.white
+            )
+            let alert = SCLAlertView(appearance: appearance)
+            alert.iconTintColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)
+            alert.addButton("Block",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
                 VAFTrendyLoadding.reasures.bloackVAFUser(igFor: self.uhsData)
-                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true)
             }
-            alert.addButton("Report") {
+            alert.addButton("Report",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
                 let acfreport = VAFContenReportTernaler.init()
                 acfreport.modalPresentationStyle = .overCurrentContext
                 self.present(acfreport, animated: true)
             }
-           
+            alert.addButton("Cancel",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
+                
+            }
           
             alert.showInfo("Report or Block", subTitle: "If you find this user's behavior inappropriate or offensive, you can choose to report them to us for review or block them to prevent further interaction.")
             

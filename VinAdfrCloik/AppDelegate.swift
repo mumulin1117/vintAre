@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/13.
+//  Created by VinAdfrCloik on 2024/11/13.
 //
 
 import UIKit

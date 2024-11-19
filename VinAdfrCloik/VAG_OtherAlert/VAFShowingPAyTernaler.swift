@@ -2,7 +2,7 @@
 //  VAFShowingPAyTernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/15.
+//  Created by VinAdfrCloik on 2024/11/15.
 //
 
 import UIKit
@@ -39,6 +39,13 @@ class VAFShowingPAyTernaler: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let vingfCoint =  VAFTrendyLoadding.reasures.logingVAFIufo["PayidCoin"] ?? "0"
+            
+        
+        self.myblanveLBlVAF.text = "\(vingfCoint)"
+        
+        
         mineCoinbgVAGbg.layer.cornerRadius = 24
 //        mineCoinbgVAGbg.layer.masksToBounds = true
         

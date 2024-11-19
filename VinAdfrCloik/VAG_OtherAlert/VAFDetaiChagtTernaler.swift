@@ -2,7 +2,7 @@
 //  VAFDetaiChagtTernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/15.
+//  Created by VinAdfrCloik on 2024/11/15.
 //
 
 import UIKit
@@ -11,7 +11,9 @@ import SCLAlertView
 
 /// chat详情
 class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+    @IBOutlet weak var lorationTou: UIImageView!
     
+    @IBOutlet weak var namertVAF: UILabel!
     var uhsData = Dictionary<String,String>()
     
     var recordingChatDicVAF: Array<(Int,String,String)> = Array<(Int,String,String)>()
@@ -54,6 +56,12 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
         someVAfDataView.dataSource = self
         someVAfDataView.delegate = self
         
+        lorationTou.image = UIImage(named:uhsData["vafHeada"] ?? "")
+        namertVAF.text = uhsData["vafniame"]
+        
+        lorationTou.isUserInteractionEnabled = true
+        lorationTou.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(usercentrGoonVAF)))
+        
     }
     
     @IBOutlet weak var someVAfDataView: UITableView!
@@ -66,7 +74,7 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
         
         if sender.tag == 110 {
             guard let contetntt = inouterCAF.text,contetntt.count > 0 else {
-                SVProgressHUD.showInfo(withStatus: "Your comment content cannot be empty!")
+                SVProgressHUD.showInfo(withStatus: "Your send message cannot be empty!")
                 return
             }
             
@@ -93,19 +101,28 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
         if sender.tag == 90 {
             
 
-            let alert = SCLAlertView()
-            
-            
-            alert.addButton("Block") {
+           
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false,
+                circleBackgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1),
+                contentViewColor:UIColor(red: 133/255, green: 116/255, blue: 88/255, alpha: 1),
+                
+                titleColor:UIColor.white
+            )
+            let alert = SCLAlertView(appearance: appearance)
+            alert.iconTintColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)
+            alert.addButton("Block",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
                 VAFTrendyLoadding.reasures.bloackVAFUser(igFor: self.uhsData)
                 self.navigationController?.popViewController(animated: true)
             }
-            alert.addButton("Report") {
+            alert.addButton("Report",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
                 let acfreport = VAFContenReportTernaler.init()
                 acfreport.modalPresentationStyle = .overCurrentContext
                 self.present(acfreport, animated: true)
             }
-           
+            alert.addButton("Cancel",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
+                
+            }
           
             alert.showInfo("Report or Block", subTitle: "If you find this user's behavior inappropriate or offensive, you can choose to report them to us for review or block them to prevent further interaction.")
             
@@ -140,7 +157,13 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
     }
 
     
-  
+    @objc func usercentrGoonVAF()  {
+       
+        let datefet = uhsData
+        
+        self.navigationController?.pushViewController(VAFhiscenterTernaer.init(ingf: datefet), animated: true)
+        
+     }
 }
 
 

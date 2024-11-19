@@ -11,12 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VAFDetailDyymstTernaler" customModule="VinAdfrCloik" customModuleProvider="target">
             <connections>
+                <outlet property="alertgf" destination="xMe-Cw-k8g" id="CyY-mA-GNS"/>
                 <outlet property="collectiomertVAF" destination="yXf-IK-DKS" id="0Kj-hC-kL3"/>
                 <outlet property="lorationTou" destination="qax-fD-hke" id="aRZ-A1-Ri6"/>
                 <outlet property="namertVAF" destination="pXq-6p-Zf5" id="SKw-iu-jj3"/>
                 <outlet property="picbgViewVAF" destination="xTN-Le-0Le" id="L5S-da-qUI"/>
                 <outlet property="topimageVieOWNr" destination="5cp-0Y-EF8" id="M2N-4o-l6P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wavtageDescLblVAF" destination="0fe-R5-WO6" id="viU-sP-yzZ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

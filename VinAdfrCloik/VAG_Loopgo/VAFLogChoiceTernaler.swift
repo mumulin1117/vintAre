@@ -2,7 +2,7 @@
 //  VAFLogChoiceTernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/13.
+//  Created by VinAdfrCloik on 2024/11/13.
 //
 
 import UIKit
@@ -73,6 +73,28 @@ class VAFLogChoiceTernaler: UIViewController {
         maskBototmVAFbg.layer.cornerRadius = 20
         maskBototmVAFbg.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        if VAFTrendyLoadding.reasures.hasSShowELUAVAf == false && VAFTrendyLoadding.reasures.hasAgreenELUAVAf == false{
+            
+            let comvjrh = VAFTELUATernaler.init()
+//            comvjrh.OKAYAgBIBAosure = {
+//                self.okayKnowCAF.isSelected = true
+//            }
+            
+            self.navigationController?.pushViewController(comvjrh, animated: true)
+            
+           
+            VAFTrendyLoadding.reasures.hasSShowELUAVAf = true
+        }
+        
+        okayKnowCAF.isSelected = VAFTrendyLoadding.reasures.hasAgreenELUAVAf
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

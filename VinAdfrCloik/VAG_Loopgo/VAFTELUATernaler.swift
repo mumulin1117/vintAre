@@ -2,13 +2,13 @@
 //  VAFTELUATernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/14.
+//  Created by VinAdfrCloik on 2024/11/14.
 //
 
 import UIKit
 
 class VAFTELUATernaler: UIViewController {
-    
+  
     var noingTyper:Int = 0
 
     @IBOutlet weak var mintTitleVAF: UILabel!
@@ -125,6 +125,9 @@ By using the VintAre application, you acknowledge that you have read, understood
         
         
         if sender.tag == 11 {
+            VAFTrendyLoadding.reasures.hasAgreenELUAVAf = true
+          
+            
             self.navigationController?.popViewController(animated: true)
         }
         
@@ -145,6 +148,10 @@ By using the VintAre application, you acknowledge that you have read, understood
         if sender.tag == 13 {
             let termf = VAFTELUATernaler.init()
             termf.noingTyper = 2
+            if let priview = termf.view.viewWithTag(12), let termview = termf.view.viewWithTag(13){
+                priview.isHidden = true
+                termview.isHidden = true
+            }
             self.navigationController?.pushViewController(termf, animated: true)
         }
         

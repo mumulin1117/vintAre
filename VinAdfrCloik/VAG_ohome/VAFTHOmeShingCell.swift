@@ -2,7 +2,7 @@
 //  VAFTHOmeShingCell.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/14.
+//  Created by VinAdfrCloik on 2024/11/14.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class VAFTHOmeShingCell: UICollectionViewCell {
     var lorationTou = UIImageView.init()
     
 
-     var atttudeVAF = UIImageView.init(image: UIImage.init(named: "vafIo_emptylike"), highlightedImage: UIImage.init(named: "vafIo_like"))
+     var atttudeVAF =  UIButton.init()
     private var commenrtVAF = UIImageView.init(image: UIImage.init(named: "vaf_commenrt"))
    
     
@@ -25,6 +25,10 @@ class VAFTHOmeShingCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        atttudeVAF.setImage(UIImage.init(named: "vafIo_emptylike"), for: .normal)
+        atttudeVAF.setImage(UIImage.init(named: "vafIo_like"), for: .selected)
+        atttudeVAF.isUserInteractionEnabled = false
+        
         
         lorationTou.layer.cornerRadius = 17
         lorationTou.layer.masksToBounds = true

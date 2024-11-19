@@ -2,7 +2,7 @@
 //  VAFUploadCoverTernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/18.
+//  Created by VinAdfrCloik on 2024/11/18.
 //
 
 import UIKit
@@ -60,15 +60,22 @@ class VAFUploadCoverTernaler: UIViewController,UINavigationControllerDelegate, U
             self.present(self.minePickCSBVC!, animated: true, completion: nil)
             return
         }else {
-            let alert = SCLAlertView()
-        
-            alert.addButton("To settings") {
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false,
+                circleBackgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1),
+                contentViewColor:UIColor(red: 133/255, green: 116/255, blue: 88/255, alpha: 1),
+                
+                titleColor:UIColor.white
+            )
+            let alert = SCLAlertView(appearance: appearance)
+            alert.iconTintColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)
+            alert.addButton("To settings",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
                 guard let url = URL(string: UIApplication.openSettingsURLString) else {
                             return
                         }
                         UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
-            alert.addButton("Cancel") {
+            alert.addButton("Cancel",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
                 
             }
            

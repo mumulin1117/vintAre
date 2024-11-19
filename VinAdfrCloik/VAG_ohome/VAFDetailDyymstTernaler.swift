@@ -2,7 +2,7 @@
 //  VAFDetailDyymstTernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/15.
+//  Created by VinAdfrCloik on 2024/11/15.
 //
 
 import UIKit
@@ -20,6 +20,7 @@ extension Double {
 
 class VAFDetailDyymstTernaler: UIViewController {
     
+    @IBOutlet weak var wavtageDescLblVAF: UILabel!
     var uhsData = Dictionary<String,String>()
     
     @IBOutlet weak var lorationTou: UIImageView!
@@ -53,10 +54,24 @@ class VAFDetailDyymstTernaler: UIViewController {
         picbgViewVAF.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
     }
     
-    
+    @objc func usercentrGoonVAF()  {
+       
+        let datefet = uhsData
+        
+        self.navigationController?.pushViewController(VAFhiscenterTernaer.init(ingf: datefet), animated: true)
+        
+     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        lorationTou.isUserInteractionEnabled = true
+        lorationTou.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(usercentrGoonVAF)))
+                                         
+        if uhsData["vafIJID"] == VAFTrendyLoadding.reasures.logingVAFIufo["vafIJID"]{
+            self.videotVAF.isHidden  = true
+            alertgf.isHidden = true
+            atttudeVAF.isHidden = true
+        }
         AIButtonhVAF.addTarget(self, action: #selector(jubaTouchBeginVAf(vafsender:)), for: .touchUpInside)
         videotVAF.addTarget(self, action: #selector(jubaTouchBeginVAf(vafsender:)), for: .touchUpInside)
         atttudeVAF.addTarget(self, action: #selector(jubaTouchBeginVAf(vafsender:)), for: .touchUpInside)
@@ -91,8 +106,8 @@ class VAFDetailDyymstTernaler: UIViewController {
         imgShongeVAFFour.image = UIImage(named:mingshonh[3])
         collectiomertVAF.text = "Collected in " +  (uhsData["vafshowYear"] ?? "")
         
-         
         
+        wavtageDescLblVAF.text =  (uhsData["vafshowBrief"] ?? "")
         
         imgShongeVAFTWO.layer.masksToBounds = true
         imgShongeVAFTWO.contentMode = .scaleToFill
@@ -202,7 +217,8 @@ class VAFDetailDyymstTernaler: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 
-
+    @IBOutlet weak var alertgf: UIButton!
+    
     @IBAction func backVAF(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
         

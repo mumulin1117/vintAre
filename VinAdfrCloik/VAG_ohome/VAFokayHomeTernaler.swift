@@ -2,7 +2,7 @@
 //  VAFokayHomeTernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/14.
+//  Created by VinAdfrCloik on 2024/11/14.
 //
 
 import UIKit
@@ -69,10 +69,12 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let kaobit = collectionView.dequeueReusableCell(withReuseIdentifier: "VAFTHOmeShingCellID", for: indexPath) as! VAFTHOmeShingCell
         let uhsData = self.shoingZhuoGuDataVAF[indexPath.row]
-        
+        kaobit.lorationTou.isUserInteractionEnabled = true
+        kaobit.lorationTou.tag = indexPath.row
+        kaobit.lorationTou.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(usercentrGoonVAF(tapgVAF:))))
         kaobit.lorationTou.image = UIImage(named:uhsData["vafHeada"] ?? "")
         kaobit.namertVAF.text = uhsData["vafniame"]
-        kaobit.atttudeVAF.isHighlighted = ((uhsData["iFlikeThisDYM"] ?? "0") == "1")
+        kaobit.atttudeVAF.isSelected = ((uhsData["iFlikeThisDYM"] ?? "0") == "1")
         
         let mingshonh = (uhsData["vafshowPic"] ?? "").components(separatedBy: ",")
         
@@ -83,6 +85,16 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
         kaobit.collectiomertVAF.text = "Collected in " +  (uhsData["vafshowYear"] ?? "")
         
         return kaobit
+    }
+    
+    
+   @objc func usercentrGoonVAF(tapgVAF:UITapGestureRecognizer)  {
+       let comnnneView = tapgVAF.view?.tag ?? 0
+       
+       let datefet = self.shoingZhuoGuDataVAF[comnnneView]
+       
+       self.navigationController?.pushViewController(VAFhiscenterTernaer.init(ingf: datefet), animated: true)
+       
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let defDatr = self.shoingZhuoGuDataVAF[indexPath.row]

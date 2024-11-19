@@ -2,7 +2,7 @@
 //  VAFAIPAyTernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/15.
+//  Created by VinAdfrCloik on 2024/11/15.
 //
 
 import UIKit

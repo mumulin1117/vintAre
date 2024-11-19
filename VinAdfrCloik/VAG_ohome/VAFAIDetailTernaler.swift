@@ -2,7 +2,7 @@
 //  VAFAIDetailTernaler.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/11/15.
+//  Created by VinAdfrCloik on 2024/11/15.
 //
 
 import UIKit
@@ -36,7 +36,7 @@ class VAFAIDetailTernaler: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
             SVProgressHUD.showSuccess(withStatus: "The result is out!")
             
-            self.resulAiVAF.text = "Here are the styling options generated based on this vintage item：\n\n" + (self.uhsData["AiREsult"] ?? "")
+            self.resulAiVAF.text = "Here are the styling options generated based on this vintage item：\n\n" + (self.uhsData["AiREsult"] ?? "") +  (self.uhsData["vafDYMAIComment"] ?? "")
         }))
         
         

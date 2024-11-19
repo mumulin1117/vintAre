@@ -113,21 +113,6 @@
                         <constraint firstItem="Olz-S2-UMu" firstAttribute="leading" secondItem="Hdg-UJ-246" secondAttribute="leading" id="yrY-OK-fhZ"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8s-F6-d03">
-                    <rect key="frame" x="16" y="752" width="358" height="45"/>
-                    <color key="backgroundColor" red="0.85098039215686272" green="0.59999999999999998" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="45" id="8Xg-db-Evm"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="Recharge">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="starterBVAFPay:" destination="-1" eventType="touchUpInside" id="niM-Dt-ElD"/>
-                    </connections>
-                </button>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eU0-5o-gVm">
                     <rect key="frame" x="0.0" y="247" width="390" height="597"/>
                     <subviews>
@@ -398,6 +383,21 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="ySv-7q-rV2"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="GtB-Z7-zRk"/>
                 </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8s-F6-d03">
+                    <rect key="frame" x="16" y="752" width="358" height="45"/>
+                    <color key="backgroundColor" red="0.85098039215686272" green="0.59999999999999998" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="8Xg-db-Evm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Recharge">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="starterBVAFPay:" destination="-1" eventType="touchUpInside" id="niM-Dt-ElD"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>

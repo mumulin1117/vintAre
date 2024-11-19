@@ -35,7 +35,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5T-Sj-chi">
-                    <rect key="frame" x="53" y="486" width="214" height="58"/>
+                    <rect key="frame" x="53" y="496" width="214" height="58"/>
                     <subviews>
                         <button opaque="NO" tag="400" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgh-SC-O3y">
                             <rect key="frame" x="86" y="8" width="42" height="42"/>
@@ -98,7 +98,7 @@
                 <constraint firstItem="BGs-9T-GYK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OvP-ih-Nys"/>
                 <constraint firstItem="hja-4s-kSY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Q8I-fd-q4g"/>
                 <constraint firstItem="hja-4s-kSY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Upa-tG-dtk"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="g5T-Sj-chi" secondAttribute="bottom" constant="24" id="WQY-uw-rs8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="g5T-Sj-chi" secondAttribute="bottom" constant="14" id="WQY-uw-rs8"/>
                 <constraint firstItem="g5T-Sj-chi" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c7Z-9C-WNN"/>
                 <constraint firstItem="BGs-9T-GYK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="on5-ca-MW9"/>
                 <constraint firstAttribute="bottom" secondItem="BGs-9T-GYK" secondAttribute="bottom" id="tQK-xu-Xzl"/>

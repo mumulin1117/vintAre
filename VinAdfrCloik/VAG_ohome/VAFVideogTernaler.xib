@@ -46,6 +46,9 @@
                     <state key="normal" image="vaf_vidddeo">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="sendmcommentVAF:" destination="-1" eventType="touchUpInside" id="xfI-Gc-wYV"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3U-16-eAe">
                     <rect key="frame" x="65" y="598" width="61" height="61"/>
@@ -59,6 +62,9 @@
                     <state key="normal" image="vaf_swiiich">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="sendmcommentVAF:" destination="-1" eventType="touchUpInside" id="7MV-BV-hXl"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXc-nQ-U0N">
                     <rect key="frame" x="166" y="598" width="61" height="61"/>
@@ -72,6 +78,9 @@
                     <state key="normal" image="vaf_cvoice">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="sendmcommentVAF:" destination="-1" eventType="touchUpInside" id="StZ-Ge-ZVv"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9k4-dK-U7V">
                     <rect key="frame" x="166" y="691" width="61" height="61"/>
@@ -85,6 +94,9 @@
                     <state key="normal" image="guaduan_VAF">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="sendmcommentVAF:" destination="-1" eventType="touchUpInside" id="WQD-m7-ZoS"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRI-M5-Z0Y">
                     <rect key="frame" x="174.66666666666666" y="67" width="43.666666666666657" height="24"/>

@@ -13,6 +13,8 @@
             <connections>
                 <outlet property="bgCommentVAF" destination="LDp-N8-FkV" id="pD9-V0-Xc5"/>
                 <outlet property="inouterCAF" destination="N8W-5F-0uf" id="amg-Eb-TO0"/>
+                <outlet property="lorationTou" destination="bTz-35-FCL" id="igh-7U-zHX"/>
+                <outlet property="namertVAF" destination="egu-hM-RWp" id="O7A-wT-XfS"/>
                 <outlet property="someVAfDataView" destination="zQ6-nJ-Ojx" id="fOB-PU-Lzl"/>
                 <outlet property="view" destination="VWY-3f-Ozt" id="EFH-9a-Txb"/>
             </connections>
