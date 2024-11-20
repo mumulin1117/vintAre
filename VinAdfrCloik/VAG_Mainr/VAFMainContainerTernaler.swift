@@ -47,10 +47,12 @@ class VAFMainContainerTernaler: UIViewController,UICollectionViewDelegate,UIColl
         }
         if stirnNewVAF.isEmpty == false {
             lajik.contentView.addSubview(sonvcnow.view)
+            sonvcnow.view.frame = UIScreen.main.bounds
             sonvcnow.didMove(toParent: self)
             return lajik
         }
         lajik.contentView.addSubview(sonvcnow.view)
+        sonvcnow.view.frame = UIScreen.main.bounds
         sonvcnow.didMove(toParent: self)
         return lajik
     }

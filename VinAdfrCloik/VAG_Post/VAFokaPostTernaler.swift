@@ -48,7 +48,16 @@ class VAFokaPostTernaler: UIViewController {
         
         nextVAF.layer.cornerRadius = 16
         nextVAF.layer.masksToBounds = true
-      
+        
+        var bootomMarginh = -58 - self.view.safeAreaInsets.bottom - 25
+        if UIScreen.main.bounds.height > 667 {
+            bootomMarginh  = -58 - self.view.safeAreaInsets.bottom - 73
+        }
+        nextVAF.snp.makeConstraints { make in
+            make.leading.trailing.equalToSuperview().inset(13)
+            make.height.equalTo(48)
+            make.bottom.equalToSuperview().offset( bootomMarginh)
+        }
 
         clothVAF.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changertNowingChongsedItemVAF(tapgiVAF:))))
         bottomVAF.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changertNowingChongsedItemVAF(tapgiVAF:))))
