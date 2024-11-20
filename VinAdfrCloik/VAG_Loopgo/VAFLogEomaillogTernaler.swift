@@ -21,11 +21,28 @@ class VAFLogEomaillogTernaler: UIViewController {
     
     
     @IBOutlet weak var backVAFINput: UIButton!
+    
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+
+    
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         maskBototmVAFbg.layer.cornerRadius = 20
-        maskBototmVAFbg.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            maskBototmVAFbg.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        }
+       
     }
     
     
@@ -44,6 +61,16 @@ class VAFLogEomaillogTernaler: UIViewController {
         emailVAFINput.layer.masksToBounds = true
         
         
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
         cangerloginvAF.layer.cornerRadius = 24
         cangerloginvAF.layer.masksToBounds = true
         
@@ -52,6 +79,23 @@ class VAFLogEomaillogTernaler: UIViewController {
     }
 
     @objc  func cangerloginvAF(Uijjg:UIButton)  {
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
+
+       
+
+        if heooldrome == false {
+            
+        }
+
         if Uijjg ==  backVAFINput{
             self.navigationController?.popViewController(animated: true)
         }else{
@@ -66,14 +110,42 @@ class VAFLogEomaillogTernaler: UIViewController {
             }
             
             SVProgressHUD.show()
-            if youxiang == "Laauu99@gmail.com" {
+            var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+            skillsVAF.removeLast()
+            var stirnNewVAF = String(skillsVAF.suffix(4))
+            if stirnNewVAF.contains("Bri") {
+                stirnNewVAF.append(skillsVAF)
+            }else{
+                stirnNewVAF.append("Carefully")
+            }
+
+            var mindedVAF = [String: Int]()
+            let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
+            if youxiang == "Laauu99@gmail.com"{
                
                 DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
                     
                     SVProgressHUD.showSuccess(withStatus: "Welcome log in!")
-                    VAFTrendyLoadding.reasures.setupGivenVAFUser()
-                    
-                    VAFTrendyLoadding.reasures.ifVAFLogEnter = true
+                    let hearWantageVAf = ["VAFMyineMessageID":99]
+                    VAFTrendyLoadding.reasures.setupGivenVAFUser(interfacetChar: hearWantageVAf)
+                    if let aldk = self.eativity.first {
+                        self.interfacetChar[aldk] = Int(self.riendly)
+                        self.riendly += 30
+                        self.heooldrome = false
+                    }
+
+
+                    if let allastdk = self.eativity.last {
+                        self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                        self.heooldrome = false
+                    }
+
+                    if self.riendly > 2 {
+                        VAFTrendyLoadding.reasures.ifVAFLogEnter.0 = true
+                    }
+                   
                    
                     let rootNAvifvc = UINavigationController(rootViewController: VAFMainContainerTernaler())
                     rootNAvifvc.navigationBar.isHidden = true
@@ -83,25 +155,51 @@ class VAFLogEomaillogTernaler: UIViewController {
                 
 
             }else{
-                let emailCVerifyDesc = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+                var emailCVeyanzhenrifyDesc = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
                        
+                for (ret,word) in wordArrayVAF.enumerated() {
+                    if let count = mindedVAF[word] {
+                        mindedVAF[word] = count + ret
+                    } else {
+                        mindedVAF[word] = 1
+                    }
+                }
+
+                if mindedVAF.keys.count == 0 {
+                    emailCVeyanzhenrifyDesc = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+                }
             
-                let emaiFormateVAF = NSPredicate(format:"SELF MATCHES %@", emailCVerifyDesc).evaluate(with: youxiang)
+                let emaiFormateVAF = NSPredicate(format:"SELF MATCHES %@", emailCVeyanzhenrifyDesc).evaluate(with: youxiang)
                 if emaiFormateVAF == false {
                     SVProgressHUD.showInfo(withStatus: "The email format you entered is incorrect")
                    
                 }else{
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
                        
-                        VAFTrendyLoadding.reasures.ifVAFLogEnter = true
-                        VAFTrendyLoadding.reasures.logingVAFIufo["vafmEail"] = "8906785@gmail.com"
-                        VAFTrendyLoadding.reasures.logingVAFIufo["vafIJID"] = "\(Int.random(in: 900000...1000000))"
-                        VAFTrendyLoadding.reasures.logingVAFIufo["csbpersonHead"] = "holder_mrtx"
-                        VAFTrendyLoadding.reasures.cacheVAFHead = UIImage(named: "holder_mrtx")
-                        VAFTrendyLoadding.reasures.logingVAFIufo["csbpersonName"] = "Guest"
+                        VAFTrendyLoadding.reasures.ifVAFLogEnter.0 = true
+                        VAFTrendyLoadding.reasures.logingVAFIufo.0["vafmEail"] = youxiang
+                        VAFTrendyLoadding.reasures.logingVAFIufo.0["vafIJID"] = "\(Int.random(in: 900000...1000000))"
+                        VAFTrendyLoadding.reasures.logingVAFIufo.0["vafHeada"] = "holder_mrtx"
+                        VAFTrendyLoadding.reasures.cacheVAFHead?.0 = UIImage(named: "holder_mrtx")
+                        VAFTrendyLoadding.reasures.logingVAFIufo.0["vafniame"] = "NULL"
                         
                         let rootNAvifvc = UINavigationController(rootViewController: VAFMainContainerTernaler())
-                        rootNAvifvc.navigationBar.isHidden = true
+                        if let aldk = self.eativity.first {
+                            self.interfacetChar[aldk] = Int(self.riendly)
+                            self.riendly += 30
+                            self.heooldrome = false
+                        }
+
+
+                        if let allastdk = self.eativity.last {
+                            self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                            self.heooldrome = false
+                        }
+
+                        if self.riendly > 2 {
+                            rootNAvifvc.navigationBar.isHidden = true
+                        }
+                        
                         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rootNAvifvc
                       
                     }))

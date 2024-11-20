@@ -7,9 +7,19 @@
 
 import UIKit
 import SVProgressHUD
+public class VAFPOpUiView: UIView {
+    
+}
 
 /// 举报
 class VAFContenReportTernaler: UIViewController {
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+    
+    
 
     @IBOutlet weak var resonYIVAF: UIButton!
     
@@ -30,8 +40,19 @@ class VAFContenReportTernaler: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        bafjgoVAF.layer.cornerRadius = 24
-        bafjgoVAF.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        
+        
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            bafjgoVAF.layer.cornerRadius = 24
+            bafjgoVAF.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        }
+        
+      
         
         
     }
@@ -70,6 +91,7 @@ class VAFContenReportTernaler: UIViewController {
             resonErVAF.isSelected = false
             resonSAnVAF.isSelected = false
             resonSiVAF.isSelected = false
+            return
         }
         
         if sender == resonErVAF {
@@ -77,6 +99,7 @@ class VAFContenReportTernaler: UIViewController {
             resonErVAF.isSelected = true
             resonSAnVAF.isSelected = false
             resonSiVAF.isSelected = false
+            return
         }
         
         if sender == resonSAnVAF {
@@ -84,6 +107,7 @@ class VAFContenReportTernaler: UIViewController {
             resonErVAF.isSelected = false
             resonSAnVAF.isSelected = true
             resonSiVAF.isSelected = false
+            return
         }
         
         if sender == resonSiVAF {
@@ -91,19 +115,64 @@ class VAFContenReportTernaler: UIViewController {
             resonErVAF.isSelected = false
             resonSAnVAF.isSelected = false
             resonSiVAF.isSelected = true
+            return
         }
         
         if sender == canceDetailYIVAF {
             self.dismiss(animated: true)
+            return
         }
+        
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+            return
+        }
+        
+        
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
+        
+       
+        
         
         if sender == sureilYIVAF {
             SVProgressHUD.show()
+            if let aldk = eativity.first {
+                interfacetChar[aldk] = Int(riendly)
+                riendly += 30
+                heooldrome = false
+            }
             
+            
+           
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
                 SVProgressHUD.showSuccess(withStatus: "Thank you for your supervision. We will verify and handle it as soon as possible!")
+                if let allastdk = self.eativity.last {
+                    self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                    self.heooldrome = false
+                }
                 
-                self.dismiss(animated: true)
+               
+                
+                if self.heooldrome == false && self.riendly > 2{
+                    self.dismiss(animated: true)
+                }
+                
             }))
         }
         

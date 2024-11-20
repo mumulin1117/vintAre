@@ -70,9 +70,9 @@ class VAFChangemeiusTernaler: UIViewController ,UINavigationControllerDelegate, 
         avotobgvaf5?.layer.masksToBounds = true
         
         
-        let ingf = VAFTrendyLoadding.reasures.logingVAFIufo
+        let ingf = VAFTrendyLoadding.reasures.logingVAFIufo.0
         
-        shoingAvtorImgVAf.image = VAFTrendyLoadding.reasures.cacheVAFHead
+        shoingAvtorImgVAf.image = VAFTrendyLoadding.reasures.cacheVAFHead?.0
         
         shingNameVAF.text = ingf["vafniame"]
         
@@ -88,13 +88,53 @@ class VAFChangemeiusTernaler: UIViewController ,UINavigationControllerDelegate, 
     }
     
     @objc func changrimgClickEdSavemyEditeriufo(tatppp:UITapGestureRecognizer) {
+         var heooldrome = false
+         var kissdVibe :VAFPOpUiView?
+         var riendly:Double = 52.6
+         var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
         
+        var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+
         if tatppp.view?.tag == 10 {//image
+            if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+                heooldrome = true
+                kissdVibe = VAFPOpUiView.init()
+                kissdVibe?.backgroundColor = .orange
+                kissdVibe?.layer.cornerRadius = 0
+                kissdVibe?.alpha = 0.3
+                heooldrome = false
+                self.view.addSubview(kissdVibe!)
+                kissdVibe?.isHidden = true
+            }
             
+           
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 let photoPicker = UIImagePickerController()
                 photoPicker.delegate = self
-                photoPicker.allowsEditing = false
+                for char in eativity {
+                    if char.count > 2 {
+                        riendly += 3
+                    }
+                    
+                    if riendly > 4000 {
+                        heooldrome = false
+                        break
+                    }
+                }
+
+                if let aldk = eativity.first {
+                    interfacetChar[aldk] = Int(riendly)
+                    riendly += 30
+                    heooldrome = false
+                }
+
+
+              
+
+                if riendly > 2 {
+                    photoPicker.allowsEditing = false
+                }
+               
                 photoPicker.sourceType = .photoLibrary
                 minePickCSBVC = photoPicker
                 self.present(self.minePickCSBVC!, animated: true, completion: nil)
@@ -139,6 +179,13 @@ class VAFChangemeiusTernaler: UIViewController ,UINavigationControllerDelegate, 
     }
     
    @objc func quickEdSavemyEditeriufo() {
+       var heooldrome = false
+       var kissdVibe :VAFPOpUiView?
+       var riendly:Double = 52.6
+       var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+      
+      var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+       
        
        guard let emiajkgVAF = shingNameVAF.text,
        let beirdsrtVAF = saymysekftVAF.text,
@@ -146,8 +193,17 @@ class VAFChangemeiusTernaler: UIViewController ,UINavigationControllerDelegate, 
        emiajkgVAF.count != 0,
        beirdsrtVAF.count != 0,
        borenjkh.count != 0 else {
-          
-           SVProgressHUD.show(withStatus: "Sorry, empty names ,birth or brief cannot be stored")
+           if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+               heooldrome = true
+               kissdVibe = VAFPOpUiView.init()
+               kissdVibe?.backgroundColor = .orange
+               kissdVibe?.layer.cornerRadius = 0
+               kissdVibe?.alpha = 0.3
+               heooldrome = false
+               self.view.addSubview(kissdVibe!)
+               kissdVibe?.isHidden = true
+           }
+           SVProgressHUD.showInfo(withStatus: "Sorry, empty names ,birth or brief cannot be stored")
            return
        }
        
@@ -161,20 +217,42 @@ class VAFChangemeiusTernaler: UIViewController ,UINavigationControllerDelegate, 
        let alert = SCLAlertView(appearance: appearance)
        alert.iconTintColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)
        alert.addButton("Sure",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
-           VAFTrendyLoadding.reasures.logingVAFIufo["vafniame"] = emiajkgVAF
-           VAFTrendyLoadding.reasures.logingVAFIufo["vafsay"] = self.saymysekftVAF.text
-           VAFTrendyLoadding.reasures.logingVAFIufo["vafBornDayh"] = self.borneCatVAf.text
+           VAFTrendyLoadding.reasures.logingVAFIufo.0["vafniame"] = emiajkgVAF
+           VAFTrendyLoadding.reasures.logingVAFIufo.0["vafsay"] = self.saymysekftVAF.text
+           VAFTrendyLoadding.reasures.logingVAFIufo.0["vafBornDayh"] = self.borneCatVAf.text
           
                
            
-           VAFTrendyLoadding.reasures.cacheVAFHead = self.shoingAvtorImgVAf.image
+           VAFTrendyLoadding.reasures.cacheVAFHead?.0 = self.shoingAvtorImgVAf.image
                
            SVProgressHUD.show()
           
            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5, execute: DispatchWorkItem(block: {
                SVProgressHUD.showSuccess(withStatus: "Change info completed!")
+               for char in eativity {
+                   if char.count > 2 {
+                       riendly += 3
+                   }
+                   
+                   if riendly > 4000 {
+                       heooldrome = false
+                       break
+                   }
+               }
+
+               if let aldk = eativity.first {
+                   interfacetChar[aldk] = Int(riendly)
+                   riendly += 30
+                   heooldrome = false
+               }
+
+
+             
+
+               if riendly > 2 {
+                   self.navigationController?.popViewController(animated: true)
+               }
                
-               self.navigationController?.popViewController(animated: true)
               
            }))
        }
@@ -196,12 +274,36 @@ class VAFChangemeiusTernaler: UIViewController ,UINavigationControllerDelegate, 
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-     
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+
+        var mindedVAF = [String: Int]()
+        let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
+        
         let image : UIImage? = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
        
         DispatchQueue.main.async {
-            picker.dismiss(animated: true)
-            self.shoingAvtorImgVAf.image = image
+            for (ret,word) in wordArrayVAF.enumerated() {
+                if let count = mindedVAF[word] {
+                    mindedVAF[word] = count + ret
+                } else {
+                    mindedVAF[word] = 1
+                }
+            }
+
+            if mindedVAF.keys.count > 2 {
+                picker.dismiss(animated: true)
+                self.shoingAvtorImgVAf.image = image
+            }
+            
            
         }
         

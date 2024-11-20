@@ -18,7 +18,12 @@ class VAFUploadOtherinfoFillTernaler: UIViewController,UINavigationControllerDel
     @IBOutlet weak var cansee1: UIButton!
     @IBOutlet weak var cansee2: UIButton!
     
-    
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+
     
     var imagetResord = ["image0":false,"image1":false,"image2":false]
     
@@ -99,7 +104,28 @@ class VAFUploadOtherinfoFillTernaler: UIViewController,UINavigationControllerDel
     
     
     @IBAction func postVAFjik(_ sender: UIButton) {
-        
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+
+        var mindedVAF = [String: Int]()
+        let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
+        for (ret,word) in wordArrayVAF.enumerated() {
+            if let count = mindedVAF[word] {
+                mindedVAF[word] = count + ret
+            } else {
+                mindedVAF[word] = 1
+            }
+        }
+
+       
         guard let colTime = timeColVAFTexf.text,colTime.count != 0, "Indicate when you collected this precious vintage item.".contains(colTime) == false else {
             SVProgressHUD.showInfo(withStatus: "Collection time must be filled in！")
             return
@@ -119,9 +145,15 @@ class VAFUploadOtherinfoFillTernaler: UIViewController,UINavigationControllerDel
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
             SVProgressHUD.showSuccess(withStatus: "Upload successful, Please be patient and wait for the review....")
+            if mindedVAF.keys.count > 2 {
+                self.navigationController?.popToRootViewController(animated: true)
+                
+            }
+
+            if stirnNewVAF.isEmpty == false {
+                
+            }
            
-            self.navigationController?.popToRootViewController(animated: true)
-            return
         }))
         
         

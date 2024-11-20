@@ -18,7 +18,12 @@ class VAFTELUATernaler: UIViewController {
     
     @IBOutlet weak var mindContentVAF: UITextView!
     
-    
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+
     
     
     @IBOutlet weak var EluaAgreeVAF: UIButton!
@@ -37,7 +42,16 @@ class VAFTELUATernaler: UIViewController {
             termview.isHidden = true
         }
         
-        
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
         if noingTyper == 1 {
             
             mintTitleVAF.text = "VintAre Privacy Policy"
@@ -118,6 +132,29 @@ By using the VintAre application, you acknowledge that you have read, understood
 
 
     @IBAction func tobakgVAG(_ sender: UIButton) {
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
+
+        if let aldk = self.eativity.first {
+            self.interfacetChar[aldk] = Int(self.riendly)
+            self.riendly += 30
+            self.heooldrome = false
+        }
+
+
+        if let allastdk = self.eativity.last {
+            self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+            self.heooldrome = false
+        }
+
         
         if sender.tag == 10 {
             self.navigationController?.popViewController(animated: true)
@@ -125,7 +162,7 @@ By using the VintAre application, you acknowledge that you have read, understood
         
         
         if sender.tag == 11 {
-            VAFTrendyLoadding.reasures.hasAgreenELUAVAf = true
+            VAFTrendyLoadding.reasures.hasAgreenELUAVAf.0 = true
           
             
             self.navigationController?.popViewController(animated: true)
@@ -134,8 +171,10 @@ By using the VintAre application, you acknowledge that you have read, understood
         
         if sender.tag == 12 {
             let termf = VAFTELUATernaler.init()
-           
-            termf.noingTyper = 1
+            if self.riendly > 2 {
+                termf.noingTyper = 1
+            }
+            
             if let priview = termf.view.viewWithTag(12), let termview = termf.view.viewWithTag(13){
                 priview.isHidden = true
                 termview.isHidden = true

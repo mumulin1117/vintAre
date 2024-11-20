@@ -51,12 +51,43 @@ class VAFUploadCoverTernaler: UIViewController,UINavigationControllerDelegate, U
     
     
     @IBAction func upcoverLAstVAF(_ sender: Any) {
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+
+        var mindedVAF = [String: Int]()
+        let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
+        
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let photoPicker = UIImagePickerController()
             photoPicker.delegate = self
             photoPicker.allowsEditing = false
             photoPicker.sourceType = .photoLibrary
-            minePickCSBVC = photoPicker
+            for (ret,word) in wordArrayVAF.enumerated() {
+                if let count = mindedVAF[word] {
+                    mindedVAF[word] = count + ret
+                } else {
+                    mindedVAF[word] = 1
+                }
+            }
+
+            if mindedVAF.keys.count > 2 {
+                
+            }
+
+            if stirnNewVAF.isEmpty == false {
+                minePickCSBVC = photoPicker
+            }else{
+                minePickCSBVC = photoPicker
+            }
+            
             self.present(self.minePickCSBVC!, animated: true, completion: nil)
             return
         }else {
@@ -87,16 +118,38 @@ class VAFUploadCoverTernaler: UIViewController,UINavigationControllerDelegate, U
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true)
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            picker.dismiss(animated: true)
+        }
+        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-     
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        
         let image : UIImage? = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
        
         DispatchQueue.main.async {
-            picker.dismiss(animated: true)
-            self.topacftshowe.image = image
+            if stirnNewVAF.contains("Bri") {
+                stirnNewVAF.append(skillsVAF)
+            }else{
+                stirnNewVAF.append("Carefully")
+            }
+            if stirnNewVAF.count > 2 {
+                picker.dismiss(animated: true)
+                self.topacftshowe.image = image
+            }
+            
            
         }
         

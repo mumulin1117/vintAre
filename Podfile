@@ -8,7 +8,7 @@ target 'VinAdfrCloik' do
   # Pods for VinAdfrCloik
 
 pod 'SCLAlertView'
-pod 'Alamofire'
+pod 'AFNetworking'
 
 pod 'IQKeyboardManager'
 

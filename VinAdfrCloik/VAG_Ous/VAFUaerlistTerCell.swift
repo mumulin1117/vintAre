@@ -11,6 +11,11 @@ class VAFUaerlistTerCell: UICollectionViewCell {
     var namertVAF = UILabel.init()
     var lorationTou = UIImageView.init()
     
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
 
      var operationVAF =  UIButton.init()
     
@@ -41,7 +46,28 @@ class VAFUaerlistTerCell: UICollectionViewCell {
         contentView.addSubview(namertVAF)
        
         contentView.addSubview(operationVAF)
-        
+        if self.contentView.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.contentView.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
+
+
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
      
         
         lorationTou.snp.makeConstraints { make in

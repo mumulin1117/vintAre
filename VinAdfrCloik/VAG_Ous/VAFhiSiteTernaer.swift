@@ -11,6 +11,11 @@ import SVProgressHUD
 import SCLAlertView
 
 class VAFhiSiteTernaer: UIViewController {
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
 
     @IBOutlet weak var topbgVAFD: UIView!
     
@@ -48,13 +53,16 @@ class VAFhiSiteTernaer: UIViewController {
         let alert = SCLAlertView(appearance: appearance)
         alert.iconTintColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)
         alert.addButton("Yes",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
+            SVProgressHUD.show()
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: DispatchWorkItem(block: {
+                VAFTrendyLoadding.reasures.ifVAFLogEnter.0 = false
+                
+                let rootNAvifvc = UINavigationController(rootViewController: VAFLogChoiceTernaler())
+                rootNAvifvc.navigationBar.isHidden = true
+                
+                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rootNAvifvc
+            }))
            
-            VAFTrendyLoadding.reasures.ifVAFLogEnter = false
-            
-            let rootNAvifvc = UINavigationController(rootViewController: VAFLogChoiceTernaler())
-            rootNAvifvc.navigationBar.isHidden = true
-            
-            ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController =  rootNAvifvc
             
         }
         alert.addButton("Not now",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
@@ -69,8 +77,18 @@ class VAFhiSiteTernaer: UIViewController {
     
     
     @IBAction func putActionVAF(_ sender: UIButton) {
-        
-        VAFTrendyLoadding.reasures.ifVAFLogEnter = false
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
+
+        VAFTrendyLoadding.reasures.ifVAFLogEnter.0 = false
         
         let rootNAvifvc = UINavigationController(rootViewController: VAFLogChoiceTernaler())
         rootNAvifvc.navigationBar.isHidden = true
@@ -83,7 +101,26 @@ class VAFhiSiteTernaer: UIViewController {
     
     
     @IBAction func prueiusejringoActionVAF(_ sender: UIButton) {
-        
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
+
+        if let aldk = self.eativity.first {
+            self.interfacetChar[aldk] = Int(self.riendly)
+            self.riendly += 30
+            self.heooldrome = false
+        }
+
+
+       
+
         if sender.tag == 50 {
             let privaf = VAFTELUATernaler.init()
            
@@ -117,8 +154,15 @@ class VAFhiSiteTernaer: UIViewController {
         
         if sender.tag == 80 {
             let folooeo = VAFUaerlistTernaer.init(TypertLisrt: 2)
-            
-            self.navigationController?.pushViewController(folooeo, animated: true)
+            if let allastdk = self.eativity.last {
+                self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                self.heooldrome = false
+            }
+
+            if self.riendly > 2 {
+                self.navigationController?.pushViewController(folooeo, animated: true)
+            }
+           
         }
         
         if sender.tag == 90 {

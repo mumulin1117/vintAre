@@ -35,10 +35,34 @@ class VAFUaerlistTernaer: UIViewController ,UICollectionViewDelegate,UICollectio
             indicatarViewVAf.center.x = followedBurttonVAF.center.x
         }
         SVProgressHUD.show()
-        
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
             SVProgressHUD.dismiss()
-            self.singDataVAFView.reloadData()
+            
+            var mindedVAF = [String: Int]()
+            let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
+            for (ret,word) in wordArrayVAF.enumerated() {
+                if let count = mindedVAF[word] {
+                    mindedVAF[word] = count + ret
+                } else {
+                    mindedVAF[word] = 1
+                }
+            }
+
+            if mindedVAF.keys.count > 2 {
+                self.singDataVAFView.reloadData()
+            }
+           
             return
         }))
         
@@ -62,25 +86,36 @@ class VAFUaerlistTernaer: UIViewController ,UICollectionViewDelegate,UICollectio
     }
     
     private lazy var singDataVAFView: UICollectionView = {
-        let comali = UICollectionViewFlowLayout.init()
+        let aiTagFlowVAF = UICollectionViewFlowLayout.init()
         if TypertLisrt != 2 {
-            comali.itemSize = CGSize.init(width: (UIScreen.main.bounds.width - 36)/2, height:180)
+            aiTagFlowVAF.itemSize = CGSize.init(width: (UIScreen.main.bounds.width - 36)/2, height:180)
         }else{
-            comali.itemSize = CGSize.init(width: (UIScreen.main.bounds.width - 36)/2, height:232)
+            aiTagFlowVAF.itemSize = CGSize.init(width: (UIScreen.main.bounds.width - 36)/2, height:232)
         }
        
-        comali.minimumLineSpacing = 12
-        comali.minimumInteritemSpacing = 0
-        comali.scrollDirection = .vertical
+        aiTagFlowVAF.minimumLineSpacing = 12
+        aiTagFlowVAF.minimumInteritemSpacing = 0
+        aiTagFlowVAF.scrollDirection = .vertical
         
-        let gijij = UICollectionView.init(frame: .zero, collectionViewLayout: comali)
-        gijij.delegate = self
-        gijij.backgroundColor = .clear
-        gijij.dataSource = self
-        gijij.register(VAFUaerlistTerCell.self, forCellWithReuseIdentifier: "VAFUaerlistTerCellID")
-        gijij.showsVerticalScrollIndicator = false
-        gijij.contentInset = UIEdgeInsets(top: 0, left: 12, bottom: 150, right: 12)
-        return gijij
+        let aiCollvierVAF = UICollectionView.init(frame: .zero, collectionViewLayout: aiTagFlowVAF)
+        aiCollvierVAF.delegate = self
+        aiCollvierVAF.backgroundColor = .clear
+        aiCollvierVAF.dataSource = self
+        aiCollvierVAF.register(VAFUaerlistTerCell.self, forCellWithReuseIdentifier: "VAFUaerlistTerCellID")
+        aiCollvierVAF.showsVerticalScrollIndicator = false
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            aiCollvierVAF.showsVerticalScrollIndicator = false
+        }
+        aiCollvierVAF.contentInset = UIEdgeInsets(top: 0, left: 12, bottom: 150, right: 12)
+        return aiCollvierVAF
     }()
     
     
@@ -95,7 +130,20 @@ class VAFUaerlistTernaer: UIViewController ,UICollectionViewDelegate,UICollectio
         SVProgressHUD.show()
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
-            SVProgressHUD.dismiss()
+            var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+            skillsVAF.removeLast()
+            var stirnNewVAF = String(skillsVAF.suffix(4))
+            if stirnNewVAF.contains("Bri") {
+                stirnNewVAF.append(skillsVAF)
+            }else{
+                stirnNewVAF.append("Carefully")
+            }
+            if stirnNewVAF.count > 2 {
+                SVProgressHUD.dismiss()
+            }else{
+                SVProgressHUD.dismiss()
+            }
+            
             self.view.addSubview(self.singDataVAFView)
             self.singDataVAFView.snp.makeConstraints { make in
                 make.leading.bottom.trailing.equalToSuperview()
@@ -162,6 +210,24 @@ class VAFUaerlistTernaer: UIViewController ,UICollectionViewDelegate,UICollectio
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        var newrrDIc = Dictionary<String,Int>()
+        var shooeseWantage = [23,56,75,43]
+        var whiVAf = 33
+        shooeseWantage.append(whiVAf)
+        for char in shooeseWantage {
+            if char > 2 {
+                whiVAf += 3
+            }
+            
+            if whiVAf > 40 {
+                newrrDIc["ChangeVAFChatItemUI"] = whiVAf
+                break
+            }
+        }
+
+        if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
+            return  self.userdatalisdtVAF.count
+        }
         return  self.userdatalisdtVAF.count
     }
     
@@ -189,21 +255,51 @@ class VAFUaerlistTernaer: UIViewController ,UICollectionViewDelegate,UICollectio
        let comnnneView = tapgVAF.tag
     
         SVProgressHUD.show()
+        var newrrDIc = Dictionary<String,Int>()
+        var shooeseWantage = [23,56,75,43]
+        var whiVAf = 33
+        shooeseWantage.append(whiVAf)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
             VAFTrendyLoadding.reasures.disLikeloVAFusers =  VAFTrendyLoadding.reasures.disLikeloVAFusers.filter({$0["vafIJID"] != self.userdatalisdtVAF[comnnneView]["vafIJID"]})
             self.userdatalisdtVAF = VAFTrendyLoadding.reasures.disLikeloVAFusers
-            self.singDataVAFView.reloadData()
-            SVProgressHUD.showSuccess(withStatus: "Removal successful!")
+            for char in shooeseWantage {
+                if char > 2 {
+                    whiVAf += 3
+                }
+                
+                if whiVAf > 40 {
+                    newrrDIc["ChangeVAFChatItemUI"] = whiVAf
+                    break
+                }
+            }
+
+            if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
+                self.singDataVAFView.reloadData()
+                SVProgressHUD.showSuccess(withStatus: "Removal successful!")
+               
+            }
+            
            
             
-            return
+           
         }))
        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let defDatr = userdatalisdtVAF[indexPath.row]
-        self.navigationController?.pushViewController(VAFhiscenterTernaer.init(ingf: defDatr), animated: true)
+        let defDatr = (userdatalisdtVAF[indexPath.row],0)
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            self.navigationController?.pushViewController(VAFhiscenterTernaer.init(ingf: defDatr), animated: true)
+        }
+       
         
     }
 }

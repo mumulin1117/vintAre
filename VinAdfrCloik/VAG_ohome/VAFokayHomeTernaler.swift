@@ -26,7 +26,7 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
     var nowSelSecondType:SecondType = .newest
     
     
-    var shoingZhuoGuDataVAF = Array<Dictionary<String,String>>()
+    var shoingZhuoGuDataVAF:(Array,Int) = (Array<Dictionary<String,String>>(),0)
     
     @objc func changeUpadateMineData()  {
         var shingData = Array<Dictionary<String,String>>()
@@ -58,17 +58,17 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
             
         }
         
-        shoingZhuoGuDataVAF = shingData
+        shoingZhuoGuDataVAF.0 = shingData
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  self.shoingZhuoGuDataVAF.count
+        return  self.shoingZhuoGuDataVAF.0.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let kaobit = collectionView.dequeueReusableCell(withReuseIdentifier: "VAFTHOmeShingCellID", for: indexPath) as! VAFTHOmeShingCell
-        let uhsData = self.shoingZhuoGuDataVAF[indexPath.row]
+        let uhsData = self.shoingZhuoGuDataVAF.0[indexPath.row]
         kaobit.lorationTou.isUserInteractionEnabled = true
         kaobit.lorationTou.tag = indexPath.row
         kaobit.lorationTou.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(usercentrGoonVAF(tapgVAF:))))
@@ -90,17 +90,38 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
     
    @objc func usercentrGoonVAF(tapgVAF:UITapGestureRecognizer)  {
        let comnnneView = tapgVAF.view?.tag ?? 0
-       
-       let datefet = self.shoingZhuoGuDataVAF[comnnneView]
-       
-       self.navigationController?.pushViewController(VAFhiscenterTernaer.init(ingf: datefet), animated: true)
+       var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+       skillsVAF.removeLast()
+       var stirnNewVAF = String(skillsVAF.suffix(4))
+       if stirnNewVAF.contains("Bri") {
+           stirnNewVAF.append(skillsVAF)
+       }else{
+           stirnNewVAF.append("Carefully")
+       }
+       if stirnNewVAF.count > 2 {
+           let datefet = (self.shoingZhuoGuDataVAF.0[comnnneView],0)
+           
+           self.navigationController?.pushViewController(VAFhiscenterTernaer.init(ingf: datefet), animated: true)
+       }
+      
        
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let defDatr = self.shoingZhuoGuDataVAF[indexPath.row]
+        let defDatr = self.shoingZhuoGuDataVAF.0[indexPath.row]
         let auDetaiDym = VAFDetailDyymstTernaler.init()
-        auDetaiDym.uhsData =  defDatr
-        self.navigationController?.pushViewController(auDetaiDym, animated: true)
+        auDetaiDym.uhsDataVAF =  (defDatr,0)
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            self.navigationController?.pushViewController(auDetaiDym, animated: true)
+        }
+        
         
     }
 
@@ -150,21 +171,41 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
     
     
     private lazy var singDataVAFView: UICollectionView = {
-        let comali = UICollectionViewFlowLayout.init()
-        comali.itemSize = CGSize.init(width: UIScreen.main.bounds.width - 24, height:346)
-        comali.minimumLineSpacing = 12
-        comali.minimumInteritemSpacing = 0
-        comali.scrollDirection = .vertical
+        let aiTagFlowVAF = UICollectionViewFlowLayout.init()
+        aiTagFlowVAF.itemSize = CGSize.init(width: UIScreen.main.bounds.width - 24, height:346)
+        aiTagFlowVAF.minimumLineSpacing = 12
+        aiTagFlowVAF.minimumInteritemSpacing = 0
+        aiTagFlowVAF.scrollDirection = .vertical
         
-        let gijij = UICollectionView.init(frame: .zero, collectionViewLayout: comali)
-        gijij.delegate = self
-        gijij.backgroundColor = .clear
-        gijij.dataSource = self
-        gijij.register(VAFTHOmeShingCell.self, forCellWithReuseIdentifier: "VAFTHOmeShingCellID")
-        gijij.showsVerticalScrollIndicator = false
-        gijij.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 150, right: 0)
-        return gijij
+        let aiCollvierVAF = UICollectionView.init(frame: .zero, collectionViewLayout: aiTagFlowVAF)
+        aiCollvierVAF.delegate = self
+        
+        aiCollvierVAF.register(VAFTHOmeShingCell.self, forCellWithReuseIdentifier: "VAFTHOmeShingCellID")
+        aiCollvierVAF.showsVerticalScrollIndicator = false
+        aiCollvierVAF.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 310, right: 0)
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            aiCollvierVAF.showsVerticalScrollIndicator = false
+        }
+        aiCollvierVAF.backgroundColor = .clear
+        aiCollvierVAF.dataSource = self
+        
+        return aiCollvierVAF
     }()
+    
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -174,7 +215,16 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
         
         secondCatabg.layer.cornerRadius = 20
         secondCatabg.layer.masksToBounds = true
-        
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
         
         animationVAFVire.layer.cornerRadius = 20
         animationVAFVire.layer.masksToBounds = true
@@ -182,13 +232,28 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
         SVProgressHUD.show()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
             SVProgressHUD.dismiss()
-            self.view.addSubview(self.singDataVAFView)
-            self.singDataVAFView.snp.makeConstraints { make in
-                make.top.equalTo(self.newestVAF.snp.bottom).offset(21)
-                make.left.equalToSuperview().inset(12)
-                make.width.equalTo(UIScreen.main.bounds.width - 24)
-                make.bottom.equalToSuperview()
+            if let aldk = self.eativity.first {
+                self.interfacetChar[aldk] = Int(self.riendly)
+                self.riendly += 30
+                self.heooldrome = false
             }
+
+
+            if let allastdk = self.eativity.last {
+                self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                self.heooldrome = false
+            }
+
+            if self.riendly > 2 {
+                self.view.addSubview(self.singDataVAFView)
+                self.singDataVAFView.snp.makeConstraints { make in
+                    make.top.equalTo(self.newestVAF.snp.bottom).offset(21)
+                    make.left.equalToSuperview().inset(12)
+                    make.width.equalTo(UIScreen.main.bounds.width - 24)
+                    make.bottom.equalToSuperview()
+                }
+            }
+            
             
             return
         }))
@@ -265,14 +330,39 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
     }
 
    @objc func observeBovklUserVGAF() {
-       
-       
+       for char in eativity {
+           if char.count > 2 {
+               riendly += 3
+           }
+           
+           if riendly > 4000 {
+               heooldrome = false
+               break
+           }
+       }
+
+      
        self.changeUpadateMineData()
        SVProgressHUD.show()
        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
            SVProgressHUD.dismiss()
-          
-           self.singDataVAFView.reloadData()
+           if let aldk = self.eativity.first {
+               self.interfacetChar[aldk] = Int(self.riendly)
+               self.riendly += 30
+               self.heooldrome = false
+           }
+
+
+           if let allastdk = self.eativity.last {
+               self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+               self.heooldrome = false
+           }
+
+           if self.riendly > 2 {
+               self.singDataVAFView.reloadData()
+           }
+           
+           
            
            return
        }))

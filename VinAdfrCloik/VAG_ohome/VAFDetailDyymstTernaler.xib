@@ -57,15 +57,14 @@
                     <color key="textColor" red="0.96078431372549022" green="0.82352941176470584" blue="0.62352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fe-R5-WO6">
-                    <rect key="frame" x="14" y="543" width="349" height="107.66666666666663"/>
-                    <string key="text">  This vintage shirt is made of high-quality cotton, offering a soft touch. The classic plaid pattern with harmonious color combinations exudes a retro vibe. The delicate collar design and unique buttons make it an excellent choice to pair with jeans or a skirt.</string>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fe-R5-WO6">
+                    <rect key="frame" x="14" y="543" width="349" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                     <color key="textColor" red="0.99607843137254903" green="0.90196078431372551" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qax-fD-hke">
-                    <rect key="frame" x="14" y="664.66666666666663" width="28" height="28"/>
+                    <rect key="frame" x="14" y="557" width="28" height="28"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="28" id="67U-Eg-YSH"/>
                         <constraint firstAttribute="height" constant="28" id="PsX-Cc-kfG"/>
@@ -104,7 +103,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pXq-6p-Zf5">
-                    <rect key="frame" x="50" y="666.66666666666663" width="38.333333333333343" height="24"/>
+                    <rect key="frame" x="50" y="559" width="38.333333333333343" height="24"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="Wvs-Ek-WAe"/>
                     </constraints>

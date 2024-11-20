@@ -11,7 +11,7 @@ class VAFAIDetailTernaler: UIViewController {
     
     @IBOutlet weak var shongZhaoGuImgvVAF: UIImageView!
     
-    var uhsData = Dictionary<String,String>()
+    var uhsData = (Dictionary<String,String>(),0)
     
     
     @IBOutlet weak var bgCommentVAF: UIView!
@@ -21,7 +21,7 @@ class VAFAIDetailTernaler: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bgCommentVAF.layer.cornerRadius = 20
-        let mingshonh = (uhsData["vafshowPic"] ?? "").components(separatedBy: ",")
+        let mingshonh = (uhsData.0["vafshowPic"] ?? "").components(separatedBy: ",")
        
         shongZhaoGuImgvVAF.image = UIImage(named:mingshonh[0])
         bgCommentVAF.layer.masksToBounds = true
@@ -36,7 +36,7 @@ class VAFAIDetailTernaler: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2, execute: DispatchWorkItem(block: {
             SVProgressHUD.showSuccess(withStatus: "The result is out!")
             
-            self.resulAiVAF.text = "Here are the styling options generated based on this vintage item：\n\n" + (self.uhsData["AiREsult"] ?? "") +  (self.uhsData["vafDYMAIComment"] ?? "")
+            self.resulAiVAF.text = "Here are the styling options generated based on this vintage item：\n\n" + (self.uhsData.0["AiREsult"] ?? "") +  (self.uhsData.0["vafDYMAIComment"] ?? "")
         }))
         
         
@@ -47,7 +47,15 @@ class VAFAIDetailTernaler: UIViewController {
         
        
         resulAiVAF.layer.cornerRadius = 20
-        resulAiVAF.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            resulAiVAF.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        }
+       
     }
     
     @IBAction func sendmcommentVAF(_ sender: UIButton) {
@@ -60,13 +68,23 @@ class VAFAIDetailTernaler: UIViewController {
             self.present(acfreport, animated: true)
             
         }
-     
-        
-        if sender.tag == 10 {
-            
-            self.navigationController?.popViewController(animated: true)
-            
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
         }
+        if stirnNewVAF.count > 2 {
+            if sender.tag == 10 {
+                
+                self.navigationController?.popViewController(animated: true)
+                
+            }
+        }
+        
+        
         
         
     }

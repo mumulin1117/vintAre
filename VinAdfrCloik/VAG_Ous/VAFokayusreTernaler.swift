@@ -37,28 +37,50 @@ class VAFokayusreTernaler: UIViewController {
     
     
     private lazy var singDataVAFView: UICollectionView = {
-        let comali = UICollectionViewFlowLayout.init()
-        comali.itemSize = CGSize.init(width: UIScreen.main.bounds.width - 24, height:346)
-        comali.minimumLineSpacing = 12
-        comali.minimumInteritemSpacing = 0
-        comali.scrollDirection = .vertical
+        let aiTagFlowVAF = UICollectionViewFlowLayout.init()
+        aiTagFlowVAF.itemSize = CGSize.init(width: UIScreen.main.bounds.width - 24, height:346)
+        aiTagFlowVAF.minimumLineSpacing = 12
+        aiTagFlowVAF.minimumInteritemSpacing = 0
+        aiTagFlowVAF.scrollDirection = .vertical
         
-        let gijij = UICollectionView.init(frame: .zero, collectionViewLayout: comali)
-        gijij.delegate = self
-        gijij.backgroundColor = .clear
-        gijij.dataSource = self
-        gijij.register(VAFTHOmeShingCell.self, forCellWithReuseIdentifier: "VAFTHOmeShingCellID")
-        gijij.showsVerticalScrollIndicator = false
-        gijij.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 150, right: 0)
-        return gijij
+        let aiCollvierVAF = UICollectionView.init(frame: .zero, collectionViewLayout: aiTagFlowVAF)
+        aiCollvierVAF.delegate = self
+        aiCollvierVAF.backgroundColor = .clear
+        aiCollvierVAF.dataSource = self
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            aiCollvierVAF.showsVerticalScrollIndicator = false
+        }
+        aiCollvierVAF.register(VAFTHOmeShingCell.self, forCellWithReuseIdentifier: "VAFTHOmeShingCellID")
+        aiCollvierVAF.showsVerticalScrollIndicator = false
+        aiCollvierVAF.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 320, right: 0)
+        return aiCollvierVAF
     }()
     
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         minAvoterVAF.layer.cornerRadius = 24
-        minAvoterVAF.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
-        
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            minAvoterVAF.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
+            
+        }
+       
        
     }
     
@@ -66,13 +88,13 @@ class VAFokayusreTernaler: UIViewController {
         super.viewDidAppear(animated)
         
         
-        let ingf = VAFTrendyLoadding.reasures.logingVAFIufo
+        let ingf = VAFTrendyLoadding.reasures.logingVAFIufo.0
         
-        minAvoterVAF.image = VAFTrendyLoadding.reasures.cacheVAFHead
+        minAvoterVAF.image = VAFTrendyLoadding.reasures.cacheVAFHead?.0
         
         usernamertVAF.text = ingf["vafniame"]
         
-        UidVAF.text = "UID:  " + (ingf["vafniame"] ?? "")
+        UidVAF.text = "UID:  " + (ingf["vafIJID"] ?? "")
         brisffVAF.text = ingf["vafsay"]
         
         if let lblbcountmelike = ilikeVAF.viewWithTag(3) as? UILabel {
@@ -88,7 +110,7 @@ class VAFokayusreTernaler: UIViewController {
         if let lblbcountmemoney = ballectVAF.viewWithTag(5) as? UILabel {
             
             
-            lblbcountmemoney.text =   VAFTrendyLoadding.reasures.logingVAFIufo["PayidCoin"] ?? "0"
+            lblbcountmemoney.text =   ingf["PayidCoin"] ?? "0"
             
         }
         
@@ -128,7 +150,15 @@ class VAFokayusreTernaler: UIViewController {
     
     
     @IBAction func userSiteNOwVAf(_ sender: Any) {
-        self.navigationController?.pushViewController(VAFhiSiteTernaer.init(), animated: true)
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            self.navigationController?.pushViewController(VAFhiSiteTernaer.init(), animated: true)
+        }
+        
     }
     
     
@@ -139,6 +169,14 @@ class VAFokayusreTernaler: UIViewController {
             self.navigationController?.pushViewController(VAFShowingPAyTernaler.init(), animated: true)
         }
         
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
         
         if sender.view == ilikeVAF {
             
@@ -149,15 +187,24 @@ class VAFokayusreTernaler: UIViewController {
         
         if sender.view == likeFoloFAce {
             let folooeo = VAFUaerlistTernaer.init(TypertLisrt: 0)
+            if stirnNewVAF.count > 2 {
+                self.navigationController?.pushViewController(folooeo, animated: true)
+            }
             
-            self.navigationController?.pushViewController(folooeo, animated: true)
         }
        
     }
 
     @IBAction func changerMyINfoVAFTouvh(_ sender: Any) {
-        
-        self.navigationController?.pushViewController(VAFChangemeiusTernaler.init(), animated: true)
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            self.navigationController?.pushViewController(VAFChangemeiusTernaler.init(), animated: true)
+        }
+       
     }
 }
 
@@ -165,8 +212,8 @@ class VAFokayusreTernaler: UIViewController {
 extension VAFokayusreTernaler:UICollectionViewDelegate,UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let uhsData = VAFTrendyLoadding.reasures.logingVAFIufo
-        if uhsData["vafIJID"] == "89676" {
+        let uhsData = VAFTrendyLoadding.reasures.logingVAFIufo.0
+        if uhsData["vafIJID"] == "345768" {
             return  1
         }
         return  0
@@ -175,9 +222,9 @@ extension VAFokayusreTernaler:UICollectionViewDelegate,UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let kaobit = collectionView.dequeueReusableCell(withReuseIdentifier: "VAFTHOmeShingCellID", for: indexPath) as! VAFTHOmeShingCell
         
-        let uhsData = VAFTrendyLoadding.reasures.logingVAFIufo
+        let uhsData = VAFTrendyLoadding.reasures.logingVAFIufo.0
        
-        if uhsData["vafIJID"] == "89676" {
+        if uhsData["vafIJID"] == "345768" {
             kaobit.lorationTou.image = UIImage(named:uhsData["vafHeada"] ?? "")
             kaobit.namertVAF.text = uhsData["vafniame"]
             kaobit.atttudeVAF.isSelected = ((uhsData["iFlikeThisDYM"] ?? "0") == "1")
@@ -195,10 +242,18 @@ extension VAFokayusreTernaler:UICollectionViewDelegate,UICollectionViewDataSourc
         return kaobit
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let uhsData = VAFTrendyLoadding.reasures.logingVAFIufo
+        let uhsData = VAFTrendyLoadding.reasures.logingVAFIufo.0
         
         let auDetaiDym = VAFDetailDyymstTernaler.init()
-        auDetaiDym.uhsData =  uhsData
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            auDetaiDym.uhsDataVAF =  (uhsData,0)
+        }
+       
         self.navigationController?.pushViewController(auDetaiDym, animated: true)
         
     }

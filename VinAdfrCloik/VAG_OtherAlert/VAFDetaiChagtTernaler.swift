@@ -14,9 +14,19 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var lorationTou: UIImageView!
     
     @IBOutlet weak var namertVAF: UILabel!
-    var uhsData = Dictionary<String,String>()
+    var uhsDataVAF = (Dictionary<String,String>(),0)
     
     var recordingChatDicVAF: Array<(Int,String,String)> = Array<(Int,String,String)>()
+    
+    
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+    
+
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         recordingChatDicVAF.count
@@ -30,7 +40,9 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
         noingChaveCEll.sendcontetnVAF.text = shoningXCe.1
         noingChaveCEll.msenTimeVAF.text = shoningXCe.2
         
-        noingChaveCEll.ChangeVAFChatItemUI(dirctionVAF: shoningXCe.0)
+        let hearWantageVAf = ["VAFMyineMessageID":99]
+        
+        noingChaveCEll.ChangeVAFChatItemUI(dirctionVAF: shoningXCe.0, interfacetChar: hearWantageVAf)
         
         return noingChaveCEll
     }
@@ -51,13 +63,24 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
         someVAfDataView.register(VAFMyineMessage.self, forCellReuseIdentifier: "VAFMyineMessageID")
         someVAfDataView.separatorStyle = .none
         someVAfDataView.allowsSelection = false
+        
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
         someVAfDataView.showsVerticalScrollIndicator = false
         someVAfDataView.backgroundColor = .clear
         someVAfDataView.dataSource = self
         someVAfDataView.delegate = self
         
-        lorationTou.image = UIImage(named:uhsData["vafHeada"] ?? "")
-        namertVAF.text = uhsData["vafniame"]
+        lorationTou.image = UIImage(named:uhsDataVAF.0["vafHeada"] ?? "")
+        namertVAF.text = uhsDataVAF.0["vafniame"]
         
         lorationTou.isUserInteractionEnabled = true
         lorationTou.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(usercentrGoonVAF)))
@@ -71,10 +94,39 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
     
     
     @IBAction func sendmcommentVAF(_ sender: UIButton) {
-        
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
+
+        if let aldk = eativity.first {
+            self.interfacetChar[aldk] = Int(riendly)
+            riendly += 30
+            heooldrome = false
+        }
+
+
+       
         if sender.tag == 110 {
+            if let allastdk = eativity.last {
+                interfacetChar[allastdk] = Int(riendly + 3.9)
+                heooldrome = false
+            }
+
+            
+
+          
             guard let contetntt = inouterCAF.text,contetntt.count > 0 else {
-                SVProgressHUD.showInfo(withStatus: "Your send message cannot be empty!")
+                if riendly > 2 {
+                    SVProgressHUD.showInfo(withStatus: "Your send message cannot be empty!")
+                }
+               
                 return
             }
             
@@ -94,8 +146,11 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
             SVProgressHUD.show()
             
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: DispatchWorkItem(block: {
-                self.someVAfDataView.reloadData()
-                SVProgressHUD.dismiss()
+                if self.heooldrome == false {
+                    self.someVAfDataView.reloadData()
+                    SVProgressHUD.dismiss()
+                }
+                
             }))
         }
         if sender.tag == 90 {
@@ -112,7 +167,8 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
             let alert = SCLAlertView(appearance: appearance)
             alert.iconTintColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)
             alert.addButton("Block",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
-                VAFTrendyLoadding.reasures.bloackVAFUser(igFor: self.uhsData)
+                let hearWantageVAf = ["VAFMyineMessageID":99]
+                VAFTrendyLoadding.reasures.bloackVAFUser(interfacetChar: hearWantageVAf, igFor: self.uhsDataVAF.0)
                 self.navigationController?.popViewController(animated: true)
             }
             alert.addButton("Report",backgroundColor:UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)) {
@@ -133,7 +189,7 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
         if sender.tag == 100 {//video
             
             let isdnf = VAFVideogTernaler.init()
-            isdnf.uhsData = self.uhsData
+            isdnf.uhsDataVAF = self.uhsDataVAF.0
             isdnf.modalPresentationStyle = .fullScreen
             self.present(isdnf, animated: true)
             
@@ -151,15 +207,22 @@ class VAFDetaiChagtTernaler: UIViewController ,UITableViewDelegate,UITableViewDa
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        bgCommentVAF.layer.cornerRadius = 24
-        bgCommentVAF.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            bgCommentVAF.layer.cornerRadius = 24
+            bgCommentVAF.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        }
+       
     }
 
     
     @objc func usercentrGoonVAF()  {
        
-        let datefet = uhsData
+        let datefet = uhsDataVAF
         
         self.navigationController?.pushViewController(VAFhiscenterTernaer.init(ingf: datefet), animated: true)
         
@@ -171,16 +234,39 @@ class VAFMyineMessage: UITableViewCell {
     let msenTimeVAF = UILabel.init()
     let sendcontetnVAF = UILabel.init()
     private let sendViewBGVAF = UIView.init()
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
     
    
     
-    func ChangeVAFChatItemUI(dirctionVAF:Int) {
+    func ChangeVAFChatItemUI(dirctionVAF:Int, interfacetChar: Dictionary<String,Int>) {
+        var newrrDIc = interfacetChar
+        var shooeseWantage = [23,56,75,43]
+        var whiVAf = 33
+        shooeseWantage.append(whiVAf)
+        for char in shooeseWantage {
+            if char > 2 {
+                whiVAf += 3
+            }
+            
+            if whiVAf > 40 {
+                newrrDIc["ChangeVAFChatItemUI"] = whiVAf
+                break
+            }
+        }
+
+        
+        
         
         if dirctionVAF == 1{
+            if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
+                sendViewBGVAF.backgroundColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)
+                sendcontetnVAF.textColor = UIColor(red: 1, green: 0.96, blue: 0.9, alpha: 1)
+                sendcontetnVAF.textAlignment = .right
+            }
            
-            sendViewBGVAF.backgroundColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1)
-            sendcontetnVAF.textColor = UIColor(red: 1, green: 0.96, blue: 0.9, alpha: 1)
-            sendcontetnVAF.textAlignment = .right
             sendViewBGVAF.snp.remakeConstraints { make in
                 make.width.greaterThanOrEqualTo(42.xxxxxxVAF)
                 make.width.lessThanOrEqualTo(282.xxxxxxVAF)
@@ -197,10 +283,13 @@ class VAFMyineMessage: UITableViewCell {
             
             
         }else{
-          
-            sendViewBGVAF.backgroundColor = UIColor(red: 0.37, green: 0.26, blue: 0.09, alpha: 1)
-            sendcontetnVAF.textColor = UIColor(red: 0.94, green: 0.85, blue: 0.73, alpha: 1)
-            sendcontetnVAF.textAlignment = .left
+            if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
+                sendViewBGVAF.backgroundColor = UIColor(red: 0.37, green: 0.26, blue: 0.09, alpha: 1)
+                sendcontetnVAF.textColor = UIColor(red: 0.94, green: 0.85, blue: 0.73, alpha: 1)
+                sendcontetnVAF.textAlignment = .left
+                
+            }
+            
             sendViewBGVAF.snp.remakeConstraints { make in
                 make.width.greaterThanOrEqualTo(42.xxxxxxVAF)
                 make.width.lessThanOrEqualTo(282.xxxxxxVAF)
@@ -232,7 +321,16 @@ class VAFMyineMessage: UITableViewCell {
         
         sendcontetnVAF.font = UIFont(name: "HarmonyOS Sans", size: 16)
        
-       
+        if self.contentView.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.contentView.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
         sendViewBGVAF.layer.cornerRadius = 20
         sendViewBGVAF.layer.masksToBounds = true
        

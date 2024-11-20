@@ -8,20 +8,46 @@
 import UIKit
 import SVProgressHUD
 extension Double {
+    private  var hearWantage:CGFloat{
+        return 44.0
+    }
     
     var xxxxxxVAF: CGFloat {
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            return UIScreen.main.bounds.width * CGFloat(self) / 375.0
+        }
         return UIScreen.main.bounds.width * CGFloat(self) / 375.0
     }
     
     var yyyyyyVAF: CGFloat {
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            return UIScreen.main.bounds.height * CGFloat(self) / 812.0
+        }
         return UIScreen.main.bounds.height * CGFloat(self) / 812.0
     }
 }
 
 class VAFDetailDyymstTernaler: UIViewController {
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: (Dictionary<String,Int>,Int) =  (Dictionary<String,Int>(),0)
     
     @IBOutlet weak var wavtageDescLblVAF: UILabel!
-    var uhsData = Dictionary<String,String>()
+    
+    
+    var uhsDataVAF = (Dictionary<String,String>(),0)
     
     @IBOutlet weak var lorationTou: UIImageView!
     
@@ -49,14 +75,21 @@ class VAFDetailDyymstTernaler: UIViewController {
         topimageVieOWNr.layer.cornerRadius = 24
         topimageVieOWNr.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
         
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            picbgViewVAF.layer.cornerRadius = 24
+            picbgViewVAF.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
+        }
         
-        picbgViewVAF.layer.cornerRadius = 24
-        picbgViewVAF.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
     }
     
     @objc func usercentrGoonVAF()  {
        
-        let datefet = uhsData
+        let datefet = uhsDataVAF
         
         self.navigationController?.pushViewController(VAFhiscenterTernaer.init(ingf: datefet), animated: true)
         
@@ -67,7 +100,7 @@ class VAFDetailDyymstTernaler: UIViewController {
         lorationTou.isUserInteractionEnabled = true
         lorationTou.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(usercentrGoonVAF)))
                                          
-        if uhsData["vafIJID"] == VAFTrendyLoadding.reasures.logingVAFIufo["vafIJID"]{
+        if uhsDataVAF.0["vafIJID"] == VAFTrendyLoadding.reasures.logingVAFIufo.0["vafIJID"]{
             self.videotVAF.isHidden  = true
             alertgf.isHidden = true
             atttudeVAF.isHidden = true
@@ -89,25 +122,25 @@ class VAFDetailDyymstTernaler: UIViewController {
         lorationTou.layer.masksToBounds = true
         atttudeVAF.titleLabel?.font = UIFont(name: "HarmonyOS Sans", size: 14)
         atttudeVAF.setTitleColor(UIColor(red: 1, green: 0.9, blue: 0.76, alpha: 1), for: .normal)
-        atttudeVAF.setTitle((uhsData["heartForerDym"] ?? "0"), for: .normal)
+        atttudeVAF.setTitle((uhsDataVAF.0["heartForerDym"] ?? "0"), for: .normal)
         atttudeVAF.setImage(UIImage.init(named: "vafIo_emptylike"), for: .normal)
         atttudeVAF.setImage(UIImage.init(named: "vafIo_like"), for: .selected)
-        atttudeVAF.isSelected = ((uhsData["iFlikeThisDYM"] ?? "0") == "1")
+        atttudeVAF.isSelected = ((uhsDataVAF.0["iFlikeThisDYM"] ?? "0") == "1")
         
-        lorationTou.image = UIImage(named:uhsData["vafHeada"] ?? "")
-        namertVAF.text = uhsData["vafniame"]
+        lorationTou.image = UIImage(named:uhsDataVAF.0["vafHeada"] ?? "")
+        namertVAF.text = uhsDataVAF.0["vafniame"]
         
         
-        let mingshonh = (uhsData["vafshowPic"] ?? "").components(separatedBy: ",")
+        let mingshonh = (uhsDataVAF.0["vafshowPic"] ?? "").components(separatedBy: ",")
         
         topimageVieOWNr.image = UIImage(named:mingshonh[0])
         imgShongeVAFTWO.image = UIImage(named:mingshonh[1])
         imgShongeVAFThree.image = UIImage(named:mingshonh[2])
         imgShongeVAFFour.image = UIImage(named:mingshonh[3])
-        collectiomertVAF.text = "Collected in " +  (uhsData["vafshowYear"] ?? "")
+        collectiomertVAF.text = "Collected in " +  (uhsDataVAF.0["vafshowYear"] ?? "")
         
         
-        wavtageDescLblVAF.text =  (uhsData["vafshowBrief"] ?? "")
+        wavtageDescLblVAF.text =  (uhsDataVAF.0["vafshowBrief"] ?? "")
         
         imgShongeVAFTWO.layer.masksToBounds = true
         imgShongeVAFTWO.contentMode = .scaleToFill
@@ -168,7 +201,7 @@ class VAFDetailDyymstTernaler: UIViewController {
         boottimContrFunView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(29.xxxxxxVAF)
             make.width.equalTo(210.xxxxxxVAF)
-            make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 32)
+            make.bottom.equalToSuperview().offset(-self.view.safeAreaInsets.bottom - 19)
             make.height.equalTo(60)
         }
         
@@ -220,13 +253,29 @@ class VAFDetailDyymstTernaler: UIViewController {
     @IBOutlet weak var alertgf: UIButton!
     
     @IBAction func backVAF(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
         
     }
     
     @IBAction func jubaREportVAf(_ sender: Any) {
         let acfreport = VAFContenReportTernaler.init()
-        acfreport.modalPresentationStyle = .overCurrentContext
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+        if skillsVAF.isEmpty == false {
+            acfreport.modalPresentationStyle = .overCurrentContext
+        }
+       
         self.present(acfreport, animated: true)
     }
     
@@ -236,7 +285,7 @@ class VAFDetailDyymstTernaler: UIViewController {
         if vafsender == videotVAF {
             
             let cafllMesgVaf = VAFDetaiChagtTernaler.init()
-            cafllMesgVaf.uhsData = self.uhsData
+            cafllMesgVaf.uhsDataVAF = uhsDataVAF
             
             self.navigationController?.pushViewController(cafllMesgVaf, animated: true)
         }
@@ -245,16 +294,36 @@ class VAFDetailDyymstTernaler: UIViewController {
         if vafsender == atttudeVAF {
             SVProgressHUD.show()
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
+                var newrrDIc = Dictionary<String,Int>()
+                var shooeseWantage = [23,56,75,43]
+                var whiVAf = 33
+                shooeseWantage.append(whiVAf)
+                for char in shooeseWantage {
+                    if char > 2 {
+                        whiVAf += 3
+                    }
+                    
+                    if whiVAf > 40 {
+                        newrrDIc["ChangeVAFChatItemUI"] = whiVAf
+                        break
+                    }
+                }
+
+              
                 SVProgressHUD.dismiss()
-                self.atttudeVAF.isSelected = !self.atttudeVAF.isSelected
+                if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
+                    self.atttudeVAF.isSelected = !self.atttudeVAF.isSelected
+                }
+                
+                
                 if self.atttudeVAF.isSelected {
                     SVProgressHUD.showSuccess(withStatus: "You have expressed your like!")
                     self.atttudeVAF.setTitle("1", for: .normal)
                 }else{
                     self.atttudeVAF.setTitle("0", for: .normal)
                 }
-                
-                VAFTrendyLoadding.reasures.renewDYMMeAttitude(ForVAF: self.uhsData, AttitudeIOPP: self.atttudeVAF.isSelected)
+                let hearWantageVAf = ["VAFMyineMessageID":99]
+                VAFTrendyLoadding.reasures.renewDYMMeAttitude(interfacetChar: hearWantageVAf, ForVAF: self.uhsDataVAF.0, AttitudeIOPP: self.atttudeVAF.isSelected)
                 
                 
                 return
@@ -268,7 +337,7 @@ class VAFDetailDyymstTernaler: UIViewController {
         }
         
         if vafsender == AIButtonhVAF {
-            var vingfCoint =  Int(VAFTrendyLoadding.reasures.logingVAFIufo["PayidCoin"] ?? "0") ?? 0
+            var vingfCoint =  Int(VAFTrendyLoadding.reasures.logingVAFIufo.0["PayidCoin"] ?? "0") ?? 0
             if vingfCoint < 50 {
                 let alert = UINavigationController.init(rootViewController:  VAFAIPAyTernaler.init())
                 alert.navigationBar.isHidden = true
@@ -279,10 +348,10 @@ class VAFDetailDyymstTernaler: UIViewController {
             
             
             vingfCoint -= 50
-            VAFTrendyLoadding.reasures.logingVAFIufo["PayidCoin"] = "\(vingfCoint)"
+            VAFTrendyLoadding.reasures.logingVAFIufo.0["PayidCoin"] = "\(vingfCoint)"
             
             let aIDEF = VAFAIDetailTernaler.init()
-            aIDEF.uhsData = self.uhsData
+            aIDEF.uhsData = self.uhsDataVAF
             self.navigationController?.pushViewController(aIDEF, animated: true)
             
         }
