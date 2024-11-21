@@ -97,13 +97,16 @@ class VAFDetailDyymstTernaler: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lorationTou.isUserInteractionEnabled = true
-        lorationTou.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(usercentrGoonVAF)))
                                          
         if uhsDataVAF.0["vafIJID"] == VAFTrendyLoadding.reasures.logingVAFIufo.0["vafIJID"]{
             self.videotVAF.isHidden  = true
             alertgf.isHidden = true
             atttudeVAF.isHidden = true
+            lorationTou.isUserInteractionEnabled = false
+        }else{
+            lorationTou.isUserInteractionEnabled = true
+            lorationTou.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(usercentrGoonVAF)))
+           
         }
         AIButtonhVAF.addTarget(self, action: #selector(jubaTouchBeginVAf(vafsender:)), for: .touchUpInside)
         videotVAF.addTarget(self, action: #selector(jubaTouchBeginVAf(vafsender:)), for: .touchUpInside)

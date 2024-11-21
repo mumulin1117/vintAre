@@ -152,7 +152,7 @@ class VAFTrendyLoadding: NSObject {
         logingVAFIufo.0["vafniame"] = "BiLyu"
         logingVAFIufo.0["vafHeada"] = "vafshowPic113"
         logingVAFIufo.0["vafIJID"] = "345768"
-        logingVAFIufo.0["vafmEail"] = "123412"
+        logingVAFIufo.0["vafmEail"] = "Laauu99@gmail.com"
         logingVAFIufo.0["vafBornDayh"] = "1997-08-22"
         logingVAFIufo.0["vafsay"] = "Nothing to say!Just Dream big, work hard, stay humble."
        

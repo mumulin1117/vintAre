@@ -44,22 +44,18 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
         }
         switch nowSelSecondType {
         case .newest:
-            if shingData.count >= 2 {
-                shingData = Array(shingData.prefix(2))
-            }else if  shingData.count >= 1 {
-                shingData = Array(shingData.prefix(1))
-            }
+            let countToKeep = min(shingData.count, 2)
+            shingData = Array(shingData.prefix(countToKeep))
+            
             
         case .Trendind:
             
-            if shingData.count >= 1 {
-                shingData = Array(shingData.suffix(1))
-            }
+            let countToKeep = min(shingData.count, 1)
+            shingData = Array(shingData.suffix(countToKeep))
             
         }
-        
-        shoingZhuoGuDataVAF.0 = shingData
-        
+        shoingZhuoGuDataVAF.0 = shingData.isEmpty ? [] : shingData
+      
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -68,6 +64,10 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let kaobit = collectionView.dequeueReusableCell(withReuseIdentifier: "VAFTHOmeShingCellID", for: indexPath) as! VAFTHOmeShingCell
+        
+        if indexPath.row >  self.shoingZhuoGuDataVAF.0.count - 1{
+            return kaobit
+        }
         let uhsData = self.shoingZhuoGuDataVAF.0[indexPath.row]
         kaobit.lorationTou.isUserInteractionEnabled = true
         kaobit.lorationTou.tag = indexPath.row
@@ -77,11 +77,13 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
         kaobit.atttudeVAF.isSelected = ((uhsData["iFlikeThisDYM"] ?? "0") == "1")
         
         let mingshonh = (uhsData["vafshowPic"] ?? "").components(separatedBy: ",")
-        
-        kaobit.tuONeVAF.image = UIImage(named:mingshonh[0])
-        kaobit.tuTWOVAF.image = UIImage(named:mingshonh[1])
-        kaobit.tuTHREEVAF.image = UIImage(named:mingshonh[2])
-        kaobit.tuFOURVAF.image = UIImage(named:mingshonh[3])
+        if mingshonh.count == 4 {
+            kaobit.tuONeVAF.image = UIImage(named:mingshonh[0])
+            kaobit.tuTWOVAF.image = UIImage(named:mingshonh[1])
+            kaobit.tuTHREEVAF.image = UIImage(named:mingshonh[2])
+            kaobit.tuFOURVAF.image = UIImage(named:mingshonh[3])
+        }
+       
         kaobit.collectiomertVAF.text = "Collected in " +  (uhsData["vafshowYear"] ?? "")
         
         return kaobit
@@ -281,49 +283,49 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
     
     @objc func tapOntopTypeTap(tabpVAF:UITapGestureRecognizer)  {
         if tabpVAF.view == clothCAtaVAfView {
-            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.isHighlighted = true
-            (bottomVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (shoeseVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (bagVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (accessVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
+            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk_Sel")
+            (bottomVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (shoeseVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (bagVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (accessVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
             self.nowSelZhaoguType = .cloth
         }
         
         
         if tabpVAF.view == bottomVafView {
-            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (bottomVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = true
-            (shoeseVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (bagVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (accessVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
+            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (bottomVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk_Sel")
+            (shoeseVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (bagVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (accessVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
             self.nowSelZhaoguType = .bottom
         }
         
         if tabpVAF.view == shoeseVafView {
-            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (bottomVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (shoeseVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = true
-            (bagVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (accessVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
+            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (bottomVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (shoeseVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk_Sel")
+            (bagVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (accessVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
             self.nowSelZhaoguType = .shose
         }
         
         
         if tabpVAF.view == bagVafView {
-            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (bottomVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (shoeseVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (bagVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = true
-            (accessVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
+            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk_Sel")
+            (bottomVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (shoeseVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (bagVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk_Sel")
+            (accessVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
             self.nowSelZhaoguType = .bags
         }
         
         if tabpVAF.view == accessVafView {
-            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (bottomVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (shoeseVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (bagVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = false
-            (accessVafView.viewWithTag(100) as? UIImageView)?.isHighlighted = true
+            (clothCAtaVAfView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (bottomVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (shoeseVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (bagVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk")
+            (accessVafView.viewWithTag(100) as? UIImageView)?.image = UIImage(named: "home_bgk_Sel")
             self.nowSelZhaoguType = .access
         }
         observeBovklUserVGAF()
@@ -346,25 +348,7 @@ class VAFokayHomeTernaler: UIViewController,UICollectionViewDelegate,UICollectio
        SVProgressHUD.show()
        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
            SVProgressHUD.dismiss()
-           if let aldk = self.eativity.first {
-               self.interfacetChar[aldk] = Int(self.riendly)
-               self.riendly += 30
-               self.heooldrome = false
-           }
-
-
-           if let allastdk = self.eativity.last {
-               self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
-               self.heooldrome = false
-           }
-
-           if self.riendly > 2 {
-               self.singDataVAFView.reloadData()
-           }
-           
-           
-           
-           return
+           self.singDataVAFView.reloadData()
        }))
        
     }

@@ -261,6 +261,10 @@ class VAFUaerlistTernaer: UIViewController ,UICollectionViewDelegate,UICollectio
         shooeseWantage.append(whiVAf)
         
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: DispatchWorkItem(block: {
+            if self.userdatalisdtVAF.count - 1 <  comnnneView{
+                SVProgressHUD.showError(withStatus: "Something Error! Please try letter")
+                return
+            }
             VAFTrendyLoadding.reasures.disLikeloVAFusers =  VAFTrendyLoadding.reasures.disLikeloVAFusers.filter({$0["vafIJID"] != self.userdatalisdtVAF[comnnneView]["vafIJID"]})
             self.userdatalisdtVAF = VAFTrendyLoadding.reasures.disLikeloVAFusers
             for char in shooeseWantage {
