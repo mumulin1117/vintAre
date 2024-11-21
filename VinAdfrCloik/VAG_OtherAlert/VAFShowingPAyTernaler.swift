@@ -348,6 +348,7 @@ class VAFShowingPAyTernaler: UIViewController {
         
        
         SwiftyStoreKit.purchaseProduct(AOkillpayID[recordINNnowTag].0, atomically: true) { psResult in
+            SVProgressHUD.dismiss()
             var skillsVAF = "Brilliant Colors  Carefully Selected Items"
             skillsVAF.removeLast()
             var stirnNewVAF = String(skillsVAF.suffix(4))
