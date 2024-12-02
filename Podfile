@@ -11,7 +11,7 @@ pod 'SCLAlertView'
 pod 'AFNetworking'
 
 pod 'IQKeyboardManager'
-
+pod 'FBSDKCoreKit'
 pod 'SnapKit'
 pod 'SVProgressHUD'
 pod 'SwiftyStoreKit'

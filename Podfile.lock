@@ -14,6 +14,12 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - FBAEMKit (17.4.0):
+    - FBSDKCoreKit_Basics (= 17.4.0)
+  - FBSDKCoreKit (17.4.0):
+    - FBAEMKit (= 17.4.0)
+    - FBSDKCoreKit_Basics (= 17.4.0)
+  - FBSDKCoreKit_Basics (17.4.0)
   - IQKeyboardManager (6.5.19)
   - SCLAlertView (0.8)
   - SnapKit (5.7.1)
@@ -24,6 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - FBSDKCoreKit
   - IQKeyboardManager
   - SCLAlertView
   - SnapKit
@@ -33,6 +40,9 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - FBAEMKit
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
     - IQKeyboardManager
     - SCLAlertView
     - SnapKit
@@ -41,12 +51,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  FBAEMKit: 58cb5f302cdd715a56d4c1d0dfdd2e423ac1421a
+  FBSDKCoreKit: 94d7461d0cecf441b1ba7c41acfff41daa8ccd41
+  FBSDKCoreKit_Basics: 151b43db8b834d3f0e02f95d36a44ffd36265e45
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
   SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
   SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
 
-PODFILE CHECKSUM: e3bc68f0a3428dfa2903d34fc8a365be65b2d275
+PODFILE CHECKSUM: 0ad46b244e61138072c24ed28353a4f1c98e6438
 
 COCOAPODS: 1.15.2

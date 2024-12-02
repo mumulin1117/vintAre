@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,13 @@
 		047512D02CE4A4A9002F3B71 /* VAFMainContainerTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512CD2CE4A4A9002F3B71 /* VAFMainContainerTernaler.swift */; };
 		047512D72CE4AB6E002F3B71 /* VAFokaPostTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512D52CE4AB6E002F3B71 /* VAFokaPostTernaler.swift */; };
 		047512D82CE4AB6E002F3B71 /* VAFokaPostTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047512D62CE4AB6E002F3B71 /* VAFokaPostTernaler.xib */; };
+		0481B4322CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481B4302CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift */; };
+		0481B4332CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0481B4312CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib */; };
+		0481B4352CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481B4342CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift */; };
+		0481B4372CFDA5A500092AFC /* VAFenterinContenesmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481B4362CFDA5A500092AFC /* VAFenterinContenesmering.swift */; };
+		0481B43D2CFDAD7D00092AFC /* YTXOperators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481B43C2CFDAD7D00092AFC /* YTXOperators.framework */; };
+		0481B43E2CFDAD7D00092AFC /* ATAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481B43A2CFDAD7D00092AFC /* ATAuthSDK.framework */; };
+		0481B43F2CFDAD7D00092AFC /* YTXMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481B43B2CFDAD7D00092AFC /* YTXMonitor.framework */; };
 		0489732A2CE594EB00020DBD /* VAFokayHomeTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */; };
 		0489732B2CE594EB00020DBD /* VAFokayHomeTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */; };
 		048FB5792CEC5C6F004185BD /* VAFUaerlistTernaer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048FB5782CEC5C6F004185BD /* VAFUaerlistTernaer.xib */; };
@@ -92,6 +99,14 @@
 		047512CE2CE4A4A9002F3B71 /* VAFMainContainerTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFMainContainerTernaler.xib; sourceTree = "<group>"; };
 		047512D52CE4AB6E002F3B71 /* VAFokaPostTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFokaPostTernaler.swift; sourceTree = "<group>"; };
 		047512D62CE4AB6E002F3B71 /* VAFokaPostTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFokaPostTernaler.xib; sourceTree = "<group>"; };
+		0481B4302CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFLaungchngLogEmailgesmering.swift; sourceTree = "<group>"; };
+		0481B4312CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFLaungchngEmailgesmering.xib; sourceTree = "<group>"; };
+		0481B4342CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFLaungchngOnlygesmering.swift; sourceTree = "<group>"; };
+		0481B4362CFDA5A500092AFC /* VAFenterinContenesmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFenterinContenesmering.swift; sourceTree = "<group>"; };
+		0481B4392CFDAAEE00092AFC /* VinAdfrCloik.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VinAdfrCloik.entitlements; sourceTree = "<group>"; };
+		0481B43A2CFDAD7D00092AFC /* ATAuthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ATAuthSDK.framework; sourceTree = "<group>"; };
+		0481B43B2CFDAD7D00092AFC /* YTXMonitor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YTXMonitor.framework; sourceTree = "<group>"; };
+		0481B43C2CFDAD7D00092AFC /* YTXOperators.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YTXOperators.framework; sourceTree = "<group>"; };
 		048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFokayHomeTernaler.swift; sourceTree = "<group>"; };
 		048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFokayHomeTernaler.xib; sourceTree = "<group>"; };
 		048FB5772CEC5C6F004185BD /* VAFUaerlistTernaer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFUaerlistTernaer.swift; sourceTree = "<group>"; };
@@ -126,6 +141,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8963DE309103A8FDA2BEC468 /* Pods_VinAdfrCloik.framework in Frameworks */,
+				0481B43D2CFDAD7D00092AFC /* YTXOperators.framework in Frameworks */,
+				0481B43E2CFDAD7D00092AFC /* ATAuthSDK.framework in Frameworks */,
+				0481B43F2CFDAD7D00092AFC /* YTXMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +171,10 @@
 		047512B32CE48BDA002F3B71 /* VinAdfrCloik */ = {
 			isa = PBXGroup;
 			children = (
+				0481B4392CFDAAEE00092AFC /* VinAdfrCloik.entitlements */,
+				0481B43A2CFDAD7D00092AFC /* ATAuthSDK.framework */,
+				0481B43B2CFDAD7D00092AFC /* YTXMonitor.framework */,
+				0481B43C2CFDAD7D00092AFC /* YTXOperators.framework */,
 				0494BD362CE6F6C100C1F77E /* VAG_OtherAlert */,
 				047512BE2CE48E0D002F3B71 /* VAG_Mainr */,
 				047512BB2CE48DDE002F3B71 /* VAG_ohome */,
@@ -176,6 +198,10 @@
 				047512C62CE49D2D002F3B71 /* VAFLogEomaillogTernaler.xib */,
 				040C93E62CE5D9A700214863 /* VAFTELUATernaler.swift */,
 				040C93E72CE5D9A700214863 /* VAFTELUATernaler.xib */,
+				0481B4302CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift */,
+				0481B4312CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib */,
+				0481B4342CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift */,
+				0481B4362CFDA5A500092AFC /* VAFenterinContenesmering.swift */,
 			);
 			path = VAG_Loopgo;
 			sourceTree = "<group>";
@@ -342,6 +368,7 @@
 				040C93E32CE5C35D00214863 /* VAFUserFdaata.plist in Resources */,
 				0495C8D22CE6DD75005EDC67 /* VAFDetailDyymstTernaler.xib in Resources */,
 				040C93E82CE5D9A700214863 /* VAFTELUATernaler.xib in Resources */,
+				0481B4332CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib in Resources */,
 				04514A112CEC21C500653EB9 /* VAFhiscenterTernaer.xib in Resources */,
 				04CACE492CE731EF009F920F /* VAFAIPAyTernaler.xib in Resources */,
 				047512C42CE495E4002F3B71 /* VAFLogChoiceTernaler.xib in Resources */,
@@ -414,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				047512D72CE4AB6E002F3B71 /* VAFokaPostTernaler.swift in Sources */,
+				0481B4372CFDA5A500092AFC /* VAFenterinContenesmering.swift in Sources */,
 				047512C32CE495E4002F3B71 /* VAFLogChoiceTernaler.swift in Sources */,
 				04D2EB2C2CEC346000A006F1 /* VAFChangemeiusTernaler.swift in Sources */,
 				04CACE482CE731EF009F920F /* VAFAIPAyTernaler.swift in Sources */,
@@ -421,6 +449,8 @@
 				0494BD3D2CE722BF00C1F77E /* VAFDetaiChagtTernaler.swift in Sources */,
 				048FB57A2CEC5C6F004185BD /* VAFUaerlistTernaer.swift in Sources */,
 				040C93E92CE5D9A700214863 /* VAFTELUATernaler.swift in Sources */,
+				0481B4322CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift in Sources */,
+				0481B4352CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift in Sources */,
 				048FB57C2CEC5FCB004185BD /* VAFUaerlistTerCell.swift in Sources */,
 				040C93EB2CE5F1F000214863 /* VAFTHOmeShingCell.swift in Sources */,
 				047512C82CE49D2D002F3B71 /* VAFLogEomaillogTernaler.swift in Sources */,
@@ -463,16 +493,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = VinAdfrCloik/VinAdfrCloik.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZJ9G935YV;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VinAdfrCloik",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VinAdfrCloik/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = VintAre;
 				INFOPLIST_KEY_NSCameraUsageDescription = "VintAre takes photos and uploads user avatars. Users chat and need access to your camera permissions";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Curlis need access to your location permissions to use the iCloud camera's location feature.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "VintAre users need access to your microphone for chatting";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "VintAre uploads user avatars and posts Vintage updates with images, requiring access to your album permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -486,8 +522,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloick.vintare;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.linqian.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -507,16 +543,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = VinAdfrCloik/VinAdfrCloik.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MZJ9G935YV;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VinAdfrCloik",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VinAdfrCloik/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = VintAre;
 				INFOPLIST_KEY_NSCameraUsageDescription = "VintAre takes photos and uploads user avatars. Users chat and need access to your camera permissions";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Curlis need access to your location permissions to use the iCloud camera's location feature.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "VintAre users need access to your microphone for chatting";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "VintAre uploads user avatars and posts Vintage updates with images, requiring access to your album permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -530,8 +572,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cloick.vintare;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.linqian.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

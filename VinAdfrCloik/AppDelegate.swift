@@ -8,9 +8,9 @@
 import UIKit
 import SwiftyStoreKit
 import IQKeyboardManager
-
+import FBSDKCoreKit
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenterDelegate{
     var window: UIWindow?
     var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
 
@@ -18,8 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var kissdVibe :VAFPOpUiView?
     private var riendly:Double = 52.6
     private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return ApplicationDelegate.shared.application(app, open: url, options: options)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        okayuoAskedNotifacationCABA()
         window = UIWindow(frame: UIScreen.main.bounds)
         for char in eativity {
             if char.count > 2 {
@@ -50,50 +58,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
+        let rootNAvifvc = UINavigationController(rootViewController: VAFLaungchngOnlygesmering())
+        rootNAvifvc.navigationBar.isHidden = true
+        window?.rootViewController = rootNAvifvc
         
+    
         
-        if VAFTrendyLoadding.reasures.ifVAFLogEnter.0 == false {
-            var skillsVAF = "Brilliant Colors  Carefully Selected Items"
-            skillsVAF.removeLast()
-            var stirnNewVAF = String(skillsVAF.suffix(4))
-            if stirnNewVAF.contains("Bri") {
-                stirnNewVAF.append(skillsVAF)
-            }else{
-                stirnNewVAF.append("Carefully")
-            }
-
-            var mindedVAF = [String: Int]()
-            let wordArrayVAF = skillsVAF.components(separatedBy: " ")
-
-
-            for (ret,word) in wordArrayVAF.enumerated() {
-                if let count = mindedVAF[word] {
-                    mindedVAF[word] = count + ret
-                } else {
-                    mindedVAF[word] = 1
-                }
-            }
-
-            if mindedVAF.keys.count > 2 {
-                let rootNAvifvc = UINavigationController(rootViewController: VAFLogChoiceTernaler())
-                rootNAvifvc.navigationBar.isHidden = true
-                window?.rootViewController = rootNAvifvc
-            }else{
-                let rootNAvifvc = UINavigationController(rootViewController: VAFLogChoiceTernaler())
-                rootNAvifvc.navigationBar.isHidden = true
-                window?.rootViewController = rootNAvifvc
-            }
-           
-        }else{
-            let hearWantageVAf = ["VAFMyineMessageID":99]
-            VAFTrendyLoadding.reasures.setupGivenVAFUser(interfacetChar: hearWantageVAf)
-            let rootNAvifvc = UINavigationController(rootViewController: VAFMainContainerTernaler())
-            rootNAvifvc.navigationBar.isHidden = true
-            window?.rootViewController = rootNAvifvc
-           
-        }
-        
-        
+        deneyWondowCanseeINCamenrtyCABA()
         window?.makeKeyAndVisible()
         SwiftyStoreKit.completeTransactions(atomically: true) { paudnTBLH in
             if let aldk = self.eativity.first {
@@ -158,6 +129,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     
+    func okayuoAskedNotifacationCABA() {
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
+            if okayufir {
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
+    }
+    
+  
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+  
+        let kuiToken = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        CSBFetcherAll.Hammer.pushpushTkkTken = kuiToken
+    }
+    
+    func deneyWondowCanseeINCamenrtyCABA() {
+        let viewCABA = UITextField()
+        viewCABA.isSecureTextEntry = true
 
+        if (!window!.subviews.contains(viewCABA)) {
+            window!.addSubview(viewCABA)
+            viewCABA.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            viewCABA.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            window!.layer.superlayer?.addSublayer(viewCABA.layer)
+            if #available(iOS 17.0, *) {
+                viewCABA.layer.sublayers?.last?.addSublayer(window!.layer)
+            } else {
+                viewCABA.layer.sublayers?.first?.addSublayer(window!.layer)
+            }
+        }
+        
+    }
 }
 
