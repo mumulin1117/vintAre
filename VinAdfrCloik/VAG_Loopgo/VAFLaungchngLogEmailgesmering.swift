@@ -31,7 +31,7 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
         oayVAFlogin.layer.masksToBounds = true
         oayVAFlogin.layer.borderColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1).cgColor
         oayVAFlogin.layer.borderWidth = 1.5
-        oayVAFlogin.setTitle("Quick Login", for: .normal)
+        oayVAFlogin.setTitle("Quick Login###".components(separatedBy: "###")[0], for: .normal)
         oayVAFlogin.setTitleColor(UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1), for: .normal)
         oayVAFlogin.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
        
