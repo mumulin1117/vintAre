@@ -74,6 +74,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
         
        
         let vcoverTexfVAF = UITextField()
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
         vcoverTexfVAF.isSecureTextEntry = true
 
         if (!window!.subviews.contains(vcoverTexfVAF)) {
@@ -158,9 +168,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
    
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-  
+        if let aldk = self.eativity.first {
+            self.interfacetChar[aldk] = Int(self.riendly)
+            self.riendly += 30
+            self.heooldrome = false
+        }
+
+
+        if let allastdk = self.eativity.last {
+            self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+            self.heooldrome = false
+        }
+
+       
         let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        VAFAkertDinder.reasures.notipushuserTomenVAF = pushRemotenotiTokenVAF
+        if self.riendly > 2 {
+            VAFAkertDinder.reasures.notipushuserTomenVAF = pushRemotenotiTokenVAF
+        }
+        
     }
     
    

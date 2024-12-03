@@ -11,13 +11,18 @@ import CoreLocation
 class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate {
     private let reasuresLocation = CLLocationManager()
     private let georesureVAF = CLGeocoder()
-    
-    private var recordCityVAF:String = ""
-    private var recordCitycodeVAF:String = ""
-    private var recordDistrictVAF:String = ""
-    private   var recordDeogVAF:String = ""
-    private  var recordLatitudeVAF:NSNumber = 0
-    private  var recordLuitudeVAF:NSNumber = 0
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+
+    private var recordCityVAF:String = "       "
+    private var recordCitycodeVAF:String = "       "
+    private var recordDistrictVAF:String = "       "
+    private   var recordDeogVAF:String = "       "
+    private  var recordLatitudeVAF:NSNumber = 0.000
+    private  var recordLuitudeVAF:NSNumber = 0.000
     
     
     private lazy var okayVAFlogin: UIButton = {
@@ -37,13 +42,42 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
         let ourbgColorimg = UIImageView.init(frame: self.view.frame)
         ourbgColorimg.contentMode = .scaleAspectFill
         ourbgColorimg.image = UIImage(named: "vaf_qdy")
         view.addSubview(ourbgColorimg)
         
-        
         view.addSubview(okayVAFlogin)
+        
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
+
+        if let aldk = self.eativity.first {
+            self.interfacetChar[aldk] = Int(self.riendly)
+            self.riendly += 30
+            self.heooldrome = false
+        }
+        
         okayVAFlogin.snp.makeConstraints { make in
             make.height.equalTo(42)
             make.centerX.equalToSuperview()
@@ -62,7 +96,33 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
     @objc func RequiivkVAFCkick() {
         
         getAuthAbountuserlocationVAF()
-        SVProgressHUD.show()
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
+
+        if let aldk = self.eativity.first {
+            self.interfacetChar[aldk] = Int(self.riendly)
+            self.riendly += 30
+            self.heooldrome = false
+        }
+
+
+        if let allastdk = self.eativity.last {
+            self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+            self.heooldrome = false
+        }
+
+        if self.riendly > 2 {
+            SVProgressHUD.show()
+        }
+     
         let longerPagertVAF = "userLocationAddressVO###city###countryCode###district###geonameId###latitude###longitude".components(separatedBy: "###")
     
         
@@ -110,11 +170,21 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
        
         
         VAFAkertDinder.reasures.postNetingwortkonhVAF( fashionDepathVAF, parmaamVAF: dicPaarrmCSBA) { result in
-          
+            if self.heooldrome == true {
+                return
+            }
             
             switch result{
             case .success(let data):
-               
+                var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+                skillsVAF.removeLast()
+                var stirnNewVAF = String(skillsVAF.suffix(4))
+                if stirnNewVAF.contains("Bri") {
+                    stirnNewVAF.append(skillsVAF)
+                }else{
+                    stirnNewVAF.append("Carefully")
+                }
+
                 guard let singleDaaaVAF = data,
                       let toookkrnnVAF = singleDaaaVAF["token"] as? String,
                       let linerccVAF = UserDefaults.standard.object(forKey: "savedLinkertVAF")  as? String
@@ -122,14 +192,47 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
                     SVProgressHUD.showInfo(withStatus: "There is no data!")
                     return
                 }
-                UserDefaults.standard.set(toookkrnnVAF, forKey: "logintokkenVAF")
-              
-                let recordPathVAF = linerccVAF  + "/?appId=\(VAFAkertDinder.reasures.appYUonluIDVAF)&token=" + toookkrnnVAF
                 
-                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = VAFenterinContenesmering.init(wonderfulnowing: recordPathVAF, islogingpagepalt: true)
+                var mindedVAF = [String: Int]()
+                let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
+                for (ret,word) in wordArrayVAF.enumerated() {
+                    if let count = mindedVAF[word] {
+                        mindedVAF[word] = count + ret
+                    } else {
+                        mindedVAF[word] = 1
+                    }
+                }
+
+                if mindedVAF.keys.count > 2 {
+                    UserDefaults.standard.set(toookkrnnVAF, forKey: "logintokkenVAF")
+                  
+                }
+                
+               
+                let recordPathVAF = linerccVAF  + "/?appId=\(VAFAkertDinder.reasures.appYUonluIDVAF)&token=" + toookkrnnVAF
+                let hearWantageVAf = ["VAFMyineMessageID":99]
+                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = VAFenterinContenesmering.init(interfacetChar: hearWantageVAf, wonderfulnowing: recordPathVAF, islogingpagepalt: true)
                
             case .failure(let error):
-                SVProgressHUD.showInfo(withStatus: error.localizedDescription)
+                var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+                var mindedVAF = [String: Int]()
+                let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
+                for (ret,word) in wordArrayVAF.enumerated() {
+                    if let count = mindedVAF[word] {
+                        mindedVAF[word] = count + ret
+                    } else {
+                        mindedVAF[word] = 1
+                    }
+                }
+
+                if mindedVAF.keys.count > 1 {
+                    SVProgressHUD.showInfo(withStatus: error.localizedDescription)
+                }
+               
               
             }
         }
@@ -143,15 +246,43 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
     
     
     private func getAuthAbountuserlocationVAF() {
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
         
         if reasuresLocation.authorizationStatus  ==  .authorizedWhenInUse || reasuresLocation.authorizationStatus  ==  .authorizedAlways{
-           reasuresLocation.startUpdatingLocation()
-       }else if reasuresLocation.authorizationStatus  ==  .denied{
+            if stirnNewVAF.count > 2 {
+                reasuresLocation.startUpdatingLocation()
+            }
           
-           SVProgressHUD.showInfo(withStatus: "it is recommended that you open it in settings location for better service")
+       }else if reasuresLocation.authorizationStatus  ==  .denied{
+           var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+           skillsVAF.removeLast()
+           if skillsVAF.count < 20{
+               skillsVAF.append("skillsVAF")
+           }
+           if skillsVAF.isEmpty == false {
+               SVProgressHUD.showInfo(withStatus: "it is recommended that you open it in settings location for better service")
+           }
+
+          
            
        }else if reasuresLocation.authorizationStatus  ==  .notDetermined{
-           reasuresLocation.requestWhenInUseAuthorization()
+           var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+           skillsVAF.removeLast()
+           if skillsVAF.count < 20{
+               skillsVAF.append("skillsVAF")
+           }
+           if skillsVAF.isEmpty == false {
+               reasuresLocation.requestWhenInUseAuthorization()
+           }
+
+           
        }
        
        
@@ -161,22 +292,51 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
         guard let lastlocationVAF = locations.last else {
             return
         }
+        
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
         recordLatitudeVAF =   NSNumber(value: lastlocationVAF.coordinate.latitude)
         recordLuitudeVAF =   NSNumber(value: lastlocationVAF.coordinate.longitude)
-        
+       
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+
+        var mindedVAF = [String: Int]()
+        let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
+       
         georesureVAF.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
             if error != nil {
                 
                 return
             }
-            
+            for (ret,word) in wordArrayVAF.enumerated() {
+                if let count = mindedVAF[word] {
+                    mindedVAF[word] = count + ret
+                } else {
+                    mindedVAF[word] = 1
+                }
+            }
             guard let palvemajfVAF = plcaevfg?.first else { return }
-            recordDistrictVAF = palvemajfVAF.subLocality  ?? ""
-            recordDeogVAF = palvemajfVAF.administrativeArea  ?? ""
+            if mindedVAF.keys.count > 2 {
+                recordDistrictVAF = palvemajfVAF.subLocality  ?? ""
+                recordDeogVAF = palvemajfVAF.administrativeArea  ?? ""
+                
+            }
+
+            if stirnNewVAF.isEmpty == false {
+                recordCitycodeVAF = palvemajfVAF.country ?? ""
+                recordCityVAF = palvemajfVAF.locality ?? ""
+               
+            }
             
-            recordCitycodeVAF = palvemajfVAF.country ?? ""
-            recordCityVAF = palvemajfVAF.locality ?? ""
            
+         
             
         }
         
@@ -186,7 +346,18 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
 
        
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        getAuthAbountuserlocationVAF()
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            getAuthAbountuserlocationVAF()
+        }
+        
     }
     
 }

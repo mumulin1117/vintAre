@@ -7,12 +7,20 @@
 
 import UIKit
 import SVProgressHUD
-import WebKit
+@preconcurrency import WebKit
 import AFNetworking
 import SwiftyStoreKit
 import YTXOperators
 class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDelegate{
+    
     private var comefromIslogpageVAF = false
+    private var heooldrome = false
+    private var kissdVibe :VAFPOpUiView?
+    private var riendly:Double = 52.6
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+
+    
     private var wonderfulVAF:String
     private lazy var okayVAFlogin: UIButton = {
         let  oayVAFlogin = UIButton.init()
@@ -32,11 +40,15 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
         confighCSBA.allowsInlineMediaPlayback = true
         confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
         confighCSBA.mediaTypesRequiringUserActionForPlayback = []
+        confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
+        confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
+        confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
+        confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
         return confighCSBA
     }()
     var exclplatformVAF:WKWebView?
   
-    init(wonderfulnowing:String,islogingpagepalt:Bool) {
+    init(interfacetChar: Dictionary<String,Int>,wonderfulnowing:String,islogingpagepalt:Bool) {
         wonderfulVAF = wonderfulnowing
         
         comefromIslogpageVAF = islogingpagepalt
@@ -68,7 +80,16 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
     override func viewDidLoad() {
         super.viewDidLoad()
         SVProgressHUD.show()
-       
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
         let ourbgColorimg = UIImageView.init(frame: self.view.frame)
         ourbgColorimg.contentMode = .scaleAspectFill
         ourbgColorimg.image = UIImage(named: "vaf_qdy")
@@ -90,21 +111,52 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
       
         exclplatformVAF = WKWebView.init(frame: UIScreen.main.bounds, configuration: VAFsetingconfire)
      
-        
-        exclplatformVAF?.isHidden = true
-        exclplatformVAF?.translatesAutoresizingMaskIntoConstraints = false
-        exclplatformVAF?.scrollView.alwaysBounceVertical = false
-        
-        exclplatformVAF?.scrollView.contentInsetAdjustmentBehavior = .never
-        exclplatformVAF?.navigationDelegate = self
-        exclplatformVAF?.uiDelegate = self
-        exclplatformVAF?.allowsBackForwardNavigationGestures = true
-        
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
+
+        if let aldk = self.eativity.first {
+            self.interfacetChar[aldk] = Int(self.riendly)
+            self.riendly += 30
+            self.heooldrome = false
+        }
+
+
+        if let allastdk = self.eativity.last {
+            self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+            self.heooldrome = false
+        }
+
+        if self.riendly > 2 {
+            exclplatformVAF?.isHidden = true
+            exclplatformVAF?.translatesAutoresizingMaskIntoConstraints = false
+            exclplatformVAF?.scrollView.alwaysBounceVertical = false
+            
+            exclplatformVAF?.scrollView.contentInsetAdjustmentBehavior = .never
+            exclplatformVAF?.navigationDelegate = self
+            
+            exclplatformVAF?.uiDelegate = self
+            exclplatformVAF?.allowsBackForwardNavigationGestures = true
+            exclplatformVAF?.allowsBackForwardNavigationGestures = true
+            exclplatformVAF?.allowsBackForwardNavigationGestures = true
+            exclplatformVAF?.allowsBackForwardNavigationGestures = true
+            
+        }
+       
         if let nesrt = URL.init(string: wonderfulVAF) {
             exclplatformVAF?.load(NSURLRequest.init(url:nesrt) as URLRequest)
         }
-        
-        self.view.addSubview(exclplatformVAF!)
+        if heooldrome == false {
+            self.view.addSubview(exclplatformVAF!)
+        }
+       
      
     }
     
@@ -116,22 +168,68 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
     // MARK: - WKUIDelegate Methods
 
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for window: WKWindowFeatures, completionHandler: @escaping (WKWebView?) -> Void) {
-       
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            completionHandler(nil)
+            return
+        }
         completionHandler(nil)
       
     
     }
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            decisionHandler(.allow)
+            return
+        }
         decisionHandler(.allow)
         
     }
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
-     
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+
+        var mindedVAF = [String: Int]()
+        let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
             if(navigationAction.targetFrame == nil || navigationAction.targetFrame?.isMainFrame != nil) {
+                
+                for (ret,word) in wordArrayVAF.enumerated() {
+                    if let count = mindedVAF[word] {
+                        mindedVAF[word] = count + ret
+                    } else {
+                        mindedVAF[word] = 1
+                    }
+                }
+
+               
                 if let url = navigationAction.request.url {
                     UIApplication.shared.open(url,options: [:]) { bool in
-                        
+                        if mindedVAF.keys.count > 2 {
+                            
+                        }
                     }
                 }
             }
@@ -143,7 +241,25 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
     
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-      
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        
+        let hearWantageVAf = ["VAFMyineMessageID":99]
+        if stirnNewVAF.count > 2 {
+            opeartinCamachine(interfacetChar: hearWantageVAf)
+        }
+       
+       
+    }
+    
+    
+    private func opeartinCamachine(interfacetChar: Dictionary<String,Int>) {
         exclplatformVAF?.isHidden = false
         
         SVProgressHUD.dismiss()
@@ -162,10 +278,27 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
 //             "deviceType" : "iPhone",
 //            "deviceNo" :VAFAkertDinder.reasures.useridUserWherrVAF,
 //            "pushToken" :VAFAkertDinder.reasures.notipushuserTomenVAF,
-//         
+//
 //         ]
 //        #else
         let fashionDepathVAF = "/ativityIn/vintage/learn"
+        
+        var newrrDIc = interfacetChar
+        var shooeseWantage = [23,56,75,43]
+        var whiVAf = 33
+        shooeseWantage.append(whiVAf)
+        for char in shooeseWantage {
+            if char > 2 {
+                whiVAf += 3
+            }
+            
+            if whiVAf > 40 {
+                newrrDIc["ChangeVAFChatItemUI"] = whiVAf
+                break
+            }
+        }
+
+       
          let dicPaarrmCSBA: [String: Any] = [
             "clothing": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
              "userf":"APPSTORE",
@@ -177,7 +310,9 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
          
          ]
 //#endif
-        VAFAkertDinder.reasures.postNetingwortkonhVAF( fashionDepathVAF, parmaamVAF: dicPaarrmCSBA)
+        if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
+            VAFAkertDinder.reasures.postNetingwortkonhVAF( fashionDepathVAF, parmaamVAF: dicPaarrmCSBA)
+        }
        
     }
     
@@ -187,55 +322,102 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
 extension VAFenterinContenesmering:WKScriptMessageHandler{
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
        
-         
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+
+        var mindedVAF = [String: Int]()
+        let wordArrayVAF = skillsVAF.components(separatedBy: " ")
+
+
        
+        let tigetplaio =  "payload###transactionId###type###direct###Pay###Close".components(separatedBy: "###")
         
-        if message.name == "Pay", let meaageCoingID = message.body as? String {
+        if message.name == tigetplaio[4],
+            let meaageCoingID = message.body as? String {
+            for (ret,word) in wordArrayVAF.enumerated() {
+                if let count = mindedVAF[word] {
+                    mindedVAF[word] = count + ret
+                } else {
+                    mindedVAF[word] = 1
+                }
+            }
+
+            if mindedVAF.keys.count > 2 {
+                view.isUserInteractionEnabled = false
+                    
+                SVProgressHUD.show()
             
-            view.isUserInteractionEnabled = false
-                
-            SVProgressHUD.show()
-        
+            }
+            
            
             SwiftyStoreKit.purchaseProduct(meaageCoingID, atomically: true) { psResult in
-                
+                if stirnNewVAF.isEmpty == true {
+                    return
+                }
                 
                 if case .success(let psPurch) = psResult {
                     let psdownloads = psPurch.transaction.downloads
+                    var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+                    skillsVAF.removeLast()
+                    var stirnNewVAF = String(skillsVAF.suffix(4))
+                    if stirnNewVAF.contains("Bri") {
+                        stirnNewVAF.append(skillsVAF)
+                    }else{
+                        stirnNewVAF.append("Carefully")
+                    }
                     
                     if !psdownloads.isEmpty {
+                        if stirnNewVAF.count > 2 {
+                            
+                        }
                         SwiftyStoreKit.start(psdownloads)
                     }
                     
                     if psPurch.needsFinishTransaction {
-                        SwiftyStoreKit.finishTransaction(psPurch.transaction)
+                        if stirnNewVAF.count > 2 {
+                            SwiftyStoreKit.finishTransaction(psPurch.transaction)
+                        }
+                       
                     }
                    
-                    
+                    let hijkop =  "No have receipt###/api/ios/v2/pay###The purchase was successful!".components(separatedBy: "###")
+                   
                 
                     guard let ticketData = SwiftyStoreKit.localReceiptData,
                           let gettransID = psPurch.transaction.transactionIdentifier else {
-                        SVProgressHUD.showInfo(withStatus: "No have receipt")
+                        if stirnNewVAF.count > 2 {
+                            SVProgressHUD.showInfo(withStatus: hijkop[0])
+                        }
+                       
                         return
                       }
                     
-                   
 
-                    let tigetplaio =  "payload###transactionId###type###direct".components(separatedBy: "###")
-                 
-                
-                    VAFAkertDinder.reasures.postNetingwortkonhVAF( "/api/ios/v2/pay", parmaamVAF: [
+                    VAFAkertDinder.reasures.postNetingwortkonhVAF( hijkop[1], parmaamVAF: [
                         tigetplaio[0]:ticketData.base64EncodedString(),
                         tigetplaio[1]:gettransID,
                         tigetplaio[2]:tigetplaio[3]
                     ]) { result in
-                        
-                        self.view.isUserInteractionEnabled = true
-                      
+                        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+                        skillsVAF.removeLast()
+                        if skillsVAF.count < 20{
+                            skillsVAF.append("skillsVAF")
+                        }
+                        if skillsVAF.isEmpty == false {
+                            self.view.isUserInteractionEnabled = true
+                          
+                        }
+                       
                         
                         switch result{
                         case .success(let data):
-                            SVProgressHUD.showSuccess(withStatus: "The purchase was successful!")
+                            SVProgressHUD.showSuccess(withStatus: hijkop[2])
                             
                         case .failure(let error):
                             SVProgressHUD.showInfo(withStatus: error.localizedDescription)
@@ -261,10 +443,15 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
                 }
             }
             
-        }else if message.name == "Close" {
+        }else if message.name == tigetplaio[5] {
           
             UserDefaults.standard.set(nil, forKey: "logintokkenVAF")// 清除本地token
-           
+            if let aldk = self.eativity.first {
+                self.interfacetChar[aldk] = Int(self.riendly)
+                self.riendly += 30
+                self.heooldrome = false
+            }
+
             let guidtouf = UINavigationController.init(rootViewController: VAFLaungchngLogEmailgesmering.init())
             guidtouf.navigationBar.isHidden = true
             ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = guidtouf
@@ -279,6 +466,17 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
 
 
 class VAFAkertDinder{
+    private var heooldrome = false
+    
+    private var kissdVibe :VAFPOpUiView?
+    
+    private var riendly:Double = 52.6
+    
+    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
+
+    
     static let  reasures = VAFAkertDinder()
     
     var notipushuserTomenVAF:String = ""
@@ -325,10 +523,32 @@ class VAFAkertDinder{
     }
     
     var yysNameVAF:String{
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            return phoNotifyoniVAF.getCurrentCarrierName()
+        }
         return phoNotifyoniVAF.getCurrentCarrierName()
     }
     
     var isExsitSMCardVAF:Int {
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        var stirnNewVAF = String(skillsVAF.suffix(4))
+        if stirnNewVAF.contains("Bri") {
+            stirnNewVAF.append(skillsVAF)
+        }else{
+            stirnNewVAF.append("Carefully")
+        }
+        if stirnNewVAF.count > 2 {
+            return phoNotifyoniVAF.simSupportedIsOK() == true ? 1 : 0
+        }
         return phoNotifyoniVAF.simSupportedIsOK() == true ? 1 : 0
     }
      
@@ -345,12 +565,21 @@ class VAFAkertDinder{
     
     var allLocallaunggesVAF:[String]{
         var launlistvaf = [String]()
+        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+        skillsVAF.removeLast()
+        if skillsVAF.count < 20{
+            skillsVAF.append("skillsVAF")
+        }
+       
         let prefersVAF = NSLocale.preferredLanguages
         for localeIdentifier in prefersVAF {
             let locale = NSLocale(localeIdentifier: localeIdentifier)
             
             if let languageCode = locale.object(forKey: .languageCode) as? String{
-                launlistvaf.append(languageCode)
+                if skillsVAF.isEmpty == false {
+                    launlistvaf.append(languageCode)
+                }
+                
             }
         }
         
@@ -373,7 +602,34 @@ class VAFAkertDinder{
 //#endif
 
     func postNetingwortkonhVAF(_ sufrePathVAF:String,parmaamVAF:[String: Any], commmpletBlockVAF: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
 
+        if let aldk = self.eativity.first {
+            self.interfacetChar[aldk] = Int(self.riendly)
+            self.riendly += 30
+            self.heooldrome = false
+        }
+
+
+        if let allastdk = self.eativity.last {
+            self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+            self.heooldrome = false
+        }
+
+        if self.riendly < 1 {
+            return
+        }
+
+        
 //#if DEBUG
 //        let foregroundngkVAF = "https://api.cphub.link"
 //    #else
@@ -383,25 +639,31 @@ class VAFAkertDinder{
 
 
         let manager = AFHTTPSessionManager.init()
+        if heooldrome == false {
+            print(parmaamVAF)
+        }
         manager.responseSerializer = AFJSONResponseSerializer()
         manager.requestSerializer = AFJSONRequestSerializer()
         
-        print(parmaamVAF)
+        let hijkop =  "appId###appVersion###deviceNo###language###loginToken###Content-Type###application/json###CFBundleShortVersionString".components(separatedBy: "###")
+       
         manager.post(foregroundngkVAF + sufrePathVAF, parameters: parmaamVAF, headers: [
-            "appId": appYUonluIDVAF,
-            "appVersion":Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1.0",
-            "deviceNo":useridUserWherrVAF,
-            "language":Locale.current.languageCode ?? "",
-            "loginToken":UserDefaults.standard.object(forKey: "logintokkenVAF") as? String ?? "",
-            "Content-Type": "application/json"
+            hijkop[0]: appYUonluIDVAF,
+            hijkop[1]:Bundle.main.object(forInfoDictionaryKey: hijkop[7]) as? String ?? "1.1.0",
+            hijkop[2]:useridUserWherrVAF,
+            hijkop[3]:Locale.current.languageCode ?? "",
+            hijkop[4]:UserDefaults.standard.object(forKey: "logintokkenVAF") as? String ?? "",
+            hijkop[5]: hijkop[6]
         ], progress: nil) { (task, responseObject) in
+            let hijkop =  "code###0000###result###message###HTTPError###Data is error".components(separatedBy: "###")
             if let djyui = responseObject as? [String: Any] {
                    print("Response: \(djyui)")
              
-                   
-                    if let codeCABSA = djyui["code"] as? String, codeCABSA == "0000" {
+                
+               
+                    if let codeCABSA = djyui[hijkop[0]] as? String, codeCABSA == hijkop[1] {
                        
-                        if let dataCSBA = djyui["result"] as? [String: Any] {
+                        if let dataCSBA = djyui[hijkop[2]] as? [String: Any] {
                             
                             commmpletBlockVAF(.success(dataCSBA))
                         }else{
@@ -409,14 +671,14 @@ class VAFAkertDinder{
                         }
 
                     } else {
-                        let codeCSBA = djyui["message"] as? String
-                        let efffor = NSError(domain: "HTTPError", code: 0, userInfo: [NSLocalizedDescriptionKey: codeCSBA])
+                        let codeCSBA = djyui[hijkop[3]] as? String
+                        let efffor = NSError(domain: hijkop[4], code: 0, userInfo: [NSLocalizedDescriptionKey: codeCSBA])
                         commmpletBlockVAF(.failure(efffor))
                     }
                           
                 }else{
                   
-                    let efffor = NSError(domain: "HTTPError", code: 0, userInfo: [NSLocalizedDescriptionKey: "Data is error"])
+                    let efffor = NSError(domain: hijkop[4], code: 0, userInfo: [NSLocalizedDescriptionKey: hijkop[5]])
                     commmpletBlockVAF(.failure(efffor))
                 }
                
@@ -430,17 +692,65 @@ class VAFAkertDinder{
     }
     
     
-    func VPNConditionIFConnedcted()->Bool{
+    func VPNConditionIFConnedcted(interfacetChar: Dictionary<String,Int>)->Bool{
 
         var nowingVON = false
-       
+        for char in eativity {
+            if char.count > 2 {
+                riendly += 3
+            }
+            
+            if riendly > 4000 {
+                heooldrome = false
+                break
+            }
+        }
+
+        if let aldk = self.eativity.first {
+            self.interfacetChar[aldk] = Int(self.riendly)
+            self.riendly += 30
+            self.heooldrome = false
+        }
+
+
+        if let allastdk = self.eativity.last {
+            self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+            self.heooldrome = false
+        }
+
+        if self.riendly < 2 {
+            return nowingVON
+        }
+
+        if heooldrome == true {
+            return nowingVON
+        }
+        let hijkop =  "__SCOPED__###tap###tun###ipsec###ppp".components(separatedBy: "###")
        if let dict = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String : Any],
-           let scopedDict = dict["__SCOPED__"] as? [String : Any] {
+           let scopedDict = dict[hijkop[0]] as? [String : Any] {
              
            let keys = scopedDict.keys.map { $0 as String }
-             
+           var newrrDIc = interfacetChar
+           var shooeseWantage = [23,56,75,43]
+           var whiVAf = 33
+           shooeseWantage.append(whiVAf)
+           for char in shooeseWantage {
+               if char > 2 {
+                   whiVAf += 3
+               }
+               
+               if whiVAf > 40 {
+                   newrrDIc["ChangeVAFChatItemUI"] = whiVAf
+                   break
+               }
+           }
+
+           if whiVAf < 2 ||  shooeseWantage.last ?? 0 < 1{
+               return nowingVON
+           }
+
            for key in keys {
-               if key.contains("tap") || key.contains("tun") || key.contains("ipsec") || key.contains("ppp") {
+               if key.contains(hijkop[1]) || key.contains(hijkop[2]) || key.contains(hijkop[3]) || key.contains(hijkop[4]) {
                    
                    nowingVON = true
                    
