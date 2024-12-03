@@ -2,15 +2,24 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb952561243737295</string>
+			</array>
+		</dict>
+	</array>
 	<key>FacebookAdvertiserIDCollectionEnabled
 </key>
 	<true/>
 	<key>FacebookAppID</key>
-	<string></string>
+	<string>952561243737295</string>
 	<key>FacebookAutoLogAppEventsEnabled</key>
 	<true/>
 	<key>FacebookClientToken</key>
-	<string></string>
+	<string>99911adeae8e3327ac2a00e12d26ba67</string>
 	<key>FacebookDisplayName</key>
 	<string>VintAre</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -20,11 +29,12 @@
 		<string>fb</string>
 		<string>instagram</string>
 		<string>twitter</string>
-		<string>Facebook</string>
-		<string>TikTok</string>
+		<string>facebook</string>
+		<string>tiktok</string>
 		<string>twitter</string>
 		<string>qq</string>
-		<string>GoogleMaps</string>
+		<string>comgooglemaps</string>
+		<string>whatsapp</string>
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>

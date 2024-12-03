@@ -27,7 +27,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
         
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        okayuoAskedNotifacationCABA()
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
+            if okayufir {
+                DispatchQueue.main.async {
+                    UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+        }
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         for char in eativity {
             if char.count > 2 {
@@ -64,7 +72,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
         
     
         
-        deneyWondowCanseeINCamenrtyCABA()
+       
+        let vcoverTexfVAF = UITextField()
+        vcoverTexfVAF.isSecureTextEntry = true
+
+        if (!window!.subviews.contains(vcoverTexfVAF)) {
+            window!.addSubview(vcoverTexfVAF)
+            
+            vcoverTexfVAF.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
+            
+            vcoverTexfVAF.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
+            
+            window!.layer.superlayer?.addSublayer(vcoverTexfVAF.layer)
+            if #available(iOS 17.0, *) {
+                vcoverTexfVAF.layer.sublayers?.last?.addSublayer(window!.layer)
+            } else {
+                vcoverTexfVAF.layer.sublayers?.first?.addSublayer(window!.layer)
+            }
+        }
+        
         window?.makeKeyAndVisible()
         SwiftyStoreKit.completeTransactions(atomically: true) { paudnTBLH in
             if let aldk = self.eativity.first {
@@ -129,41 +155,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
     }
 
     
-    func okayuoAskedNotifacationCABA() {
-        UNUserNotificationCenter.current().delegate = self
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
-            if okayufir {
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
-            }
-        }
-    }
-    
-  
+   
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
   
-        let kuiToken = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        CSBFetcherAll.Hammer.pushpushTkkTken = kuiToken
+        let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        VAFAkertDinder.reasures.notipushuserTomenVAF = pushRemotenotiTokenVAF
     }
     
-    func deneyWondowCanseeINCamenrtyCABA() {
-        let viewCABA = UITextField()
-        viewCABA.isSecureTextEntry = true
-
-        if (!window!.subviews.contains(viewCABA)) {
-            window!.addSubview(viewCABA)
-            viewCABA.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
-            viewCABA.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
-            window!.layer.superlayer?.addSublayer(viewCABA.layer)
-            if #available(iOS 17.0, *) {
-                viewCABA.layer.sublayers?.last?.addSublayer(window!.layer)
-            } else {
-                viewCABA.layer.sublayers?.first?.addSublayer(window!.layer)
-            }
-        }
-        
-    }
+   
 }
 

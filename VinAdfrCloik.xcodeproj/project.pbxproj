@@ -36,7 +36,6 @@
 		047512D72CE4AB6E002F3B71 /* VAFokaPostTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047512D52CE4AB6E002F3B71 /* VAFokaPostTernaler.swift */; };
 		047512D82CE4AB6E002F3B71 /* VAFokaPostTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047512D62CE4AB6E002F3B71 /* VAFokaPostTernaler.xib */; };
 		0481B4322CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481B4302CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift */; };
-		0481B4332CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0481B4312CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib */; };
 		0481B4352CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481B4342CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift */; };
 		0481B4372CFDA5A500092AFC /* VAFenterinContenesmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481B4362CFDA5A500092AFC /* VAFenterinContenesmering.swift */; };
 		0481B43D2CFDAD7D00092AFC /* YTXOperators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481B43C2CFDAD7D00092AFC /* YTXOperators.framework */; };
@@ -100,7 +99,6 @@
 		047512D52CE4AB6E002F3B71 /* VAFokaPostTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFokaPostTernaler.swift; sourceTree = "<group>"; };
 		047512D62CE4AB6E002F3B71 /* VAFokaPostTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFokaPostTernaler.xib; sourceTree = "<group>"; };
 		0481B4302CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFLaungchngLogEmailgesmering.swift; sourceTree = "<group>"; };
-		0481B4312CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFLaungchngEmailgesmering.xib; sourceTree = "<group>"; };
 		0481B4342CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFLaungchngOnlygesmering.swift; sourceTree = "<group>"; };
 		0481B4362CFDA5A500092AFC /* VAFenterinContenesmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFenterinContenesmering.swift; sourceTree = "<group>"; };
 		0481B4392CFDAAEE00092AFC /* VinAdfrCloik.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VinAdfrCloik.entitlements; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 				040C93E62CE5D9A700214863 /* VAFTELUATernaler.swift */,
 				040C93E72CE5D9A700214863 /* VAFTELUATernaler.xib */,
 				0481B4302CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift */,
-				0481B4312CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib */,
 				0481B4342CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift */,
 				0481B4362CFDA5A500092AFC /* VAFenterinContenesmering.swift */,
 			);
@@ -368,7 +365,6 @@
 				040C93E32CE5C35D00214863 /* VAFUserFdaata.plist in Resources */,
 				0495C8D22CE6DD75005EDC67 /* VAFDetailDyymstTernaler.xib in Resources */,
 				040C93E82CE5D9A700214863 /* VAFTELUATernaler.xib in Resources */,
-				0481B4332CFDA32E00092AFC /* VAFLaungchngEmailgesmering.xib in Resources */,
 				04514A112CEC21C500653EB9 /* VAFhiscenterTernaer.xib in Resources */,
 				04CACE492CE731EF009F920F /* VAFAIPAyTernaler.xib in Resources */,
 				047512C42CE495E4002F3B71 /* VAFLogChoiceTernaler.xib in Resources */,
@@ -499,7 +495,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZJ9G935YV;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VinAdfrCloik",
@@ -549,7 +545,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MZJ9G935YV;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
-				EXCLUDED_ARCHS = "";
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VinAdfrCloik",

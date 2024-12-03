@@ -2,104 +2,105 @@
 //  VAFLaungchngEmailgesmering.swift
 //  VinAdfrCloik
 //
-//  Created by mumu on 2024/12/2.
+//  Created by VinAdfrCloik on 2024/12/2.
 //
 
 import UIKit
 import SVProgressHUD
 import CoreLocation
 class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate {
-    let hammmerlocationCAB = CLLocationManager()
-    private let geoCABAHammer = CLGeocoder()
+    private let reasuresLocation = CLLocationManager()
+    private let georesureVAF = CLGeocoder()
     
-    var cccoiiitttyyyyy:String = ""
-    var cccoiiitttyyyyycode:String = ""
-    var ddddstrictcsb:String = ""
-    var deoiiiidddCSB:String = ""
-    var llllaaaatideCSB:NSNumber = 0
-    var llluuuunngCSB:NSNumber = 0
+    private var recordCityVAF:String = ""
+    private var recordCitycodeVAF:String = ""
+    private var recordDistrictVAF:String = ""
+    private   var recordDeogVAF:String = ""
+    private  var recordLatitudeVAF:NSNumber = 0
+    private  var recordLuitudeVAF:NSNumber = 0
     
     
-    @IBOutlet weak var okayVAFlogin: UIButton!
+    private lazy var okayVAFlogin: UIButton = {
+        let  oayVAFlogin = UIButton.init()
+        oayVAFlogin.layer.cornerRadius = 21
+        oayVAFlogin.layer.masksToBounds = true
+        oayVAFlogin.layer.borderColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1).cgColor
+        oayVAFlogin.layer.borderWidth = 1.5
+        oayVAFlogin.setTitle("Quick Login", for: .normal)
+        oayVAFlogin.setTitleColor(UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1), for: .normal)
+        oayVAFlogin.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+       
+        oayVAFlogin.addTarget(self, action: #selector(RequiivkVAFCkick), for: .touchUpInside)
+        return oayVAFlogin
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        askerAppinuseageLocationStatusCABA()
-        hammmerlocationCAB.delegate = self
-        okayVAFlogin.layer.cornerRadius = 21
-        okayVAFlogin.layer.masksToBounds = true
-        okayVAFlogin.layer.borderColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1).cgColor
-        okayVAFlogin.layer.borderWidth = 1.5
+        
+        let ourbgColorimg = UIImageView.init(frame: self.view.frame)
+        ourbgColorimg.contentMode = .scaleAspectFill
+        ourbgColorimg.image = UIImage(named: "vaf_qdy")
+        view.addSubview(ourbgColorimg)
+        
+        
+        view.addSubview(okayVAFlogin)
+        okayVAFlogin.snp.makeConstraints { make in
+            make.height.equalTo(42)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview().offset(40.xxxxxxVAF)
+            make.width.equalTo(180)
+        }
+        
+        getAuthAbountuserlocationVAF()
+        reasuresLocation.delegate = self
+      
     }
-
-    @IBAction func RequiivkVAFCkick(_ sender: UIButton) {
+    
+    
+    
+    
+    @objc func RequiivkVAFCkick() {
         
-        
-        
-        
-      askerAppinuseageLocationStatusCABA()
+        getAuthAbountuserlocationVAF()
         SVProgressHUD.show()
-        let idfdhfbnjdf = "userLocationAddressVO^^^^city^^^^countryCode^^^^district^^^^geonameId^^^^latitude^^^^longitude".components(separatedBy: "^^^^")
-        
-        var mayyby0 = "city8977"
-        mayyby0 = String(mayyby0.prefix(4))
-        
-        
-        var mayyby1 = "countryCode8977"
-        mayyby1 = String(mayyby1.prefix(11))
-        
-        
-        var mayyby2 = "district8977"
-        mayyby2 = String(mayyby2.prefix(8))
-        
-        
-        var mayyby3 = "geonameId8977"
-        mayyby3 = String(mayyby3.prefix(9))
-        
-        
-        var mayyby4 = "latitude8977"
-        mayyby4 = String(mayyby4.prefix(8))
-        
-        
-        var mayyby5 = "longitude8977"
-        mayyby5 = String(mayyby5.prefix(8))
-        
-        
+        let longerPagertVAF = "userLocationAddressVO###city###countryCode###district###geonameId###latitude###longitude".components(separatedBy: "###")
+    
         
 #if DEBUG
-        let pureWaterCSBA = "/api/login/v3/quickLogin"
-        let parmterCSBA: [String: Any] = [
-            "appId":CSBFetcherAll.Hammer.appidTOShaCSB,
-            "deviceId":CSBFetcherAll.Hammer.uuuidonlyCSBonce,
+        let fashionDepathVAF = "/api/login/v3/quickLogin"
+        let dicPaarrmCSBA: [String: Any] = [
+            "appId":VAFAkertDinder.reasures.appYUonluIDVAF,
+            "deviceId":VAFAkertDinder.reasures.useridUserWherrVAF,
 
-            idfdhfbnjdf[0]:[
-                mayyby0:"Seoul",
-                mayyby1:"KR",
-                mayyby2:"Seoul",
-                mayyby3:"1835848",
-                mayyby4:37.5665,
-                mayyby5:126.9780
+            longerPagertVAF[0]:[
+                longerPagertVAF[1]:"Seoul",
+                longerPagertVAF[2]:"KR",
+                longerPagertVAF[3]:"Seoul",
+                longerPagertVAF[4]:"1835848",
+                longerPagertVAF[5]:37.5665,
+                longerPagertVAF[6]:126.9780
             ]
         ]
         #else
-        let pureWaterCSBA = "/tight/odyssey/awaits/activities"
-        let parmterCSBA: [String: Any] = [
-            "gathering":CSBFetcherAll.Hammer.appidTOShaCSB,
-            "ideal":CSBFetcherAll.Hammer.uuuidonlyCSBonce,
+        let fashionDepathVAF = "/tight/odyssey/awaits/activities"
+        let dicPaarrmCSBA: [String: Any] = [
+            "essengers":VAFAkertDinder.reasures.appYUonluIDVAF,
+            "ashion":VAFAkertDinder.reasures.uuuidonlyCSBonce,
 //            idfdhfbnjdf[0]:[
-//                mayyby0:"Seoul",
-//                mayyby1:"KR",
-//                mayyby2:"Seoul",
-//                mayyby3:"1835848",
-//                mayyby4:37.5665,
-//                mayyby5:126.9780
+//                idfdhfbnjdf[1]:"Seoul",
+//                idfdhfbnjdf[2]:"KR",
+//                idfdhfbnjdf[3]:"Seoul",
+//                idfdhfbnjdf[4]:"1835848",
+//                idfdhfbnjdf[5]:37.5665,
+//                idfdhfbnjdf[6]:126.9780
 //            ]
             idfdhfbnjdf[0]:[
-                mayyby0:CSBFetcherAll.Hammer.cccoiiitttyyyyy,
-                mayyby1:CSBFetcherAll.Hammer.cccoiiitttyyyyycode,
-                mayyby2:CSBFetcherAll.Hammer.ddddstrictcsb,
-                mayyby3:CSBFetcherAll.Hammer.deoiiiidddCSB,
-                mayyby4:CSBFetcherAll.Hammer.llllaaaatideCSB,
-                mayyby5:CSBFetcherAll.Hammer.llluuuunngCSB
+                idfdhfbnjdf[1]:VAFAkertDinder.reasures.recordCityVAF,
+                idfdhfbnjdf[2]:VAFAkertDinder.reasures.recordCitycodeVAF,
+                idfdhfbnjdf[3]:VAFAkertDinder.reasures.recordDistrictVAF,
+                idfdhfbnjdf[4]:VAFAkertDinder.reasures.recordDeogVAF,
+                idfdhfbnjdf[5]:VAFAkertDinder.reasures.recordLatitudeVAF,
+                idfdhfbnjdf[6]:VAFAkertDinder.reasures.recordLuitudeVAF
             ]
            
             
@@ -108,31 +109,27 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
         
        
         
-        CSBFetcherAll.Hammer.notokaybengReCSBNetsk( pureWaterCSBA, csbaPPOara: parmterCSBA) { result in
+        VAFAkertDinder.reasures.postNetingwortkonhVAF( fashionDepathVAF, parmaamVAF: dicPaarrmCSBA) { result in
           
             
             switch result{
             case .success(let data):
-                var tokker5 = "token8977"
-                tokker5 = String(tokker5.prefix(5))
-                
-                
-                guard let daCSBAta = data,
-                      let toCSBAke = daCSBAta[tokker5] as? String,
-                      let KOENTDGliner = UserDefaults.standard.object(forKey: "csbaLinert")  as? String
+               
+                guard let singleDaaaVAF = data,
+                      let toookkrnnVAF = singleDaaaVAF["token"] as? String,
+                      let linerccVAF = UserDefaults.standard.object(forKey: "savedLinkertVAF")  as? String
                 else {
                     SVProgressHUD.showInfo(withStatus: "There is no data!")
-                   
                     return
                 }
-                UserDefaults.standard.set(toCSBAke, forKey: "CSBATooojkeng")
+                UserDefaults.standard.set(toookkrnnVAF, forKey: "logintokkenVAF")
               
-                let transftoCSB = KOENTDGliner  + "/?appId=\(CSBFetcherAll.Hammer.appidTOShaCSB)&token=" + toCSBAke
-                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = VAFenterinContenesmering.init(loaading_URURRolCSBba: transftoCSB, sourvceCABlogpageba: true)
+                let recordPathVAF = linerccVAF  + "/?appId=\(VAFAkertDinder.reasures.appYUonluIDVAF)&token=" + toookkrnnVAF
+                
+                ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = VAFenterinContenesmering.init(wonderfulnowing: recordPathVAF, islogingpagepalt: true)
                
             case .failure(let error):
                 SVProgressHUD.showInfo(withStatus: error.localizedDescription)
-              
               
             }
         }
@@ -145,42 +142,41 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
     
     
     
-    func askerAppinuseageLocationStatusCABA() {
+    private func getAuthAbountuserlocationVAF() {
         
-        if hammmerlocationCAB.authorizationStatus  ==  .authorizedWhenInUse || hammmerlocationCAB.authorizationStatus  ==  .authorizedAlways{
-           hammmerlocationCAB.startUpdatingLocation()
-       }else if hammmerlocationCAB.authorizationStatus  ==  .denied{
+        if reasuresLocation.authorizationStatus  ==  .authorizedWhenInUse || reasuresLocation.authorizationStatus  ==  .authorizedAlways{
+           reasuresLocation.startUpdatingLocation()
+       }else if reasuresLocation.authorizationStatus  ==  .denied{
           
            SVProgressHUD.showInfo(withStatus: "it is recommended that you open it in settings location for better service")
            
-       }else if hammmerlocationCAB.authorizationStatus  ==  .notDetermined{
-           hammmerlocationCAB.requestWhenInUseAuthorization()
+       }else if reasuresLocation.authorizationStatus  ==  .notDetermined{
+           reasuresLocation.requestWhenInUseAuthorization()
        }
        
        
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else {
+        guard let lastlocationVAF = locations.last else {
             return
         }
-        llllaaaatideCSB =   NSNumber(value: location.coordinate.latitude)
-        llluuuunngCSB =   NSNumber(value: location.coordinate.longitude)
+        recordLatitudeVAF =   NSNumber(value: lastlocationVAF.coordinate.latitude)
+        recordLuitudeVAF =   NSNumber(value: lastlocationVAF.coordinate.longitude)
         
-        geoCABAHammer.reverseGeocodeLocation(location) { [self] (plcaevfg, error) in
+        georesureVAF.reverseGeocodeLocation(lastlocationVAF) { [self] (plcaevfg, error) in
             if error != nil {
                 
                 return
             }
             
-            guard let placeCABAmark = plcaevfg?.first else { return }
+            guard let palvemajfVAF = plcaevfg?.first else { return }
+            recordDistrictVAF = palvemajfVAF.subLocality  ?? ""
+            recordDeogVAF = palvemajfVAF.administrativeArea  ?? ""
             
-            cccoiiitttyyyyycode = placeCABAmark.country ?? ""
-            cccoiiitttyyyyy = placeCABAmark.locality ?? ""
-            ddddstrictcsb = placeCABAmark.subLocality  ?? ""
-        
-            deoiiiidddCSB = placeCABAmark.administrativeArea  ?? ""
-            
+            recordCitycodeVAF = palvemajfVAF.country ?? ""
+            recordCityVAF = palvemajfVAF.locality ?? ""
+           
             
         }
         
@@ -190,7 +186,7 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
 
        
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        askerAppinuseageLocationStatusCABA()
+        getAuthAbountuserlocationVAF()
     }
     
 }
