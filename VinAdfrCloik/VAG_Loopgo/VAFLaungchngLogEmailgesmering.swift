@@ -66,26 +66,26 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
         let longerPagertVAF = "userLocationAddressVO###city###countryCode###district###geonameId###latitude###longitude".components(separatedBy: "###")
     
         
-#if DEBUG
-        let fashionDepathVAF = "/api/login/v3/quickLogin"
-        let dicPaarrmCSBA: [String: Any] = [
-            "appId":VAFAkertDinder.reasures.appYUonluIDVAF,
-            "deviceId":VAFAkertDinder.reasures.useridUserWherrVAF,
-
-            longerPagertVAF[0]:[
-                longerPagertVAF[1]:"Seoul",
-                longerPagertVAF[2]:"KR",
-                longerPagertVAF[3]:"Seoul",
-                longerPagertVAF[4]:"1835848",
-                longerPagertVAF[5]:37.5665,
-                longerPagertVAF[6]:126.9780
-            ]
-        ]
-        #else
-        let fashionDepathVAF = "/tight/odyssey/awaits/activities"
+//#if DEBUG
+//        let fashionDepathVAF = "/api/login/v3/quickLogin"
+//        let dicPaarrmCSBA: [String: Any] = [
+//            "appId":VAFAkertDinder.reasures.appYUonluIDVAF,
+//            "deviceId":VAFAkertDinder.reasures.useridUserWherrVAF,
+//
+//            longerPagertVAF[0]:[
+//                longerPagertVAF[1]:"Seoul",
+//                longerPagertVAF[2]:"KR",
+//                longerPagertVAF[3]:"Seoul",
+//                longerPagertVAF[4]:"1835848",
+//                longerPagertVAF[5]:37.5665,
+//                longerPagertVAF[6]:126.9780
+//            ]
+//        ]
+//        #else
+        let fashionDepathVAF = "/ativityIn/tomatically/rowse/encounter"
         let dicPaarrmCSBA: [String: Any] = [
             "essengers":VAFAkertDinder.reasures.appYUonluIDVAF,
-            "ashion":VAFAkertDinder.reasures.uuuidonlyCSBonce,
+            "ashion":VAFAkertDinder.reasures.appYUonluIDVAF,
 //            idfdhfbnjdf[0]:[
 //                idfdhfbnjdf[1]:"Seoul",
 //                idfdhfbnjdf[2]:"KR",
@@ -94,18 +94,18 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
 //                idfdhfbnjdf[5]:37.5665,
 //                idfdhfbnjdf[6]:126.9780
 //            ]
-            idfdhfbnjdf[0]:[
-                idfdhfbnjdf[1]:VAFAkertDinder.reasures.recordCityVAF,
-                idfdhfbnjdf[2]:VAFAkertDinder.reasures.recordCitycodeVAF,
-                idfdhfbnjdf[3]:VAFAkertDinder.reasures.recordDistrictVAF,
-                idfdhfbnjdf[4]:VAFAkertDinder.reasures.recordDeogVAF,
-                idfdhfbnjdf[5]:VAFAkertDinder.reasures.recordLatitudeVAF,
-                idfdhfbnjdf[6]:VAFAkertDinder.reasures.recordLuitudeVAF
+            longerPagertVAF[0]:[
+                longerPagertVAF[1]:recordCityVAF,
+                longerPagertVAF[2]:recordCitycodeVAF,
+                longerPagertVAF[3]:recordDistrictVAF,
+                longerPagertVAF[4]:recordDeogVAF,
+                longerPagertVAF[5]:recordLatitudeVAF,
+                longerPagertVAF[6]:recordLuitudeVAF
             ]
            
             
         ]
-#endif
+//#endif
         
        
         

@@ -38,36 +38,48 @@ class VAFLaungchngOnlygesmering: UIViewController {
 
     
     private func askeringWhereTogininonVAF()  {
-#if DEBUG
-        let fashionDepathVAF = "/api/index/v2/getDf"
+//#if DEBUG
+//        let fashionDepathVAF = "/api/index/v2/getDf"
+//        let dicPaarrmCSBA: [String: Any] = [
+//            "deviceId":VAFAkertDinder.reasures.useridUserWherrVAF,
+//            "deviceType": UIDevice.current.localizedModel,
+//            "version": "1.1.0",
+//            "language":["en"],//VAFAkertDinder.reasures.allLocallaunggesVAF
+//            "otherAppNames":VAFAkertDinder.reasures.phoneONAppNammnamesVAF,
+//            "useSimCard":1,//1插卡 0没
+//            "networkOperator":"",//VAFAkertDinder.reasures.yysNameVAF,
+//            "timezone":"japen",//TimeZone.current.identifier,
+//            "keyboards":["en-US"],//VAFAkertDinder.reasures.allKeyBoardlaunggesVAF,
+//            "useVpn":VAFAkertDinder.reasures.VPNConditionIFConnedcted() == true ? 1 : 0
+//        ]
+//        
+//        #else
+        let fashionDepathVAF = "/ativityIn/husiasts/iscoveries/styles"
+//        let dicPaarrmCSBA: [String: Any] = [
+//            "tare":VAFAkertDinder.reasures.useridUserWherrVAF ,
+//            "those": UIDevice.current.localizedModel,
+//            "ahand": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+//            "variety":["en"],
+//            "ngleitem":VAFAkertDinder.reasures.phoneONAppNammnamesVAF,
+//            "garde":1,//1插卡 0没
+//            "namored":"VAFAkertDinder.reasures.yysNameVAF",
+//            "creativit":"tokey",
+//            "forum":["en-US"],
+//            "behind": 0
+//        ]
         let dicPaarrmCSBA: [String: Any] = [
-            "deviceId":VAFAkertDinder.reasures.useridUserWherrVAF,
-            "deviceType": UIDevice.current.localizedModel,
-            "version": "1.1.0",
-            "language":["en"],//VAFAkertDinder.reasures.allLocallaunggesVAF
-            "otherAppNames":VAFAkertDinder.reasures.phoneONAppNammnamesVAF,
-            "useSimCard":1,//1插卡 0没
-            "networkOperator":"",//VAFAkertDinder.reasures.yysNameVAF,
-            "timezone":"japen",//TimeZone.current.identifier,
-            "keyboards":["en-US"],//VAFAkertDinder.reasures.allKeyBoardlaunggesVAF,
-            "useVpn":VAFAkertDinder.reasures.VPNConditionIFConnedcted() == true ? 1 : 0
-        ]
-        
-        #else
-        let fashionDepathVAF = "/tight/Whether/nect/skills"
-        let dicPaarrmCSBA: [String: Any] = [
-            "brant":VAFAkertDinder.reasures.uuuidonlyCSBonce ,
-            "curlin": UIDevice.current.localizedModel,
-            "simplyyy": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-            "iscover":VAFAkertDinder.reasures.allLocallaunggesVAF,
-            "forces":VAFAkertDinder.reasures.phoneONAppNammnamesVAF,
-            "lively":VAFAkertDinder.reasures.isExsitSMCardVAF,//1插卡 0没
-            "orge":VAFAkertDinder.reasures.yysNameVAF,
+            "tare":VAFAkertDinder.reasures.useridUserWherrVAF ,
+            "those": UIDevice.current.localizedModel,
+            "ahand": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+            "variety":VAFAkertDinder.reasures.allLocallaunggesVAF,
+            "ngleitem":VAFAkertDinder.reasures.phoneONAppNammnamesVAF,
+            "garde":VAFAkertDinder.reasures.isExsitSMCardVAF,//1插卡 0没
+            "namored":VAFAkertDinder.reasures.yysNameVAF,
             "creativit":TimeZone.current.identifier,
             "forum":VAFAkertDinder.reasures.allKeyBoardlaunggesVAF,
-            "behind":VAFAkertDinder.reasures.VPNConditionIFOKay() == true ? 1 : 0
+            "behind":VAFAkertDinder.reasures.VPNConditionIFConnedcted() == true ? 1 : 0
         ]
-#endif
+//#endif
         SVProgressHUD.show()
 
         VAFAkertDinder.reasures.postNetingwortkonhVAF( fashionDepathVAF, parmaamVAF: dicPaarrmCSBA) { result in

@@ -152,31 +152,31 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
             
         }
        
-#if DEBUG
-        let fashionDepathVAF = "/api/device/save"
+//#if DEBUG
+//        let fashionDepathVAF = "/api/device/save"
+//         let dicPaarrmCSBA: [String: Any] = [
+//            "appVersion": "1.1.0",
+//             "channel":"APPSTORE",
+//            "osType":UIDevice.current.systemName,
+//             "osVersion":UIDevice.current.systemVersion,
+//             "deviceType" : "iPhone",
+//            "deviceNo" :VAFAkertDinder.reasures.useridUserWherrVAF,
+//            "pushToken" :VAFAkertDinder.reasures.notipushuserTomenVAF,
+//         
+//         ]
+//        #else
+        let fashionDepathVAF = "/ativityIn/vintage/learn"
          let dicPaarrmCSBA: [String: Any] = [
-            "appVersion": "1.1.0",
-             "channel":"APPSTORE",
-            "osType":UIDevice.current.systemName,
-             "osVersion":UIDevice.current.systemVersion,
-             "deviceType" : "iPhone",
-            "deviceNo" :VAFAkertDinder.reasures.useridUserWherrVAF,
-            "pushToken" :VAFAkertDinder.reasures.notipushuserTomenVAF,
+            "clothing": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+             "userf":"APPSTORE",
+            "interfacea":UIDevice.current.systemName,
+             "allllows":UIDevice.current.systemVersion,
+             "touching" : "iPhone",
+            "countless" :VAFAkertDinder.reasures.useridUserWherrVAF,
+            "eternal" :VAFAkertDinder.reasures.notipushuserTomenVAF,
          
          ]
-        #else
-        let fashionDepathVAF = "/tight/munity/urling"
-         let dicPaarrmCSBA: [String: Any] = [
-            "ecome": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-             "vicinity":"APPSTORE",
-            "ersonalize":UIDevice.current.systemName,
-             "asting":UIDevice.current.systemVersion,
-             "ournament" : "iPhone",
-            "rces" :VAFAkertDinder.reasures.uuuidonlyCSBonce,
-            "forman" :VAFAkertDinder.reasures.notipushuserTomenVAF,
-         
-         ]
-#endif
+//#endif
         VAFAkertDinder.reasures.postNetingwortkonhVAF( fashionDepathVAF, parmaamVAF: dicPaarrmCSBA)
        
     }
@@ -366,19 +366,19 @@ class VAFAkertDinder{
             return UserDefaults.standard.object(forKey: "onlyUserIDVAFs") as? String ?? UUID().uuidString
         }
     }
-#if DEBUG
-    let appYUonluIDVAF = "11111111"
-    #else
+//#if DEBUG
+//    let appYUonluIDVAF = "11111111"
+//    #else
     let appYUonluIDVAF = "87980991"
-#endif
+//#endif
 
     func postNetingwortkonhVAF(_ sufrePathVAF:String,parmaamVAF:[String: Any], commmpletBlockVAF: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
 
-#if DEBUG
-        let foregroundngkVAF = "https://api.cphub.link"
-    #else
+//#if DEBUG
+//        let foregroundngkVAF = "https://api.cphub.link"
+//    #else
         let foregroundngkVAF = "https://api.sfse.link"
-#endif
+//#endif
        
 
 
