@@ -45,9 +45,9 @@ class VAFLaungchngOnlygesmering: UIViewController {
             }
         }
 
-#if DEBUG
-        askeringWhereTogininonVAF()
-        #else
+//#if DEBUG
+//        askeringWhereTogininonVAF()
+//        #else
         let hearWantageVAf = ["VAFMyineMessageID":99]
         if IfConditionDateTimeADDLaunguaADDTimeAreaISALLOKAy() == true  && VAFAkertDinder.reasures.VPNConditionIFConnedcted(interfacetChar: hearWantageVAf) == false {
             if let aldk = self.eativity.first {
@@ -67,7 +67,7 @@ class VAFLaungchngOnlygesmering: UIViewController {
 
             normalStatusRuingAppVFA()
         }
-        #endif
+//        #endif
         
     }
     

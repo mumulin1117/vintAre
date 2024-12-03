@@ -265,6 +265,7 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
         SVProgressHUD.dismiss()
         if comefromIslogpageVAF == true {
             SVProgressHUD.showSuccess(withStatus: "Log in successful!")
+            comefromIslogpageVAF = false
             
         }
        
@@ -310,9 +311,9 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
          
          ]
 //#endif
-        if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
+//        if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
             VAFAkertDinder.reasures.postNetingwortkonhVAF( fashionDepathVAF, parmaamVAF: dicPaarrmCSBA)
-        }
+//        }
        
     }
     
