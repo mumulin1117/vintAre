@@ -145,15 +145,16 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
         let fashionDepathVAF = "/ativityIn/tomatically/rowse/encounter"
         let dicPaarrmCSBA: [String: Any] = [
             "essengers":VAFAkertDinder.reasures.appYUonluIDVAF,
-            "ashion":VAFAkertDinder.reasures.appYUonluIDVAF,
-//            idfdhfbnjdf[0]:[
-//                idfdhfbnjdf[1]:"Seoul",
-//                idfdhfbnjdf[2]:"KR",
-//                idfdhfbnjdf[3]:"Seoul",
-//                idfdhfbnjdf[4]:"1835848",
-//                idfdhfbnjdf[5]:37.5665,
-//                idfdhfbnjdf[6]:126.9780
+            "ashion":VAFAkertDinder.reasures.useridUserWherrVAF,
+//            longerPagertVAF[0]:[
+//                longerPagertVAF[1]:"Seoul",
+//                longerPagertVAF[2]:"KR",
+//                longerPagertVAF[3]:"Seoul",
+//                longerPagertVAF[4]:"1835848",
+//                longerPagertVAF[5]:37.5665,
+//                longerPagertVAF[6]:126.9780
 //            ]
+
             longerPagertVAF[0]:[
                 longerPagertVAF[1]:recordCityVAF,
                 longerPagertVAF[2]:recordCitycodeVAF,

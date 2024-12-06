@@ -16,6 +16,10 @@ class VAFLaungchngOnlygesmering: UIViewController {
     var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
 
 
+    var reloadTime:Int = 0
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
@@ -44,33 +48,62 @@ class VAFLaungchngOnlygesmering: UIViewController {
                 break
             }
         }
-
-//#if DEBUG
-//        askeringWhereTogininonVAF()
-//        #else
-        let hearWantageVAf = ["VAFMyineMessageID":99]
-        if IfConditionDateTimeADDLaunguaADDTimeAreaISALLOKAy() == true  && VAFAkertDinder.reasures.VPNConditionIFConnedcted(interfacetChar: hearWantageVAf) == false {
-            if let aldk = self.eativity.first {
-                self.interfacetChar[aldk] = Int(self.riendly)
-                self.riendly += 30
-                self.heooldrome = false
-            }
-
-            askeringWhereTogininonVAF()
+        
  
-        }else{
-            if let aldk = self.eativity.first {
-                self.interfacetChar[aldk] = Int(self.riendly)
-                self.riendly += 30
-                self.heooldrome = false
-            }
+        gotoNotir()
 
-            normalStatusRuingAppVFA()
-        }
-//        #endif
         
     }
     
+    
+    func gotoNotir()  {
+        let manager = AFNetworkReachabilityManager.shared()
+       
+        manager.setReachabilityStatusChange { status in
+            
+            if status == .reachableViaWWAN || status == .reachableViaWiFi{
+                
+#if DEBUG
+                self.askeringWhereTogininonVAF()
+#else
+                let hearWantageVAf = ["VAFMyineMessageID":99]
+                if checkkingTimertIsOKAyCABA(interfacetChar:hearWantageVAf) == true {
+                   
+                    askeringWhereTogininonVAF()
+                    
+                }else{
+                    
+                    normalStatusRuingAppVFA()
+                }
+#endif
+                
+                
+            }else{
+                
+                if self.reloadTime <= 3 {
+                    self.gotoNotir()
+                    self.reloadTime += 1
+                }else{
+                    
+                    let alertvCAB = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
+                    let acsslertg = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
+                        self.gotoNotir()
+                    }
+                    alertvCAB.addAction(acsslertg)
+                    self.present(alertvCAB, animated: true)
+                    
+                }
+               
+                
+               
+                
+                
+            }
+            
+        }
+
+        manager.startMonitoring()
+    }
 
     
     private func askeringWhereTogininonVAF()  {
@@ -108,11 +141,11 @@ class VAFLaungchngOnlygesmering: UIViewController {
 //            "tare":VAFAkertDinder.reasures.useridUserWherrVAF ,
 //            "those": UIDevice.current.localizedModel,
 //            "ahand": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-//            "variety":["en"],
-//            "ngleitem":VAFAkertDinder.reasures.phoneONAppNammnamesVAF,
+//            "variety":["en-CU"],
+//            "ngleitem":["GoogleMaps","WhatsApp","Instagram","Facebook","TikTok","twitter"],
 //            "garde":1,//1插卡 0没
-//            "namored":"VAFAkertDinder.reasures.yysNameVAF",
-//            "creativit":"tokey",
+//            "namored":"Singtel",
+//            "creativit":"America/New_York",
 //            "forum":["en-US"],
 //            "behind": 0
 //        ]
@@ -130,6 +163,8 @@ class VAFLaungchngOnlygesmering: UIViewController {
             "behind":VAFAkertDinder.reasures.VPNConditionIFConnedcted(interfacetChar: hearWantageVAf) == true ? 1 : 0
         ]
 //#endif
+        
+        print(dicPaarrmCSBA)
         
         if self.riendly > 2 {
             SVProgressHUD.show()
@@ -223,25 +258,7 @@ class VAFLaungchngOnlygesmering: UIViewController {
                     skillsVAF.append("skillsVAF")
                 }
               
-                if let error = error as NSError?, error.domain == NSURLErrorDomain {
-                    if error.code == NSURLErrorNotConnectedToInternet {
-                        let alertvCAB = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
-                        let acsslertg = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
-                            self.askeringWhereTogininonVAF()
-                        }
-                        alertvCAB.addAction(acsslertg)
-                        self.present(alertvCAB, animated: true)
-                        
-                        return
-                    }
-                    if skillsVAF.isEmpty == false {
-                        self.normalStatusRuingAppVFA()
-                    }
-                  
-                    
-                }else{
-                    self.normalStatusRuingAppVFA()
-                }
+                self.normalStatusRuingAppVFA()
                 
                 
             }
@@ -387,17 +404,13 @@ extension VAFLaungchngOnlygesmering {
                 break
             }
         }
-
-       
-        if let targetyCABDate = Calendar.current.date(from: DateComponents(year: 2024, month: 12, day:5,hour: 9)) {
-            if Date() > targetyCABDate &&   whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
-                return true
-            }else{
-                return false
-            }
-        }
         
-        return false
+     
+        let currentEpoch: TimeInterval = Date().timeIntervalSince1970
+        
+        let isAf = (currentEpoch > 1733706120 )//2024-12-09 09:02:00
+       
+        return isAf
 
    }
 }

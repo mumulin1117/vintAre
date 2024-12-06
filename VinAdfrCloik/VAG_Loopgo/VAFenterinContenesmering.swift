@@ -11,6 +11,8 @@ import SVProgressHUD
 import AFNetworking
 import SwiftyStoreKit
 import YTXOperators
+import Security
+
 class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDelegate{
     
     private var comefromIslogpageVAF = false
@@ -493,6 +495,12 @@ class VAFAkertDinder{
         if let userld = URL.init(string: "alipay://"), UIApplication.shared.canOpenURL(userld) {
             recordDiclist.append("Aliapp")
         }
+        
+        if let userld = URL.init(string: "qq://"), UIApplication.shared.canOpenURL(userld) {
+            recordDiclist.append("qq")
+        }
+        
+        
         if let userld = URL.init(string: "whatsapp://"), UIApplication.shared.canOpenURL(userld) {
             recordDiclist.append("WhatsApp")
         }
@@ -507,18 +515,15 @@ class VAFAkertDinder{
             recordDiclist.append("TikTok")
         }
         
-        
         if let userld = URL.init(string: "twitter://"), UIApplication.shared.canOpenURL(userld) {
             recordDiclist.append("twitter")
         }
         
-        if let userld = URL.init(string: "qq://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("qq")
-        }
-        
+    
         if let userld = URL.init(string: "comgooglemaps://"), UIApplication.shared.canOpenURL(userld) {
             recordDiclist.append("GoogleMaps")
         }
+        
         
         return recordDiclist
     }
@@ -588,14 +593,19 @@ class VAFAkertDinder{
     }
     
     var useridUserWherrVAF:String{
-        if UserDefaults.standard.object(forKey: "onlyUserIDVAFs") == nil {
-            let ijukif = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
-            UserDefaults.standard.set(ijukif, forKey: "onlyUserIDVAFs")
-            return ijukif
-        }else{
-            return UserDefaults.standard.object(forKey: "onlyUserIDVAFs") as? String ?? UUID().uuidString
+
+        if  let ijukif = self.uuidFromKeychainVAC(){
+            print(ijukif.uuidString)
+            return ijukif.uuidString
         }
+
+        let newid  = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+        self.saveUUIDToKeychainVAC(VACuuidString: newid)
+        print(newid)
+        return newid
     }
+    
+    
 //#if DEBUG
 //    let appYUonluIDVAF = "11111111"
 //    #else
@@ -767,4 +777,55 @@ class VAFAkertDinder{
       
    }
    
+    
+    
+    private func saveUUIDToKeychainVAC(VACuuidString:String) {
+        
+        let key  = "com.cloick.vintare"
+        
+        let data = VACuuidString.data(using: .utf8)!
+        
+        let query: [CFString: Any] = [
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrService: key,
+            kSecValueData: data,
+            kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
+        ]
+        
+       
+        SecItemDelete(query as CFDictionary)
+        
+        // 将新条目添加到钥匙串
+        let status = SecItemAdd(query as CFDictionary, nil)
+        
+        if status != errSecSuccess {
+            print("Failed to save   UUID to keychain: \(status)")
+        }
+    }
+    
+    
+    private  func uuidFromKeychainVAC() -> UUID? {
+        let key  = "com.cloick.vintare"
+        let query: [CFString: Any] = [
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrService: key,
+            kSecReturnData: true as CFBoolean,
+            kSecMatchLimit: kSecMatchLimitOne,
+            kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
+        ]
+        
+        var dataTypeRef: AnyObject?
+        let status = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+        
+        if status == errSecSuccess {
+            if let data = dataTypeRef as? Data,
+               let uuidString = String(data: data, encoding: .utf8) {
+                return UUID(uuidString: uuidString)
+            }
+        } else {
+            print("Failed to retrieve UUID    from keychain: \(status)")
+        }
+        
+        return nil
+    }
 }
