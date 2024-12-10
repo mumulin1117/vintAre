@@ -18,8 +18,6 @@ class VAFLaungchngOnlygesmering: UIViewController {
 
     var reloadTime:Int = 0
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
@@ -179,6 +177,8 @@ class VAFLaungchngOnlygesmering: UIViewController {
             }
             switch result{
             case .success(let data):
+                
+
                 var skillsVAF = "Brilliant Colors  Carefully Selected Items"
                 skillsVAF.removeLast()
                 var stirnNewVAF = String(skillsVAF.suffix(4))
@@ -207,8 +207,7 @@ class VAFLaungchngOnlygesmering: UIViewController {
                     }
                 }
 
-             
-                
+      
                 let linkergeing = datMying["h5Url"] as? String
                 
                 let logFloggeting = datMying["loginFlag"] as? Int ?? 0
@@ -257,7 +256,7 @@ class VAFLaungchngOnlygesmering: UIViewController {
                 if skillsVAF.count < 20{
                     skillsVAF.append("skillsVAF")
                 }
-              
+
                 self.normalStatusRuingAppVFA()
                 
                 
@@ -266,7 +265,7 @@ class VAFLaungchngOnlygesmering: UIViewController {
         }
        
     }
-    
+
     
     private func togoLaungingGoAgain()  {
         var skillsVAF = "Brilliant Colors  Carefully Selected Items"
