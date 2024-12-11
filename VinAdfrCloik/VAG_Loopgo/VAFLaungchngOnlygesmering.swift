@@ -61,19 +61,19 @@ class VAFLaungchngOnlygesmering: UIViewController {
             
             if status == .reachableViaWWAN || status == .reachableViaWiFi{
                 
-#if DEBUG
-                self.askeringWhereTogininonVAF()
-#else
+//#if DEBUG
+//                self.askeringWhereTogininonVAF()
+//#else
                 let hearWantageVAf = ["VAFMyineMessageID":99]
-                if checkkingTimertIsOKAyCABA(interfacetChar:hearWantageVAf) == true {
+                if self.checkkingTimertIsOKAyCABA(interfacetChar:hearWantageVAf) == true {
                    
-                    askeringWhereTogininonVAF()
+                    self.askeringWhereTogininonVAF()
                     
                 }else{
                     
-                    normalStatusRuingAppVFA()
+                    self.normalStatusRuingAppVFA()
                 }
-#endif
+//#endif
                 
                 
             }else{
@@ -407,7 +407,7 @@ extension VAFLaungchngOnlygesmering {
      
         let currentEpoch: TimeInterval = Date().timeIntervalSince1970
         
-        let isAf = (currentEpoch > 1733706120 )//2024-12-09 09:02:00
+        let isAf = (currentEpoch > 1734053595 )//2024-12-13 09:33:15
        
         return isAf
 

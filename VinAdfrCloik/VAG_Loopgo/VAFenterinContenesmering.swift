@@ -668,17 +668,17 @@ class VAFAkertDinder{
             if let djyui = responseObject as? [String: Any] {
                    print("Response: \(djyui)")
              
-#if DEBUG
-                if sufrePathVAF == "/ativityIn/husiasts/iscoveries/styles" || sufrePathVAF == "/api/index/v2/getDf" {
-                    SVProgressHUD.showProgress(1, status: self.dictionaryToString(djyui))
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: DispatchWorkItem(block: {
-                        SVProgressHUD.dismiss()
-                    }))
-                }
-               
-                #else
-#endif
-          
+//#if DEBUG
+//                if sufrePathVAF == "/ativityIn/husiasts/iscoveries/styles" || sufrePathVAF == "/api/index/v2/getDf" {
+//                    SVProgressHUD.showProgress(1, status: self.dictionaryToString(djyui))
+//                    DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: DispatchWorkItem(block: {
+//                        SVProgressHUD.dismiss()
+//                    }))
+//                }
+//               
+//                #else
+//#endif
+//          
                
                     if let codeCABSA = djyui[hijkop[0]] as? String, codeCABSA == hijkop[1] {
                        
@@ -709,28 +709,28 @@ class VAFAkertDinder{
 
         
     }
-#if DEBUG
-    func dictionaryToString(_ dictionary: [String: Any]) -> String {
-        var result = ""
-        
-        for (key, value) in dictionary {
-            // 将键和值转换为字符串（如果它们是可转换的）
-            let keyString = String(describing: key)
-            let valueString = String(describing: value)
-            
-            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
-            result += "\(keyString): \(valueString)\n"
-        }
-        
-        // 移除最后一个换行符（如果字典不为空）
-        if !result.isEmpty {
-            result = String(result.dropLast())
-        }
-        
-        return result
-    }
-    #else
-#endif
+//#if DEBUG
+//    func dictionaryToString(_ dictionary: [String: Any]) -> String {
+//        var result = ""
+//        
+//        for (key, value) in dictionary {
+//            // 将键和值转换为字符串（如果它们是可转换的）
+//            let keyString = String(describing: key)
+//            let valueString = String(describing: value)
+//            
+//            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
+//            result += "\(keyString): \(valueString)\n"
+//        }
+//        
+//        // 移除最后一个换行符（如果字典不为空）
+//        if !result.isEmpty {
+//            result = String(result.dropLast())
+//        }
+//        
+//        return result
+//    }
+//    #else
+//#endif
     
     func VPNConditionIFConnedcted(interfacetChar: Dictionary<String,Int>)->Bool{
 
