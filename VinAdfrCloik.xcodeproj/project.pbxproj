@@ -502,11 +502,11 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VinAdfrCloik/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = VintAre;
-				INFOPLIST_KEY_NSCameraUsageDescription = "VintAre takes photos and uploads user avatars. Users chat and need access to your camera permissions";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Curlis need access to your location permissions to use the iCloud camera's location feature.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "VintAre users need access to your microphone for chatting";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "VintAre uploads user avatars and posts Vintage updates with images, requiring access to your album permissions";
+				INFOPLIST_KEY_CFBundleDisplayName = LivaMe;
+				INFOPLIST_KEY_NSCameraUsageDescription = "LivaMe takes photos and uploads user avatars. Users chat and need access to your camera permissions";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "LivaMe need access to your location permissions to use the iCloud camera's location feature.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "LivaMe users need access to your microphone for chatting";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "LivaMe uploads user avatars and posts Vintage updates with images, requiring access to your album permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -518,7 +518,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cloick.vintare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -552,11 +552,11 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VinAdfrCloik/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = VintAre;
-				INFOPLIST_KEY_NSCameraUsageDescription = "VintAre takes photos and uploads user avatars. Users chat and need access to your camera permissions";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Curlis need access to your location permissions to use the iCloud camera's location feature.";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "VintAre users need access to your microphone for chatting";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "VintAre uploads user avatars and posts Vintage updates with images, requiring access to your album permissions";
+				INFOPLIST_KEY_CFBundleDisplayName = LivaMe;
+				INFOPLIST_KEY_NSCameraUsageDescription = "LivaMe takes photos and uploads user avatars. Users chat and need access to your camera permissions";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "LivaMe need access to your location permissions to use the iCloud camera's location feature.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "LivaMe users need access to your microphone for chatting";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "LivaMe uploads user avatars and posts Vintage updates with images, requiring access to your album permissions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -568,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cloick.vintare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

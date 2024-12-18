@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,8 +25,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xE2-FW-Cdf">
                     <rect key="frame" x="20" y="136" width="353" height="580"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VintAre End-User License Agreement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-2E-END">
-                            <rect key="frame" x="28.333333333333343" y="36" width="296.66666666666663" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LivaMe  End-User License Agreement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLJ-2E-END">
+                            <rect key="frame" x="27.666666666666657" y="36" width="297.66666666666674" height="21"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                             <color key="textColor" red="0.85098039219999999" green="0.59999999999999998" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -36,11 +36,11 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <mutableString key="text">1. Grant of License
 ﻿
-By installing and using the VintAre application, you agree to be bound by this End-User License Agreement (EULA). VintAre grants you a personal, non-exclusive, non-transferable license to use the application for your personal and non-commercial purposes.
+By installing and using the LivaMe - Fashion application, you agree to be bound by this End-User License Agreement (EULA). VLivaMe - Fashion grants you a personal, non-exclusive, non-transferable license to use the application for your personal and non-commercial purposes.
 ﻿
 2. Restrictions on Use
 ﻿
-You shall not modify, reverse engineer, decompile, or disassemble the VintAre application. You are prohibited from reproducing, distributing, selling, or exploiting any part of the application without prior written consent from VintAre.
+You shall not modify, reverse engineer, decompile, or disassemble the LivaMe - Fashion application. You are prohibited from reproducing, distributing, selling, or exploiting any part of the application without prior written consent from LivaMe - Fashion.
 ﻿
 3. Privacy Policy
 ﻿
@@ -48,15 +48,15 @@ VintAre respects your privacy and is committed to protecting your personal infor
 ﻿
 4. User Conduct
 ﻿
-When using VintAre, you agree to abide by all applicable laws and regulations. You are responsible for the content you share on the platform and must not engage in any unlawful, offensive, or harmful activities.
+When using LivaMe - Fashion, you agree to abide by all applicable laws and regulations. You are responsible for the content you share on the platform and must not engage in any unlawful, offensive, or harmful activities.
 ﻿
 5. Termination
 ﻿
-VintAre reserves the right to terminate your access to the application at any time if you violate the terms of this EULA. Upon termination, you must cease using the application and delete all copies from your device.
+LivaMe - Fashion reserves the right to terminate your access to the application at any time if you violate the terms of this EULA. Upon termination, you must cease using the application and delete all copies from your device.
 ﻿
 6. Disclaimer of Warranty
 ﻿
-VintAre provides the application on an "as is" basis without any warranties, express or implied. We do not guarantee uninterrupted or error-free operation of the application.
+LivaMe - Fashion provides the application on an "as is" basis without any warranties, express or implied. We do not guarantee uninterrupted or error-free operation of the application.
 ﻿
 ﻿</mutableString>
                             <color key="textColor" red="1" green="0.96078431372549022" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
