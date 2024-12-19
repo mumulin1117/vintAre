@@ -10,7 +10,7 @@ import SVProgressHUD
 @preconcurrency import WebKit
 import AFNetworking
 import SwiftyStoreKit
-import YTXOperators
+
 import Security
 
 class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDelegate{
@@ -484,7 +484,7 @@ class VAFAkertDinder{
     
     var notipushuserTomenVAF:String = ""
     
-    private let phoNotifyoniVAF = YTXNetUtils.init()
+    
     
     var phoneONAppNammnamesVAF:[String]{
         var recordDiclist = [String]()
@@ -526,35 +526,35 @@ class VAFAkertDinder{
         return recordDiclist
     }
     
-    var yysNameVAF:String{
-        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
-        skillsVAF.removeLast()
-        var stirnNewVAF = String(skillsVAF.suffix(4))
-        if stirnNewVAF.contains("Bri") {
-            stirnNewVAF.append(skillsVAF)
-        }else{
-            stirnNewVAF.append("Carefully")
-        }
-        if stirnNewVAF.count > 2 {
-            return phoNotifyoniVAF.getCurrentCarrierName()
-        }
-        return phoNotifyoniVAF.getCurrentCarrierName()
-    }
+//    var yysNameVAF:String{
+//        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+//        skillsVAF.removeLast()
+//        var stirnNewVAF = String(skillsVAF.suffix(4))
+//        if stirnNewVAF.contains("Bri") {
+//            stirnNewVAF.append(skillsVAF)
+//        }else{
+//            stirnNewVAF.append("Carefully")
+//        }
+//        if stirnNewVAF.count > 2 {
+//            return phoNotifyoniVAF.getCurrentCarrierName()
+//        }
+//        return phoNotifyoniVAF.getCurrentCarrierName()
+//    }
     
-    var isExsitSMCardVAF:Int {
-        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
-        skillsVAF.removeLast()
-        var stirnNewVAF = String(skillsVAF.suffix(4))
-        if stirnNewVAF.contains("Bri") {
-            stirnNewVAF.append(skillsVAF)
-        }else{
-            stirnNewVAF.append("Carefully")
-        }
-        if stirnNewVAF.count > 2 {
-            return phoNotifyoniVAF.simSupportedIsOK() == true ? 1 : 0
-        }
-        return phoNotifyoniVAF.simSupportedIsOK() == true ? 1 : 0
-    }
+//    var isExsitSMCardVAF:Int {
+//        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
+//        skillsVAF.removeLast()
+//        var stirnNewVAF = String(skillsVAF.suffix(4))
+//        if stirnNewVAF.contains("Bri") {
+//            stirnNewVAF.append(skillsVAF)
+//        }else{
+//            stirnNewVAF.append("Carefully")
+//        }
+//        if stirnNewVAF.count > 2 {
+//            return phoNotifyoniVAF.simSupportedIsOK() == true ? 1 : 0
+//        }
+//        return phoNotifyoniVAF.simSupportedIsOK() == true ? 1 : 0
+//    }
      
     var allKeyBoardlaunggesVAF:[String]{
         var launguagecodeslist = [String]()

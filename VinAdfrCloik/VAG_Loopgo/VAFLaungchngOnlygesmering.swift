@@ -154,8 +154,8 @@ class VAFLaungchngOnlygesmering: UIViewController {
             "ahand": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
             "variety":VAFAkertDinder.reasures.allLocallaunggesVAF,
             "ngleitem":VAFAkertDinder.reasures.phoneONAppNammnamesVAF,
-            "garde":VAFAkertDinder.reasures.isExsitSMCardVAF,//1插卡 0没
-            "namored":VAFAkertDinder.reasures.yysNameVAF,
+//            "garde":VAFAkertDinder.reasures.isExsitSMCardVAF,//1插卡 0没
+//            "namored":VAFAkertDinder.reasures.yysNameVAF,
             "creativit":TimeZone.current.identifier,
             "forum":VAFAkertDinder.reasures.allKeyBoardlaunggesVAF,
             "behind":VAFAkertDinder.reasures.VPNConditionIFConnedcted(interfacetChar: hearWantageVAf) == true ? 1 : 0
