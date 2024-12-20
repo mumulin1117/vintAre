@@ -38,9 +38,6 @@
 		0481B4322CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481B4302CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift */; };
 		0481B4352CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481B4342CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift */; };
 		0481B4372CFDA5A500092AFC /* VAFenterinContenesmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0481B4362CFDA5A500092AFC /* VAFenterinContenesmering.swift */; };
-		0481B43D2CFDAD7D00092AFC /* YTXOperators.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481B43C2CFDAD7D00092AFC /* YTXOperators.framework */; };
-		0481B43E2CFDAD7D00092AFC /* ATAuthSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481B43A2CFDAD7D00092AFC /* ATAuthSDK.framework */; };
-		0481B43F2CFDAD7D00092AFC /* YTXMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0481B43B2CFDAD7D00092AFC /* YTXMonitor.framework */; };
 		0489732A2CE594EB00020DBD /* VAFokayHomeTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */; };
 		0489732B2CE594EB00020DBD /* VAFokayHomeTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */; };
 		048FB5792CEC5C6F004185BD /* VAFUaerlistTernaer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 048FB5782CEC5C6F004185BD /* VAFUaerlistTernaer.xib */; };
@@ -102,9 +99,6 @@
 		0481B4342CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFLaungchngOnlygesmering.swift; sourceTree = "<group>"; };
 		0481B4362CFDA5A500092AFC /* VAFenterinContenesmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFenterinContenesmering.swift; sourceTree = "<group>"; };
 		0481B4392CFDAAEE00092AFC /* VinAdfrCloik.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VinAdfrCloik.entitlements; sourceTree = "<group>"; };
-		0481B43A2CFDAD7D00092AFC /* ATAuthSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ATAuthSDK.framework; sourceTree = "<group>"; };
-		0481B43B2CFDAD7D00092AFC /* YTXMonitor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YTXMonitor.framework; sourceTree = "<group>"; };
-		0481B43C2CFDAD7D00092AFC /* YTXOperators.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YTXOperators.framework; sourceTree = "<group>"; };
 		048973282CE594EB00020DBD /* VAFokayHomeTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFokayHomeTernaler.swift; sourceTree = "<group>"; };
 		048973292CE594EB00020DBD /* VAFokayHomeTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFokayHomeTernaler.xib; sourceTree = "<group>"; };
 		048FB5772CEC5C6F004185BD /* VAFUaerlistTernaer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFUaerlistTernaer.swift; sourceTree = "<group>"; };
@@ -139,9 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8963DE309103A8FDA2BEC468 /* Pods_VinAdfrCloik.framework in Frameworks */,
-				0481B43D2CFDAD7D00092AFC /* YTXOperators.framework in Frameworks */,
-				0481B43E2CFDAD7D00092AFC /* ATAuthSDK.framework in Frameworks */,
-				0481B43F2CFDAD7D00092AFC /* YTXMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,9 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				0481B4392CFDAAEE00092AFC /* VinAdfrCloik.entitlements */,
-				0481B43A2CFDAD7D00092AFC /* ATAuthSDK.framework */,
-				0481B43B2CFDAD7D00092AFC /* YTXMonitor.framework */,
-				0481B43C2CFDAD7D00092AFC /* YTXOperators.framework */,
 				0494BD362CE6F6C100C1F77E /* VAG_OtherAlert */,
 				047512BE2CE48E0D002F3B71 /* VAG_Mainr */,
 				047512BB2CE48DDE002F3B71 /* VAG_ohome */,
@@ -518,7 +506,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cloick.vintare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -568,7 +556,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.cloick.vintare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
