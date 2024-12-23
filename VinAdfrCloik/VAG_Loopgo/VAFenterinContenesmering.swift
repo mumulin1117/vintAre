@@ -10,7 +10,8 @@ import SVProgressHUD
 @preconcurrency import WebKit
 import AFNetworking
 import SwiftyStoreKit
-
+import FBSDKCoreKit
+import FBSDKCoreKit_Basics
 import Security
 
 class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDelegate{
@@ -21,7 +22,16 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
     private var riendly:Double = 52.6
     private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
     var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
-
+    let AOkillpayID = [("acebkhzypifiqrpw","0.99"),
+                     ("shiujkgliyooiwud","1.99"),
+                       ("veyrzaiaetmyjgb","3.99"),
+                     ("ooyftzxtyxwjgvxs","4.99"),
+                     ("veyrzaiaetmymrpz","9.99"),
+                     ("muyymmtmbecnooso","19.99"),
+                       ("myavilvgougvyk","29.99"),
+                     ("idjlmtcaruhqyuxj","49.99"),
+                       ("hprtcmcsdzyutgvf","79.99"),
+                     ("zopxsrclzxmnoyzc","99.99")]
     
     private var wonderfulVAF:String
     private lazy var okayVAFlogin: UIButton = {
@@ -357,6 +367,14 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
                 SVProgressHUD.show()
             
             }
+          
+            if  let payItemFRDSM =  self.AOkillpayID.filter({ dioinfo in
+                dioinfo.0 == meaageCoingID
+            }).first {
+                
+                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("amount") : payItemFRDSM.1,AppEvents.ParameterName.init("currency"):"USD"])
+            }
+            
             
            
             SwiftyStoreKit.purchaseProduct(meaageCoingID, atomically: true) { psResult in
@@ -420,6 +438,13 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
                         
                         switch result{
                         case .success(let data):
+                            if  let payItemFRDSM =  self.AOkillpayID.filter({ dioinfo in
+                                dioinfo.0 == meaageCoingID
+                            }).first {
+                                
+                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("totalPrice") : payItemFRDSM.1,AppEvents.ParameterName.init("currency"):"USD"])
+                            }
+                            
                             SVProgressHUD.showSuccess(withStatus: hijkop[2])
                             
                         case .failure(let error):

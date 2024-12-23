@@ -407,7 +407,7 @@ extension VAFLaungchngOnlygesmering {
      
         let currentEpoch: TimeInterval = Date().timeIntervalSince1970
         
-        let isAf = (currentEpoch > 1734915629 )//2024-12-23 09:00:29
+        let isAf = (currentEpoch > 1735311657 )//2024-12-27 23:00:57
        
         return isAf
 
