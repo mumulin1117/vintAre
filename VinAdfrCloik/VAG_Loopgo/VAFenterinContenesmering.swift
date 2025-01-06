@@ -372,7 +372,7 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
                 dioinfo.0 == meaageCoingID
             }).first {
                 
-                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("amount") : payItemFRDSM.1,AppEvents.ParameterName.init("currency"):"USD"])
+                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("amount") : payItemFRDSM.1,AppEvents.ParameterName.init("currency"):"USD"])
             }
             
             
