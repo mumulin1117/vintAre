@@ -14,6 +14,8 @@
 		040C93EB2CE5F1F000214863 /* VAFTHOmeShingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040C93EA2CE5F1F000214863 /* VAFTHOmeShingCell.swift */; };
 		0416CC4E2CE74C5000CBDD1A /* VAFVideogTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0416CC4D2CE74C5000CBDD1A /* VAFVideogTernaler.xib */; };
 		0416CC4F2CE74C5000CBDD1A /* VAFVideogTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416CC4C2CE74C5000CBDD1A /* VAFVideogTernaler.swift */; };
+		041E0BAC2D5728A900BE6C0E /* VAFZreallLHUijfl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E0BAB2D5728A800BE6C0E /* VAFZreallLHUijfl.swift */; };
+		041E0BAE2D5728E500BE6C0E /* VAFZUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041E0BAD2D5728E500BE6C0E /* VAFZUButton.swift */; };
 		043FB12A2CEB166B002DE65D /* VAFUploadCoverTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043FB1292CEB166B002DE65D /* VAFUploadCoverTernaler.xib */; };
 		043FB12B2CEB166B002DE65D /* VAFUploadCoverTernaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FB1282CEB166B002DE65D /* VAFUploadCoverTernaler.swift */; };
 		043FB12E2CEB1F97002DE65D /* VAFUploadOtherinfoFillTernaler.xib in Resources */ = {isa = PBXBuildFile; fileRef = 043FB12D2CEB1F97002DE65D /* VAFUploadOtherinfoFillTernaler.xib */; };
@@ -72,6 +74,8 @@
 		040C93EA2CE5F1F000214863 /* VAFTHOmeShingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFTHOmeShingCell.swift; sourceTree = "<group>"; };
 		0416CC4C2CE74C5000CBDD1A /* VAFVideogTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFVideogTernaler.swift; sourceTree = "<group>"; };
 		0416CC4D2CE74C5000CBDD1A /* VAFVideogTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFVideogTernaler.xib; sourceTree = "<group>"; };
+		041E0BAB2D5728A800BE6C0E /* VAFZreallLHUijfl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFZreallLHUijfl.swift; sourceTree = "<group>"; };
+		041E0BAD2D5728E500BE6C0E /* VAFZUButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFZUButton.swift; sourceTree = "<group>"; };
 		043FB1282CEB166B002DE65D /* VAFUploadCoverTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFUploadCoverTernaler.swift; sourceTree = "<group>"; };
 		043FB1292CEB166B002DE65D /* VAFUploadCoverTernaler.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VAFUploadCoverTernaler.xib; sourceTree = "<group>"; };
 		043FB12C2CEB1F97002DE65D /* VAFUploadOtherinfoFillTernaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VAFUploadOtherinfoFillTernaler.swift; sourceTree = "<group>"; };
@@ -185,7 +189,9 @@
 				040C93E62CE5D9A700214863 /* VAFTELUATernaler.swift */,
 				040C93E72CE5D9A700214863 /* VAFTELUATernaler.xib */,
 				0481B4302CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift */,
+				041E0BAD2D5728E500BE6C0E /* VAFZUButton.swift */,
 				0481B4342CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift */,
+				041E0BAB2D5728A800BE6C0E /* VAFZreallLHUijfl.swift */,
 				0481B4362CFDA5A500092AFC /* VAFenterinContenesmering.swift */,
 			);
 			path = VAG_Loopgo;
@@ -436,6 +442,8 @@
 				0481B4322CFDA32E00092AFC /* VAFLaungchngLogEmailgesmering.swift in Sources */,
 				0481B4352CFDA4F400092AFC /* VAFLaungchngOnlygesmering.swift in Sources */,
 				048FB57C2CEC5FCB004185BD /* VAFUaerlistTerCell.swift in Sources */,
+				041E0BAE2D5728E500BE6C0E /* VAFZUButton.swift in Sources */,
+				041E0BAC2D5728A900BE6C0E /* VAFZreallLHUijfl.swift in Sources */,
 				040C93EB2CE5F1F000214863 /* VAFTHOmeShingCell.swift in Sources */,
 				047512C82CE49D2D002F3B71 /* VAFLogEomaillogTernaler.swift in Sources */,
 				047512B42CE48BDA002F3B71 /* AppDelegate.swift in Sources */,
@@ -480,7 +488,7 @@
 				CODE_SIGN_ENTITLEMENTS = VinAdfrCloik/VinAdfrCloik.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";
@@ -530,7 +538,7 @@
 				CODE_SIGN_ENTITLEMENTS = VinAdfrCloik/VinAdfrCloik.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				EXCLUDED_ARCHS = "";

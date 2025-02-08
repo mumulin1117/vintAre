@@ -28,15 +28,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         
         UNUserNotificationCenter.current().delegate = self
+        window = UIWindow(frame: UIScreen.main.bounds)
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { okayufir, error in
+            var shiol: Int = 908
             if okayufir {
+                shiol += 2
                 DispatchQueue.main.async {
+                    shiol += 2
                     UIApplication.shared.registerForRemoteNotifications()
+                    shiol += 2
                 }
             }
         }
         
-        window = UIWindow(frame: UIScreen.main.bounds)
+        
         for char in eativity {
             if char.count > 2 {
                 riendly += 3
@@ -67,9 +72,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
         
         
         let rootNAvifvc = UINavigationController(rootViewController: VAFLaungchngOnlygesmering())
+        var shiol: Int = 908
         rootNAvifvc.navigationBar.isHidden = true
+        shiol -= 3
         window?.rootViewController = rootNAvifvc
-        
+        shiol -= 3
     
         
        
@@ -87,16 +94,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
         vcoverTexfVAF.isSecureTextEntry = true
 
         if (!window!.subviews.contains(vcoverTexfVAF)) {
+            shiol -= 3
             window!.addSubview(vcoverTexfVAF)
-            
+            shiol -= 3
             vcoverTexfVAF.centerXAnchor.constraint(equalTo: window!.centerXAnchor).isActive = true
-            
+            shiol -= 3
             vcoverTexfVAF.centerYAnchor.constraint(equalTo: window!.centerYAnchor).isActive = true
-            
+            shiol -= 3
             window!.layer.superlayer?.addSublayer(vcoverTexfVAF.layer)
             if #available(iOS 17.0, *) {
+                shiol -= 3
                 vcoverTexfVAF.layer.sublayers?.last?.addSublayer(window!.layer)
+                shiol -= 3
             } else {
+                shiol -= 3
                 vcoverTexfVAF.layer.sublayers?.first?.addSublayer(window!.layer)
             }
         }
@@ -180,7 +191,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate , UNUserNotificationCenter
             self.heooldrome = false
         }
 
-       
+      
+        
         let pushRemotenotiTokenVAF = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         if self.riendly > 2 {
             VAFAkertDinder.reasures.notipushuserTomenVAF = pushRemotenotiTokenVAF

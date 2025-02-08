@@ -8,56 +8,57 @@
 import UIKit
 import SVProgressHUD
 @preconcurrency import WebKit
+import SCLAlertView
 import AFNetworking
+import Vision
 import SwiftyStoreKit
+import SCLAlertView
 import FBSDKCoreKit
+import SCLAlertView
 import FBSDKCoreKit_Basics
 import Security
 
-class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDelegate{
+class VAFenterinContenesmering: VAFZreallLHUijfl , WKNavigationDelegate, WKUIDelegate{
     
     private var comefromIslogpageVAF = false
     private var heooldrome = false
     private var kissdVibe :VAFPOpUiView?
     private var riendly:Double = 52.6
-    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    private var eativity = "[CharacterInt]#$#$#$VAFPOpUiView#$#$#$VAFContenReportTernaler".components(separatedBy: "#$#$#$")
     var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
-    let AOkillpayID = [("acebkhzypifiqrpw","0.99"),
-                     ("shiujkgliyooiwud","1.99"),
-                       ("veyrzaiaetmyjgb","3.99"),
-                     ("ooyftzxtyxwjgvxs","4.99"),
-                     ("veyrzaiaetmymrpz","9.99"),
-                     ("muyymmtmbecnooso","19.99"),
-                       ("myavilvgougvyk","29.99"),
-                     ("idjlmtcaruhqyuxj","49.99"),
-                       ("hprtcmcsdzyutgvf","79.99"),
-                     ("zopxsrclzxmnoyzc","99.99")]
+    let AOkillpayID = [("acebkhzypifiqrpw","#$0.9#$9".replacingOccurrences(of: "#$", with: "")
+                       ),
+                     ("shiujkgliyooiwud","1#$.99".replacingOccurrences(of: "#$", with: "")),
+                       ("veyrzaiaetmyjgb","3#$.99".replacingOccurrences(of: "#$", with: "")),
+                     ("ooyftzxtyxwjgvxs","4#$.99".replacingOccurrences(of: "#$", with: "")),
+                     ("veyrzaiaetmymrpz","9#$.99".replacingOccurrences(of: "#$", with: "")),
+                     ("muyymmtmbecnooso","19#$.99".replacingOccurrences(of: "#$", with: "")),
+                       ("myavilvgougvyk","29#$.99".replacingOccurrences(of: "#$", with: "")),
+                     ("idjlmtcaruhqyuxj","49#$.99".replacingOccurrences(of: "#$", with: "")),
+                       ("hprtcmcsdzyutgvf","79#$.99".replacingOccurrences(of: "#$", with: "")),
+                     ("zopxsrclzxmnoyzc","99#$.99".replacingOccurrences(of: "#$", with: ""))]
     
     private var wonderfulVAF:String
-    private lazy var okayVAFlogin: UIButton = {
-        let  oayVAFlogin = UIButton.init()
+    private lazy var okayVAFlogin: VAFZUButton = {
+        let  oayVAFlogin = VAFZUButton.init()
+        var dojjiVAF:Int = 34
         oayVAFlogin.layer.cornerRadius = 21
         oayVAFlogin.layer.masksToBounds = true
+        dojjiVAF += 2
+        let huijooVAF = "Q#$ui#$ck Lo#$gin".replacingOccurrences(of: "#$", with: "")
+        dojjiVAF += 2
+        oayVAFlogin.setTitle(huijooVAF, for: .normal)
+        dojjiVAF += 2
+        oayVAFlogin.setTitleColor(UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1), for: .normal)
         oayVAFlogin.layer.borderColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1).cgColor
         oayVAFlogin.layer.borderWidth = 1.5
-        oayVAFlogin.setTitle("Quick Login", for: .normal)
-        oayVAFlogin.setTitleColor(UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1), for: .normal)
+        dojjiVAF += 2
         oayVAFlogin.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        dojjiVAF += 2
         oayVAFlogin.isUserInteractionEnabled = false
         return oayVAFlogin
     }()
-    lazy var VAFsetingconfire: WKWebViewConfiguration = {
-        let confighCSBA = WKWebViewConfiguration()
-        confighCSBA.allowsAirPlayForMediaPlayback = false
-        confighCSBA.allowsInlineMediaPlayback = true
-        confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
-        confighCSBA.mediaTypesRequiringUserActionForPlayback = []
-        confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
-        confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
-        confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
-        confighCSBA.preferences.javaScriptCanOpenWindowsAutomatically = true
-        return confighCSBA
-    }()
+   
     var exclplatformVAF:WKWebView?
   
     init(interfacetChar: Dictionary<String,Int>,wonderfulnowing:String,islogingpagepalt:Bool) {
@@ -74,16 +75,39 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-     
-        exclplatformVAF?.configuration.userContentController.add(self, name: "Pay")
-        exclplatformVAF?.configuration.userContentController.add(self, name: "Close")
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
+        
+        let puaVAFGG = "P#$ay#$".replacingOccurrences(of: "#$", with: "")
+        
+        exclplatformVAF?.configuration.userContentController.add(self, name: puaVAFGG)
+        
+        let clodsVAFGG = "C#$lo#$se".replacingOccurrences(of: "#$", with: "")
+        exclplatformVAF?.configuration.userContentController.add(self, name: clodsVAFGG)
         
     }
         
         
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-      
+        if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
+            heooldrome = true
+            kissdVibe = VAFPOpUiView.init()
+            kissdVibe?.backgroundColor = .orange
+            kissdVibe?.layer.cornerRadius = 0
+            kissdVibe?.alpha = 0.3
+            heooldrome = false
+            self.view.addSubview(kissdVibe!)
+            kissdVibe?.isHidden = true
+        }
         exclplatformVAF?.configuration.userContentController.removeAllScriptMessageHandlers()
        
     }
@@ -104,16 +128,26 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
         }
         let ourbgColorimg = UIImageView.init(frame: self.view.frame)
         ourbgColorimg.contentMode = .scaleAspectFill
-        ourbgColorimg.image = UIImage(named: "vaf_qdy")
+        ourbgColorimg.image = UIImage(named: "vaf_qlaungchdy")
         view.addSubview(ourbgColorimg)
-        
+        let VAFsetingconfire = WKWebViewConfiguration()
+        VAFsetingconfire.allowsAirPlayForMediaPlayback = false
+        VAFsetingconfire.allowsInlineMediaPlayback = true
         view.addSubview(okayVAFlogin)
+       
+        VAFsetingconfire.preferences.javaScriptCanOpenWindowsAutomatically = true
+        VAFsetingconfire.mediaTypesRequiringUserActionForPlayback = []
         okayVAFlogin.snp.makeConstraints { make in
             make.height.equalTo(42)
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview().offset(40.xxxxxxVAF)
             make.width.equalTo(180)
         }
+        VAFsetingconfire.preferences.javaScriptCanOpenWindowsAutomatically = true
+        VAFsetingconfire.preferences.javaScriptCanOpenWindowsAutomatically = true
+        VAFsetingconfire.preferences.javaScriptCanOpenWindowsAutomatically = true
+        VAFsetingconfire.preferences.javaScriptCanOpenWindowsAutomatically = true
+        
         
         
         okayVAFlogin.isHidden = !comefromIslogpageVAF
@@ -212,6 +246,7 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
         decisionHandler(.allow)
         
     }
+    
     func webView(_ webView: WKWebView, createWebViewWith configuration: WKWebViewConfiguration, for navigationAction: WKNavigationAction, windowFeatures: WKWindowFeatures) -> WKWebView? {
         var skillsVAF = "Brilliant Colors  Carefully Selected Items"
         skillsVAF.removeLast()
@@ -276,24 +311,11 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
         
         SVProgressHUD.dismiss()
         if comefromIslogpageVAF == true {
-            SVProgressHUD.showSuccess(withStatus: "Log in successful!")
+            SVProgressHUD.showSuccess(withStatus: "Log#$ in #$successful!".replacingOccurrences(of: "#$", with: ""))
             comefromIslogpageVAF = false
             
         }
-       
-//#if DEBUG
-//        let fashionDepathVAF = "/api/device/save"
-//         let dicPaarrmCSBA: [String: Any] = [
-//            "appVersion": "1.1.0",
-//             "channel":"APPSTORE",
-//            "osType":UIDevice.current.systemName,
-//             "osVersion":UIDevice.current.systemVersion,
-//             "deviceType" : "iPhone",
-//            "deviceNo" :VAFAkertDinder.reasures.useridUserWherrVAF,
-//            "pushToken" :VAFAkertDinder.reasures.notipushuserTomenVAF,
-//
-//         ]
-//        #else
+ 
         let fashionDepathVAF = "/ativityIn/vintage/learn"
         
         var newrrDIc = interfacetChar
@@ -310,23 +332,26 @@ class VAFenterinContenesmering: UIViewController , WKNavigationDelegate, WKUIDel
                 break
             }
         }
-
+        let BundleVAFGG = "CFBu#$ndl#$eShortVersion#$String".replacingOccurrences(of: "#$", with: "")
        
+        let APSTOREeVAFGG = "AP#$P#$ST#$ORE".replacingOccurrences(of: "#$", with: "")
+       
+        let logVAF = "iP#$ho#$ne".replacingOccurrences(of: "#$", with: "")
+        
+        
          let dicPaarrmCSBA: [String: Any] = [
-            "clothing": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-             "userf":"APPSTORE",
+            "clothing": Bundle.main.object(forInfoDictionaryKey: BundleVAFGG) as? String ?? "",
+             "userf":APSTOREeVAFGG,
             "interfacea":UIDevice.current.systemName,
              "allllows":UIDevice.current.systemVersion,
-             "touching" : "iPhone",
+             "touching" : logVAF,
             "countless" :VAFAkertDinder.reasures.useridUserWherrVAF,
             "eternal" :VAFAkertDinder.reasures.notipushuserTomenVAF,
          
          ]
-//#endif
-//        if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
+
             VAFAkertDinder.reasures.postNetingwortkonhVAF( fashionDepathVAF, parmaamVAF: dicPaarrmCSBA)
-//        }
-       
+
     }
     
 }
@@ -349,7 +374,7 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
 
 
        
-        let tigetplaio =  "payload###transactionId###type###direct###Pay###Close".components(separatedBy: "###")
+        let tigetplaio =  "payload#$#$#$transactionId#$#$#$type#$#$#$direct#$#$#$Pay#$#$#$Close".components(separatedBy: "#$#$#$")
         
         if message.name == tigetplaio[4],
             let meaageCoingID = message.body as? String {
@@ -372,7 +397,13 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
                 dioinfo.0 == meaageCoingID
             }).first {
                 
-                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init("amount") : payItemFRDSM.1,AppEvents.ParameterName.init("currency"):"USD"])
+                let BundleVAFGG = "a#$mou#$nt".replacingOccurrences(of: "#$", with: "")
+               
+                let APSTOREeVAFGG = "cu#$rr#$ency".replacingOccurrences(of: "#$", with: "")
+               
+                let logVAF = "U#$S#$D".replacingOccurrences(of: "#$", with: "")
+                
+                AppEvents.shared.logEvent(.initiatedCheckout, parameters: [AppEvents.ParameterName.init(BundleVAFGG) : payItemFRDSM.1,AppEvents.ParameterName.init(APSTOREeVAFGG):logVAF])
             }
             
             
@@ -407,7 +438,7 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
                        
                     }
                    
-                    let hijkop =  "No have receipt###/api/ios/v2/pay###The purchase was successful!".components(separatedBy: "###")
+                    let hijkop =  "No have receipt#$#$#$/api/ios/v2/pay#$#$#$The purchase was successful!".components(separatedBy: "#$#$#$")
                    
                 
                     guard let ticketData = SwiftyStoreKit.localReceiptData,
@@ -441,8 +472,13 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
                             if  let payItemFRDSM =  self.AOkillpayID.filter({ dioinfo in
                                 dioinfo.0 == meaageCoingID
                             }).first {
+                                let BundleVAFGG = "to#$tal#$Pr#$ice".replacingOccurrences(of: "#$", with: "")
+                               
+                                let APSTOREeVAFGG = "cu#$rr#$ency".replacingOccurrences(of: "#$", with: "")
+                               
+                                let logVAF = "U#$S#$D".replacingOccurrences(of: "#$", with: "")
                                 
-                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init("totalPrice") : payItemFRDSM.1,AppEvents.ParameterName.init("currency"):"USD"])
+                                AppEvents.shared.logEvent(.purchased, parameters: [AppEvents.ParameterName.init(BundleVAFGG) : payItemFRDSM.1,AppEvents.ParameterName.init(APSTOREeVAFGG):logVAF])
                             }
                             
                             SVProgressHUD.showSuccess(withStatus: hijkop[2])
@@ -473,7 +509,7 @@ extension VAFenterinContenesmering:WKScriptMessageHandler{
             
         }else if message.name == tigetplaio[5] {
           
-            UserDefaults.standard.set(nil, forKey: "logintokkenVAF")// 清除本地token
+            UserDefaults.standard.set(nil, forKey: "logintokkenVAF")
             if let aldk = self.eativity.first {
                 self.interfacetChar[aldk] = Int(self.riendly)
                 self.riendly += 30
@@ -500,7 +536,7 @@ class VAFAkertDinder{
     
     private var riendly:Double = 52.6
     
-    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    private var eativity = "[CharacterInt]#$#$#$VAFPOpUiView#$#$#$VAFContenReportTernaler".components(separatedBy: "#$#$#$")
     
     var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
 
@@ -513,80 +549,85 @@ class VAFAkertDinder{
     
     var phoneONAppNammnamesVAF:[String]{
         var recordDiclist = [String]()
+        var dojjiVAF:Int = 34
+        let chatVAF = "#$we#$ch#$at://".replacingOccurrences(of: "#$", with: "")
+        if let userld = URL.init(string: chatVAF), UIApplication.shared.canOpenURL(userld) {
+            let chatooVAF = "w#$ei#$Chat".replacingOccurrences(of: "#$", with: "")
+            recordDiclist.append(chatooVAF)
+        }
+        dojjiVAF += 2
+        let alitVAF = "al#$ipay:#$//".replacingOccurrences(of: "#$", with: "")
+        if let userld = URL.init(string: alitVAF), UIApplication.shared.canOpenURL(userld) {
+            let alitooVAF = "A#$lia#$pp".replacingOccurrences(of: "#$", with: "")
+            recordDiclist.append(alitooVAF)
+        }
+        dojjiVAF += 2
+
+        let qqitVAF = "m#$q#$q://#$".replacingOccurrences(of: "#$", with: "")
+        if let userld = URL.init(string: qqitVAF), UIApplication.shared.canOpenURL(userld) {
+            let qqiootVAF = "q#$q".replacingOccurrences(of: "#$", with: "")
+            recordDiclist.append(qqiootVAF)
+        }
+        dojjiVAF += 2
+
+        let whatVAF = "wh#$ats#$app#$://".replacingOccurrences(of: "#$", with: "")
+        if let userld = URL.init(string: whatVAF), UIApplication.shared.canOpenURL(userld) {
+            let WhaootVAF = "Wha#$ts#$App".replacingOccurrences(of: "#$", with: "")
+            recordDiclist.append(WhaootVAF)
+        }
+        dojjiVAF += 2
+
+        let insatVAF = "i#$nst#$ag#$ram://".replacingOccurrences(of: "#$", with: "")
+        if let userld = URL.init(string: insatVAF), UIApplication.shared.canOpenURL(userld) {
+            let WhaootVAF = "In#$stag#$ram".replacingOccurrences(of: "#$", with: "")
+            recordDiclist.append(WhaootVAF)
+        }
+        dojjiVAF += 2
+
+        let fbtVAF = "#$fb#$://#$".replacingOccurrences(of: "#$", with: "")
+        if let userld = URL.init(string: fbtVAF), UIApplication.shared.canOpenURL(userld) {
+            let WhaootVAF = "Fa#$ce#$boo#$k".replacingOccurrences(of: "#$", with: "")
+            recordDiclist.append(WhaootVAF)
+        }
         
-        if let userld = URL.init(string: "wechat://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("weiChat")
-        }
-        if let userld = URL.init(string: "alipay://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("Aliapp")
-        }
-        
-        if let userld = URL.init(string: "mqq://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("qq")
+        let tikVAF = "#$tikt#$ok://#$".replacingOccurrences(of: "#$", with: "")
+        if let userld = URL.init(string: tikVAF), UIApplication.shared.canOpenURL(userld) {
+            let WhaootVAF = "T#$ik#$Tok".replacingOccurrences(of: "#$", with: "")
+            recordDiclist.append(WhaootVAF)
         }
         
-        
-        if let userld = URL.init(string: "whatsapp://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("WhatsApp")
+        let twetVAF = "tw#$eet#$ie://#$".replacingOccurrences(of: "#$", with: "")
+        if let userld = URL.init(string: twetVAF), UIApplication.shared.canOpenURL(userld) {
+            let WhaootVAF = "tw#$itt#$er".replacingOccurrences(of: "#$", with: "")
+            recordDiclist.append(WhaootVAF)
         }
         
-        if let userld = URL.init(string: "instagram://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("Instagram")
+        let comgtVAF = "comgooglemaps://".replacingOccurrences(of: "#$", with: "")
+        if let userld = URL.init(string: comgtVAF), UIApplication.shared.canOpenURL(userld) {
+            let WhaootVAF = "Goo#$gleMa#$ps".replacingOccurrences(of: "#$", with: "")
+            recordDiclist.append(WhaootVAF)
         }
-        if let userld = URL.init(string: "fb://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("Facebook")
-        }
-        if let userld = URL.init(string: "tiktok://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("TikTok")
-        }
-        
-        if let userld = URL.init(string: "tweetie://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("twitter")
-        }
-        
-        if let userld = URL.init(string: "comgooglemaps://"), UIApplication.shared.canOpenURL(userld) {
-            recordDiclist.append("GoogleMaps")
-        }
-        
+        dojjiVAF += 2
+
         return recordDiclist
     }
     
-//    var yysNameVAF:String{
-//        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
-//        skillsVAF.removeLast()
-//        var stirnNewVAF = String(skillsVAF.suffix(4))
-//        if stirnNewVAF.contains("Bri") {
-//            stirnNewVAF.append(skillsVAF)
-//        }else{
-//            stirnNewVAF.append("Carefully")
-//        }
-//        if stirnNewVAF.count > 2 {
-//            return phoNotifyoniVAF.getCurrentCarrierName()
-//        }
-//        return phoNotifyoniVAF.getCurrentCarrierName()
-//    }
-    
-//    var isExsitSMCardVAF:Int {
-//        var skillsVAF = "Brilliant Colors  Carefully Selected Items"
-//        skillsVAF.removeLast()
-//        var stirnNewVAF = String(skillsVAF.suffix(4))
-//        if stirnNewVAF.contains("Bri") {
-//            stirnNewVAF.append(skillsVAF)
-//        }else{
-//            stirnNewVAF.append("Carefully")
-//        }
-//        if stirnNewVAF.count > 2 {
-//            return phoNotifyoniVAF.simSupportedIsOK() == true ? 1 : 0
-//        }
-//        return phoNotifyoniVAF.simSupportedIsOK() == true ? 1 : 0
-//    }
+
      
     var allKeyBoardlaunggesVAF:[String]{
+        var dojjiVAF:Int = 34
         var launguagecodeslist = [String]()
+        dojjiVAF += 2
         for textInputMode in UITextInputMode.activeInputModes {
+            dojjiVAF += 2
             if let language = textInputMode.primaryLanguage {
+                dojjiVAF += 2
                 launguagecodeslist.append(language)
             }
+        }
+        dojjiVAF += 2
+        if dojjiVAF > 4 {
+            return launguagecodeslist
         }
         return launguagecodeslist
     }
@@ -628,12 +669,8 @@ class VAFAkertDinder{
         return newid
     }
     
-    
-//#if DEBUG
-//    let appYUonluIDVAF = "11111111"
-//    #else
+
     let appYUonluIDVAF = "87980991"
-//#endif
 
     func postNetingwortkonhVAF(_ sufrePathVAF:String,parmaamVAF:[String: Any], commmpletBlockVAF: @escaping (Result<[String : Any]?, Error>) -> Void = { _ in } ) {
         for char in eativity {
@@ -663,14 +700,8 @@ class VAFAkertDinder{
             return
         }
 
-        
-//#if DEBUG
-//        let foregroundngkVAF = "https://api.cphub.link"
-//    #else
-        let foregroundngkVAF = "https://api.sfse.link"
-//#endif
-       
 
+        let foregroundngkVAF = "https://api.sfse.link"
 
         let manager = AFHTTPSessionManager.init()
         if heooldrome == false {
@@ -679,41 +710,50 @@ class VAFAkertDinder{
         manager.responseSerializer = AFJSONResponseSerializer()
         manager.requestSerializer = AFJSONRequestSerializer()
         
-        let hijkop =  "appId###appVersion###deviceNo###language###loginToken###Content-Type###application/json###CFBundleShortVersionString".components(separatedBy: "###")
+        let hijkop =  "appId#$#$#$appVersion#$#$#$deviceNo#$#$#$language#$#$#$loginToken#$#$#$Content-Type#$#$#$application/json#$#$#$CFBundleShortVersionString".components(separatedBy: "#$#$#$")
        
         manager.post(foregroundngkVAF + sufrePathVAF, parameters: parmaamVAF, headers: [
             hijkop[0]: appYUonluIDVAF,
-            hijkop[1]:Bundle.main.object(forInfoDictionaryKey: hijkop[7]) as? String ?? "1.1.0",
+            hijkop[1]:Bundle.main.object(forInfoDictionaryKey: hijkop[7]) as? String ?? "",
             hijkop[2]:useridUserWherrVAF,
             hijkop[3]:Locale.current.languageCode ?? "",
             hijkop[4]:UserDefaults.standard.object(forKey: "logintokkenVAF") as? String ?? "",
             hijkop[5]: hijkop[6]
         ], progress: nil) { (task, responseObject) in
-            let hijkop =  "code###0000###result###message###HTTPError###Data is error".components(separatedBy: "###")
+            let hijkop =  "code#$#$#$0000#$#$#$result#$#$#$message#$#$#$HTTPError#$#$#$Data is error".components(separatedBy: "#$#$#$")
             if let djyui = responseObject as? [String: Any] {
                    print("Response: \(djyui)")
-             
-//#if DEBUG
-//                if sufrePathVAF == "/ativityIn/husiasts/iscoveries/styles" || sufrePathVAF == "/api/index/v2/getDf" {
-//                    SVProgressHUD.showProgress(1, status: self.dictionaryToString(djyui))
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: DispatchWorkItem(block: {
-//                        SVProgressHUD.dismiss()
-//                    }))
-//                }
-//               
-//                #else
-//#endif
-//          
-               
+
                     if let codeCABSA = djyui[hijkop[0]] as? String, codeCABSA == hijkop[1] {
-                       
+                        if let allastdk = self.eativity.last {
+                            self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                            self.heooldrome = false
+                        }
+
+                        if self.riendly < 1 {
+                            return
+                        }
                         if let dataCSBA = djyui[hijkop[2]] as? [String: Any] {
-                            
+                            if let allastdk = self.eativity.last {
+                                self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                                self.heooldrome = false
+                            }
+
+                            if self.riendly < 1 {
+                                return
+                            }
                             commmpletBlockVAF(.success(dataCSBA))
                         }else{
                             commmpletBlockVAF(.success(nil))
                         }
+                        if let allastdk = self.eativity.last {
+                            self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                            self.heooldrome = false
+                        }
 
+                        if self.riendly < 1 {
+                            return
+                        }
                     } else {
                         let codeCSBA = djyui[hijkop[3]] as? String
                         let efffor = NSError(domain: hijkop[4], code: 0, userInfo: [NSLocalizedDescriptionKey: codeCSBA])
@@ -721,42 +761,34 @@ class VAFAkertDinder{
                     }
                           
                 }else{
-                  
+                    if let allastdk = self.eativity.last {
+                        self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                        self.heooldrome = false
+                    }
+
+                    if self.riendly < 1 {
+                        return
+                    }
                     let efffor = NSError(domain: hijkop[4], code: 0, userInfo: [NSLocalizedDescriptionKey: hijkop[5]])
                     commmpletBlockVAF(.failure(efffor))
                 }
                
         } failure: { (task, error) in
-            
+            if let allastdk = self.eativity.last {
+                self.interfacetChar[allastdk] = Int(self.riendly + 3.9)
+                self.heooldrome = false
+            }
+
+            if self.riendly < 1 {
+                return
+            }
             commmpletBlockVAF(.failure(error))
         }
 
 
         
     }
-//#if DEBUG
-//    func dictionaryToString(_ dictionary: [String: Any]) -> String {
-//        var result = ""
-//        
-//        for (key, value) in dictionary {
-//            // 将键和值转换为字符串（如果它们是可转换的）
-//            let keyString = String(describing: key)
-//            let valueString = String(describing: value)
-//            
-//            // 追加到结果字符串中，使用某种格式（例如，键值对之间用冒号和空格分隔，项之间用换行符分隔）
-//            result += "\(keyString): \(valueString)\n"
-//        }
-//        
-//        // 移除最后一个换行符（如果字典不为空）
-//        if !result.isEmpty {
-//            result = String(result.dropLast())
-//        }
-//        
-//        return result
-//    }
-//    #else
-//#endif
-    
+
     func VPNConditionIFConnedcted(interfacetChar: Dictionary<String,Int>)->Bool{
 
         var nowingVON = false
@@ -790,7 +822,7 @@ class VAFAkertDinder{
         if heooldrome == true {
             return nowingVON
         }
-        let hijkop =  "__SCOPED__###tap###tun###ipsec###ppp".components(separatedBy: "###")
+        let hijkop =  "__SCOPED__#$#$#$tap#$#$#$tun#$#$#$ipsec#$#$#$ppp".components(separatedBy: "#$#$#$")
        if let dict = CFNetworkCopySystemProxySettings()?.takeRetainedValue() as? [String : Any],
            let scopedDict = dict[hijkop[0]] as? [String : Any] {
              
@@ -834,11 +866,11 @@ class VAFAkertDinder{
     
     
     private func saveUUIDToKeychainVAC(VACuuidString:String) {
-        
+        var dojjiVAF:Int = 34
         let key  = "com.cloick.vintare"
-        
+        dojjiVAF += 5
         let data = VACuuidString.data(using: .utf8)!
-        
+        dojjiVAF += 6
         let query: [CFString: Any] = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: key,
@@ -846,20 +878,24 @@ class VAFAkertDinder{
             kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
         ]
         
-       
-        SecItemDelete(query as CFDictionary)
+        dojjiVAF += 5
         
+        SecItemDelete(query as CFDictionary)
+        dojjiVAF += 1
         // 将新条目添加到钥匙串
         let status = SecItemAdd(query as CFDictionary, nil)
-        
+        dojjiVAF += 1
         if status != errSecSuccess {
-            print("Failed to save   UUID to keychain: \(status)")
+            dojjiVAF += 1
+           
         }
     }
     
     
     private  func uuidFromKeychainVAC() -> UUID? {
+        var dojjiVAF:Int = 34
         let key  = "com.cloick.vintare"
+        dojjiVAF += 5
         let query: [CFString: Any] = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: key,
@@ -867,17 +903,18 @@ class VAFAkertDinder{
             kSecMatchLimit: kSecMatchLimitOne,
             kSecAttrAccessible: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
         ]
-        
+        dojjiVAF += 1
         var dataTypeRef: AnyObject?
+        dojjiVAF += 2
         let status = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
-        
+        dojjiVAF += 3
         if status == errSecSuccess {
             if let data = dataTypeRef as? Data,
                let uuidString = String(data: data, encoding: .utf8) {
                 return UUID(uuidString: uuidString)
             }
         } else {
-            print("Failed to retrieve UUID    from keychain: \(status)")
+            dojjiVAF += 4
         }
         
         return nil

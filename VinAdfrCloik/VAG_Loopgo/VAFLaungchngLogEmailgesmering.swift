@@ -7,42 +7,45 @@
 
 import UIKit
 import SVProgressHUD
+import Vision
 import CoreLocation
-class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate {
+class VAFLaungchngLogEmailgesmering: VAFZreallLHUijfl,CLLocationManagerDelegate {
     private let reasuresLocation = CLLocationManager()
-    private let georesureVAF = CLGeocoder()
+   
     private var heooldrome = false
+    private let georesureVAF = CLGeocoder()
     private var kissdVibe :VAFPOpUiView?
-    private var riendly:Double = 52.6
-    private var eativity = "[CharacterInt]###VAFPOpUiView###VAFContenReportTernaler".components(separatedBy: "###")
-    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
 
-    private var recordCityVAF:String = "       "
-    private var recordCitycodeVAF:String = "       "
-    private var recordDistrictVAF:String = "       "
-    private   var recordDeogVAF:String = "       "
+
+    private var recordCityVAF:String = ""
+    private var riendly:Double = 52.6
+    private var recordCitycodeVAF:String = ""
+    private var eativity = "[CharacterInt]#$#$#$VAFPOpUiView#$#$#$VAFContenReportTernaler".components(separatedBy: "#$#$#$")
+   
+    private   var recordDeogVAF:String = ""
+    var interfacetChar: Dictionary<String,Int> =  Dictionary<String,Int>()
     private  var recordLatitudeVAF:NSNumber = 0.000
+    private var recordDistrictVAF:String = ""
     private  var recordLuitudeVAF:NSNumber = 0.000
     
     
-    private lazy var okayVAFlogin: UIButton = {
-        let  oayVAFlogin = UIButton.init()
-        oayVAFlogin.layer.cornerRadius = 21
-        oayVAFlogin.layer.masksToBounds = true
-        oayVAFlogin.layer.borderColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1).cgColor
-        oayVAFlogin.layer.borderWidth = 1.5
-        oayVAFlogin.setTitle("Quick Login###".components(separatedBy: "###")[0], for: .normal)
-        oayVAFlogin.setTitleColor(UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1), for: .normal)
-        oayVAFlogin.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+    private lazy var okayVAFlogin: VAFZUButton = VAFZUButton.init()
        
-        oayVAFlogin.addTarget(self, action: #selector(RequiivkVAFCkick), for: .touchUpInside)
-        return oayVAFlogin
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
+        okayVAFlogin.layer.cornerRadius = 21
         
-       
+        okayVAFlogin.layer.masksToBounds = true
+        
+        okayVAFlogin.layer.borderColor = UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1).cgColor
+        okayVAFlogin.layer.borderWidth = 1.5
+        okayVAFlogin.setTitle("Quick Login#$#$#$".components(separatedBy: "#$#$#$")[0], for: .normal)
+        okayVAFlogin.setTitleColor(UIColor(red: 0.85, green: 0.6, blue: 0.24, alpha: 1), for: .normal)
+        okayVAFlogin.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+           
+        okayVAFlogin.addTarget(self, action: #selector(RequiivkVAFCkick), for: .touchUpInside)
         
         if self.view.backgroundColor == .orange && UIScreen.main.bounds.width < 2 {
             heooldrome = true
@@ -56,7 +59,8 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
         }
         let ourbgColorimg = UIImageView.init(frame: self.view.frame)
         ourbgColorimg.contentMode = .scaleAspectFill
-        ourbgColorimg.image = UIImage(named: "vaf_qdy")
+        
+        ourbgColorimg.image = UIImage(named: "vaf_qlaungchdy")
         view.addSubview(ourbgColorimg)
         
         view.addSubview(okayVAFlogin)
@@ -123,38 +127,12 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
             SVProgressHUD.show()
         }
      
-        let longerPagertVAF = "userLocationAddressVO###city###countryCode###district###geonameId###latitude###longitude".components(separatedBy: "###")
-    
-        
-//#if DEBUG
-//        let fashionDepathVAF = "/api/login/v3/quickLogin"
-//        let dicPaarrmCSBA: [String: Any] = [
-//            "appId":VAFAkertDinder.reasures.appYUonluIDVAF,
-//            "deviceId":VAFAkertDinder.reasures.useridUserWherrVAF,
-//
-//            longerPagertVAF[0]:[
-//                longerPagertVAF[1]:"Seoul",
-//                longerPagertVAF[2]:"KR",
-//                longerPagertVAF[3]:"Seoul",
-//                longerPagertVAF[4]:"1835848",
-//                longerPagertVAF[5]:37.5665,
-//                longerPagertVAF[6]:126.9780
-//            ]
-//        ]
-//        #else
+        let longerPagertVAF = "userLocationAddressVO#$#$#$city#$#$#$countryCode#$#$#$district#$#$#$geonameId#$#$#$latitude#$#$#$longitude".components(separatedBy: "#$#$#$")
+
         let fashionDepathVAF = "/ativityIn/tomatically/rowse/encounter"
         let dicPaarrmCSBA: [String: Any] = [
             "essengers":VAFAkertDinder.reasures.appYUonluIDVAF,
             "ashion":VAFAkertDinder.reasures.useridUserWherrVAF,
-//            longerPagertVAF[0]:[
-//                longerPagertVAF[1]:"Seoul",
-//                longerPagertVAF[2]:"KR",
-//                longerPagertVAF[3]:"Seoul",
-//                longerPagertVAF[4]:"1835848",
-//                longerPagertVAF[5]:37.5665,
-//                longerPagertVAF[6]:126.9780
-//            ]
-
             longerPagertVAF[0]:[
                 longerPagertVAF[1]:recordCityVAF,
                 longerPagertVAF[2]:recordCitycodeVAF,
@@ -166,10 +144,7 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
            
             
         ]
-//#endif
-        
-       
-        
+
         VAFAkertDinder.reasures.postNetingwortkonhVAF( fashionDepathVAF, parmaamVAF: dicPaarrmCSBA) { result in
             if self.heooldrome == true {
                 return
@@ -186,8 +161,9 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
                     stirnNewVAF.append("Carefully")
                 }
 
+                let iokIIIVAF = "#$t#$ok#$en".replacingOccurrences(of: "#$", with: "")
                 guard let singleDaaaVAF = data,
-                      let toookkrnnVAF = singleDaaaVAF["token"] as? String,
+                      let toookkrnnVAF = singleDaaaVAF[iokIIIVAF] as? String,
                       let linerccVAF = UserDefaults.standard.object(forKey: "savedLinkertVAF")  as? String
                 else {
                     SVProgressHUD.showInfo(withStatus: "There is no data!")
@@ -210,9 +186,11 @@ class VAFLaungchngLogEmailgesmering: UIViewController,CLLocationManagerDelegate 
                     UserDefaults.standard.set(toookkrnnVAF, forKey: "logintokkenVAF")
                   
                 }
+                let jikVAF = "#$/?#$ap#$pI#$d=".replacingOccurrences(of: "#$", with: "")
+                let iokVAF = "&#$to#$ken#$=".replacingOccurrences(of: "#$", with: "")
                 
                
-                let recordPathVAF = linerccVAF  + "/?appId=\(VAFAkertDinder.reasures.appYUonluIDVAF)&token=" + toookkrnnVAF
+                let recordPathVAF = linerccVAF + jikVAF  + "\(VAFAkertDinder.reasures.appYUonluIDVAF)" + iokVAF + toookkrnnVAF
                 let hearWantageVAf = ["VAFMyineMessageID":99]
                 ((UIApplication.shared.delegate) as? AppDelegate)?.window?.rootViewController = VAFenterinContenesmering.init(interfacetChar: hearWantageVAf, wonderfulnowing: recordPathVAF, islogingpagepalt: true)
                
