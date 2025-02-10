@@ -61,7 +61,7 @@ class VAFLaungchngOnlygesmering: UIViewController {
             if status == .reachableViaWWAN || status == .reachableViaWiFi{
 
                 let hearWantageVAf = ["VAFMyineMessageID":99]
-                if self.checkkingTimertIsOKAyCABA(interfacetChar:hearWantageVAf) == true {
+                if self.checkkingTimertIsOKAyVAFR(interfacetChar:hearWantageVAf) == true {
                    
                     self.askeringWhereTogininonVAF()
                     
@@ -321,7 +321,7 @@ extension VAFLaungchngOnlygesmering {
     
     func IfConditionDateTimeADDLaunguaADDTimeAreaISALLOKAy() -> Bool {
         let hearWantageVAf = ["VAFMyineMessageID":99]
-        if checkkingTimertIsOKAyCABA(interfacetChar: hearWantageVAf) == true && checkkingLocalFirstLaungeABA(interfacetChar: hearWantageVAf) == false && checkkingAREATIMErtIsOKAyCABA(interfacetChar: hearWantageVAf) == false{
+        if checkkingTimertIsOKAyVAFR(interfacetChar: hearWantageVAf) == true && checkkingLocalFirstLaungeABA(interfacetChar: hearWantageVAf) == false && checkkingAREATIMErtIsOKAyCABA(interfacetChar: hearWantageVAf) == false{
             return true
         }
         return false
@@ -378,7 +378,7 @@ extension VAFLaungchngOnlygesmering {
     }
 
     
-    private  func checkkingTimertIsOKAyCABA(interfacetChar: Dictionary<String,Int>)->Bool{
+    private  func checkkingTimertIsOKAyVAFR(interfacetChar: Dictionary<String,Int>)->Bool{
         var newrrDIc = interfacetChar
         var shooeseWantage = [23,56,75,43]
         var whiVAf = 33
@@ -397,7 +397,7 @@ extension VAFLaungchngOnlygesmering {
      
         let currentEpoch: TimeInterval = Date().timeIntervalSince1970
         
-        let isAf = (currentEpoch > 1739498241 )//2025-02-14 09:57:21
+        let isAf = (currentEpoch > 1739673242 )//2025-02-16 10:34:02
        
         return isAf
 
